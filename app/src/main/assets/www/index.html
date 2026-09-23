@@ -18,7 +18,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-family: system-ui, -apple-system, sans-serif;
     }
 
     body {
@@ -53,7 +53,6 @@
       background: var(--card-bg);
       padding: 18px;
       border-radius: 16px;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
       width: 100%;
       max-width: 500px;
       text-align: center;
@@ -87,18 +86,12 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      transition: all 0.2s ease;
       cursor: pointer;
-    }
-
-    .upload-btn:hover {
-      background-color: var(--accent-hover);
-      transform: translateY(-2px);
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       gap: 16px;
       width: 100%;
       max-width: 1000px;
@@ -111,12 +104,6 @@
       overflow: hidden;
       aspect-ratio: 1 / 1;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      transition: transform 0.25 ease;
-      cursor: pointer;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
     }
 
     .card img {
@@ -125,28 +112,11 @@
       object-fit: cover;
     }
 
-    .delete-btn {
-      position: absolute;
-      top: 8px;
-      left: 8px;
-      background: rgba(239, 68, 68, 0.9);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      opacity: 0;
-      transition: opacity 0.2s ease;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    .card:hover .delete-btn {
-      opacity: 1;
+    .status-msg {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #38bdf8;
+      display: none;
     }
 
     .empty-msg {
@@ -154,41 +124,6 @@
       text-align: center;
       color: var(--text-muted);
       padding: 40px;
-      font-size: 1.1rem;
-    }
-
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.92);
-      z-index: 1000;
-      justify-content: center;
-      align-items: center;
-      backdrop-filter: blur(8px);
-    }
-
-    .modal.active {
-      display: flex;
-    }
-
-    .modal img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
-    }
-
-    .close-modal {
-      position: absolute;
-      top: 20px;
-      right: 25px;
-      color: white;
-      font-size: 35px;
-      cursor: pointer;
     }
   </style>
 </head>
@@ -196,137 +131,89 @@
 
   <header>
     <h1>✨ تطبيق كحباتي ✨</h1>
-    <p>ارفع شگد ما تريد صور بدون حدود وحفظ تلقائي!</p>
+    <p>حفظ أبدي أونلاين بدون ما تروح عليك أي صورة!</p>
   </header>
 
   <div class="controls">
     <div class="file-input-wrapper">
       <button class="upload-btn">
-        <span>📸 رفع صور جديدة (اختيار متعدد)</span>
+        <span>📸 رفع صور جديدة للسيرفر</span>
       </button>
       <input type="file" id="imageInput" accept="image/*" multiple>
     </div>
+    <div class="status-msg" id="statusMsg">جاري الرفع للسيرفر... انتظر لحظة ⏳</div>
   </div>
 
   <div class="gallery" id="gallery">
-    <div class="empty-msg" id="emptyMsg">بعدك ما ضايف أي صورة.. ارفع صورك واشوفك الرهابة!</div>
-  </div>
-
-  <div class="modal" id="imageModal">
-    <span class="close-modal" id="closeModal">&times;</span>
-    <img id="modalImg" src="" alt="عرض الصور">
+    <div class="empty-msg" id="emptyMsg">بعدك ما ضايف أي صورة.. ارفع صورك هسة!</div>
   </div>
 
   <script>
+    // ⚠️ استبدل هذن القيم بالقيم مالتك من موقع Cloudinary
+    const CLOUD_NAME = "YOUR_CLOUD_NAME"; 
+    const UPLOAD_PRESET = "YOUR_UPLOAD_PRESET"; 
+
     const imageInput = document.getElementById('imageInput');
     const gallery = document.getElementById('gallery');
     const emptyMsg = document.getElementById('emptyMsg');
-    const imageModal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImg');
-    const closeModal = document.getElementById('closeModal');
+    const statusMsg = document.getElementById('statusMsg');
 
-    // إعداد قاعدة بيانات IndexedDB لحفظ عدد لا نهائي من الصور
-    let db;
-    const request = indexedDB.open("KahbatiDB", 1);
+    // تحميل روابط الصور المحفوظة عند فتح التطبيق
+    document.addEventListener('DOMContentLoaded', loadSavedImages);
 
-    request.onupgradeneeded = function(e) {
-      db = e.target.result;
-      if (!db.objectStoreNames.contains('photos')) {
-        db.createObjectStore('photos', { keyPath: 'id', autoIncrement: true });
-      }
-    };
-
-    request.onsuccess = function(e) {
-      db = e.target.result;
-      loadImagesFromDB();
-    };
-
-    imageInput.addEventListener('change', function (e) {
+    imageInput.addEventListener('change', async function (e) {
       const files = Array.from(e.target.files);
       if (files.length === 0) return;
 
-      files.forEach(file => {
-        const reader = new FileReader();
-        reader.onload = function (event) {
-          const imageData = event.target.result;
-          saveImageToDB(imageData);
-        };
-        reader.readAsDataURL(file);
-      });
+      statusMsg.style.display = 'block';
 
+      for (let file of files) {
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('upload_preset', UPLOAD_PRESET);
+
+        try {
+          const res = await fetch(`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`, {
+            method: 'POST',
+            body: formData
+          });
+          const data = await res.json();
+          if (data.secure_url) {
+            saveUrlLocally(data.secure_url);
+            renderImage(data.secure_url);
+          }
+        } catch (err) {
+          alert('صار خطأ بالرفع، تأكد من الاتصال بالإنترنت أو إعدادات السيرفر.');
+        }
+      }
+
+      statusMsg.style.display = 'none';
       imageInput.value = '';
     });
 
-    function saveImageToDB(dataUrl) {
-      const tx = db.transaction('photos', 'readwrite');
-      const store = tx.objectStore('photos');
-      const item = { data: dataUrl, timestamp: Date.now() };
-      const req = store.add(item);
-
-      req.onsuccess = function(e) {
-        renderImage(dataUrl, e.target.result);
-      };
+    function saveUrlLocally(url) {
+      let urls = JSON.parse(localStorage.getItem('kahbati_urls') || '[]');
+      urls.push(url);
+      localStorage.setItem('kahbati_urls', JSON.stringify(urls));
     }
 
-    function loadImagesFromDB() {
-      const tx = db.transaction('photos', 'readonly');
-      const store = tx.objectStore('photos');
-      const req = store.getAll();
-
-      req.onsuccess = function() {
-        const items = req.result;
-        if (items.length > 0) {
-          emptyMsg.style.display = 'none';
-          items.forEach(item => renderImage(item.data, item.id));
-        }
-      };
+    function loadSavedImages() {
+      let urls = JSON.parse(localStorage.getItem('kahbati_urls') || '[]');
+      if (urls.length > 0) {
+        emptyMsg.style.display = 'none';
+        urls.forEach(url => renderImage(url));
+      }
     }
 
-    function renderImage(src, id) {
+    function renderImage(src) {
       emptyMsg.style.display = 'none';
-
       const card = document.createElement('div');
       card.className = 'card';
-
       const img = document.createElement('img');
       img.src = src;
-      img.onclick = () => openModal(src);
-
-      const deleteBtn = document.createElement('button');
-      deleteBtn.className = 'delete-btn';
-      deleteBtn.innerHTML = '✕';
-      deleteBtn.onclick = (e) => {
-        e.stopPropagation();
-        deleteImageFromDB(id, card);
-      };
-
       card.appendChild(img);
-      card.appendChild(deleteBtn);
       gallery.appendChild(card);
     }
-
-    function deleteImageFromDB(id, cardElement) {
-      const tx = db.transaction('photos', 'readwrite');
-      const store = tx.objectStore('photos');
-      store.delete(id);
-
-      tx.oncomplete = function() {
-        cardElement.remove();
-        if (gallery.querySelectorAll('.card').length === 0) {
-          emptyMsg.style.display = 'block';
-        }
-      };
-    }
-
-    function openModal(src) {
-      modalImg.src = src;
-      imageModal.classList.add('active');
-    }
-
-    closeModal.onclick = () => imageModal.classList.remove('active');
-    imageModal.onclick = (e) => {
-      if (e.target === imageModal) imageModal.classList.remove('active');
-    };
   </script>
 </body>
 </html>
