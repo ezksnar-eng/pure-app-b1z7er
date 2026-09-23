@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>معرض صوري الرهيب</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --accent-color: #6366f1;
+      --accent-hover: #4f46e5;
+      --text-color: #f8fafc;
+      --text-muted: #94a3b8;
+      --danger: #ef4444;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #a855f7, #6366f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Upload Controls */
+    .controls {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      margin-bottom: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .file-input-wrapper {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .file-input-wrapper input[type="file"] {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    .upload-btn {
+      background-color: var(--accent-color);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .upload-btn:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .card {
+      position: relative;
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .delete-btn {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: rgba(239, 68, 68, 0.85);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      font-weight: bold;
+    }
+
+    .card:hover .delete-btn {
+      opacity: 1;
+    }
+
+    .empty-msg {
+      grid-column: 1 / -1;
+      text-align: center;
+      color: var(--text-muted);
+      padding: 40px;
+      font-size: 1.1rem;
+    }
+
+    /* Lightbox Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(5px);
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      color: white;
+      font-size: 35px;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📸 معرض صوري الرهيب</h1>
+    <p>ارفع صورك واحفظها بكل سهولة بمتصفحك</p>
+  </header>
+
+  <div class="controls">
+    <div class="file-input-wrapper">
+      <button class="upload-btn">
+        <span>➕ إضافة صور جديدة</span>
+      </button>
+      <input type="file" id="imageInput" accept="image/*" multiple>
+    </div>
+  </div>
+
+  <div class="gallery" id="gallery">
+    <div class="empty-msg" id="emptyMsg">ماكو أي صور حالياً.. ارفع كم صورة وشوف الرهابة!</div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="modal" id="imageModal">
+    <span class="close-modal" id="closeModal">&times;</span>
+    <img id="modalImg" src="" alt="عرض مكبر">
+  </div>
+
+  <script>
+    const imageInput = document.getElementById('imageInput');
+    const gallery = document.getElementById('gallery');
+    const emptyMsg = document.getElementById('emptyMsg');
+    const imageModal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+    const closeModal = document.getElementById('closeModal');
+
+    // تحميل الصور المحفوظة عند فتح التطبيق
+    document.addEventListener('DOMContentLoaded', loadImages);
+
+    imageInput.addEventListener('change', function (e) {
+      const files = Array.from(e.target.files);
+      if (files.length === 0) return;
+
+      files.forEach(file => {
+        const reader = new FileReader();
+        reader.onload = function (event) {
+          const imageData = event.target.result;
+          saveImageToStorage(imageData);
+          renderImage(imageData);
+        };
+        reader.readAsDataURL(file);
+      });
+
+      imageInput.value = ''; // إعادة ضبط المدخلات
+    });
+
+    function renderImage(src) {
+      emptyMsg.style.display = 'none';
+
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = 'صورة مرفوعة';
+      img.onclick = () => openModal(src);
+
+      const deleteBtn = document.createElement('button');
+      deleteBtn.className = 'delete-btn';
+      deleteBtn.innerHTML = '✕';
+      deleteBtn.onclick = (e) => {
+        e.stopPropagation(); // منع فتح الـ Modal عند الضغط على الحذف
+        deleteImage(src, card);
+      };
+
+      card.appendChild(img);
+      card.appendChild(deleteBtn);
+      gallery.appendChild(card);
+    }
+
+    function openModal(src) {
+      modalImg.src = src;
+      imageModal.classList.add('active');
+    }
+
+    closeModal.onclick = () => {
+      imageModal.classList.remove('active');
+    };
+
+    imageModal.onclick = (e) => {
+      if (e.target === imageModal) {
+        imageModal.classList.remove('active');
+      }
+    };
+
+    function saveImageToStorage(imageData) {
+      let images = JSON.parse(localStorage.getItem('my_gallery_images') || '[]');
+      images.push(imageData);
+      try {
+        localStorage.setItem('my_gallery_images', JSON.stringify(images));
+      } catch (e) {
+        alert('المساحة المتاحة بالمتصفح امتلت، حاول تحذف بعض الصور القديمة.');
+      }
+    }
+
+    function loadImages() {
+      let images = JSON.parse(localStorage.getItem('my_gallery_images') || '[]');
+      if (images.length > 0) {
+        emptyMsg.style.display = 'none';
+        images.forEach(src => renderImage(src));
+      }
+    }
+
+    function deleteImage(src, cardElement) {
+      let images = JSON.parse(localStorage.getItem('my_gallery_images') || '[]');
+      images = images.filter(img => img !== src);
+      localStorage.setItem('my_gallery_images', JSON.stringify(images));
+      
+      cardElement.remove();
+
+      if (gallery.children.length === 1) { // باقي بس رسالة emptyMsg
+        emptyMsg.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
