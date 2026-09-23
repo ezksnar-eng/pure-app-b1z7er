@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>معرض صوري الرهيب</title>
+  <title>كحباتي</title>
   <style>
     :root {
       --bg-color: #0f172a;
@@ -12,7 +12,6 @@
       --accent-hover: #4f46e5;
       --text-color: #f8fafc;
       --text-muted: #94a3b8;
-      --danger: #ef4444;
     }
 
     * {
@@ -34,13 +33,13 @@
 
     header {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     header h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 8px;
-      background: linear-gradient(135deg, #a855f7, #6366f1);
+      background: linear-gradient(135deg, #ec4899, #8b5cf6, #6366f1);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -50,10 +49,9 @@
       font-size: 0.95rem;
     }
 
-    /* Upload Controls */
     .controls {
       background: var(--card-bg);
-      padding: 20px;
+      padding: 18px;
       border-radius: 16px;
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
       width: 100%;
@@ -98,10 +96,9 @@
       transform: translateY(-2px);
     }
 
-    /* Gallery Grid */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       gap: 16px;
       width: 100%;
       max-width: 1000px;
@@ -114,13 +111,12 @@
       overflow: hidden;
       aspect-ratio: 1 / 1;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.25 ease;
       cursor: pointer;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+      transform: scale(1.03);
     }
 
     .card img {
@@ -133,18 +129,19 @@
       position: absolute;
       top: 8px;
       left: 8px;
-      background: rgba(239, 68, 68, 0.85);
+      background: rgba(239, 68, 68, 0.9);
       color: white;
       border: none;
       border-radius: 50%;
-      width: 28px;
-      height: 28px;
+      width: 30px;
+      height: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       opacity: 0;
       transition: opacity 0.2s ease;
+      font-size: 14px;
       font-weight: bold;
     }
 
@@ -160,7 +157,7 @@
       font-size: 1.1rem;
     }
 
-    /* Lightbox Modal */
+    /* Modal */
     .modal {
       display: none;
       position: fixed;
@@ -168,11 +165,11 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
+      background-color: rgba(0, 0, 0, 0.92);
       z-index: 1000;
       justify-content: center;
       align-items: center;
-      backdrop-filter: blur(5px);
+      backdrop-filter: blur(8px);
     }
 
     .modal.active {
@@ -182,8 +179,7 @@
     .modal img {
       max-width: 90%;
       max-height: 90%;
-      border-radius: 8px;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
     }
 
     .close-modal {
@@ -193,34 +189,32 @@
       color: white;
       font-size: 35px;
       cursor: pointer;
-      user-select: none;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>📸 معرض صوري الرهيب</h1>
-    <p>ارفع صورك واحفظها بكل سهولة بمتصفحك</p>
+    <h1>✨ تطبيق كحباتي ✨</h1>
+    <p>ارفع شگد ما تريد صور بدون حدود وحفظ تلقائي!</p>
   </header>
 
   <div class="controls">
     <div class="file-input-wrapper">
       <button class="upload-btn">
-        <span>➕ إضافة صور جديدة</span>
+        <span>📸 رفع صور جديدة (اختيار متعدد)</span>
       </button>
       <input type="file" id="imageInput" accept="image/*" multiple>
     </div>
   </div>
 
   <div class="gallery" id="gallery">
-    <div class="empty-msg" id="emptyMsg">ماكو أي صور حالياً.. ارفع كم صورة وشوف الرهابة!</div>
+    <div class="empty-msg" id="emptyMsg">بعدك ما ضايف أي صورة.. ارفع صورك واشوفك الرهابة!</div>
   </div>
 
-  <!-- Lightbox Modal -->
   <div class="modal" id="imageModal">
     <span class="close-modal" id="closeModal">&times;</span>
-    <img id="modalImg" src="" alt="عرض مكبر">
+    <img id="modalImg" src="" alt="عرض الصور">
   </div>
 
   <script>
@@ -231,8 +225,21 @@
     const modalImg = document.getElementById('modalImg');
     const closeModal = document.getElementById('closeModal');
 
-    // تحميل الصور المحفوظة عند فتح التطبيق
-    document.addEventListener('DOMContentLoaded', loadImages);
+    // إعداد قاعدة بيانات IndexedDB لحفظ عدد لا نهائي من الصور
+    let db;
+    const request = indexedDB.open("KahbatiDB", 1);
+
+    request.onupgradeneeded = function(e) {
+      db = e.target.result;
+      if (!db.objectStoreNames.contains('photos')) {
+        db.createObjectStore('photos', { keyPath: 'id', autoIncrement: true });
+      }
+    };
+
+    request.onsuccess = function(e) {
+      db = e.target.result;
+      loadImagesFromDB();
+    };
 
     imageInput.addEventListener('change', function (e) {
       const files = Array.from(e.target.files);
@@ -242,16 +249,40 @@
         const reader = new FileReader();
         reader.onload = function (event) {
           const imageData = event.target.result;
-          saveImageToStorage(imageData);
-          renderImage(imageData);
+          saveImageToDB(imageData);
         };
         reader.readAsDataURL(file);
       });
 
-      imageInput.value = ''; // إعادة ضبط المدخلات
+      imageInput.value = '';
     });
 
-    function renderImage(src) {
+    function saveImageToDB(dataUrl) {
+      const tx = db.transaction('photos', 'readwrite');
+      const store = tx.objectStore('photos');
+      const item = { data: dataUrl, timestamp: Date.now() };
+      const req = store.add(item);
+
+      req.onsuccess = function(e) {
+        renderImage(dataUrl, e.target.result);
+      };
+    }
+
+    function loadImagesFromDB() {
+      const tx = db.transaction('photos', 'readonly');
+      const store = tx.objectStore('photos');
+      const req = store.getAll();
+
+      req.onsuccess = function() {
+        const items = req.result;
+        if (items.length > 0) {
+          emptyMsg.style.display = 'none';
+          items.forEach(item => renderImage(item.data, item.id));
+        }
+      };
+    }
+
+    function renderImage(src, id) {
       emptyMsg.style.display = 'none';
 
       const card = document.createElement('div');
@@ -259,15 +290,14 @@
 
       const img = document.createElement('img');
       img.src = src;
-      img.alt = 'صورة مرفوعة';
       img.onclick = () => openModal(src);
 
       const deleteBtn = document.createElement('button');
       deleteBtn.className = 'delete-btn';
       deleteBtn.innerHTML = '✕';
       deleteBtn.onclick = (e) => {
-        e.stopPropagation(); // منع فتح الـ Modal عند الضغط على الحذف
-        deleteImage(src, card);
+        e.stopPropagation();
+        deleteImageFromDB(id, card);
       };
 
       card.appendChild(img);
@@ -275,50 +305,28 @@
       gallery.appendChild(card);
     }
 
+    function deleteImageFromDB(id, cardElement) {
+      const tx = db.transaction('photos', 'readwrite');
+      const store = tx.objectStore('photos');
+      store.delete(id);
+
+      tx.oncomplete = function() {
+        cardElement.remove();
+        if (gallery.querySelectorAll('.card').length === 0) {
+          emptyMsg.style.display = 'block';
+        }
+      };
+    }
+
     function openModal(src) {
       modalImg.src = src;
       imageModal.classList.add('active');
     }
 
-    closeModal.onclick = () => {
-      imageModal.classList.remove('active');
-    };
-
+    closeModal.onclick = () => imageModal.classList.remove('active');
     imageModal.onclick = (e) => {
-      if (e.target === imageModal) {
-        imageModal.classList.remove('active');
-      }
+      if (e.target === imageModal) imageModal.classList.remove('active');
     };
-
-    function saveImageToStorage(imageData) {
-      let images = JSON.parse(localStorage.getItem('my_gallery_images') || '[]');
-      images.push(imageData);
-      try {
-        localStorage.setItem('my_gallery_images', JSON.stringify(images));
-      } catch (e) {
-        alert('المساحة المتاحة بالمتصفح امتلت، حاول تحذف بعض الصور القديمة.');
-      }
-    }
-
-    function loadImages() {
-      let images = JSON.parse(localStorage.getItem('my_gallery_images') || '[]');
-      if (images.length > 0) {
-        emptyMsg.style.display = 'none';
-        images.forEach(src => renderImage(src));
-      }
-    }
-
-    function deleteImage(src, cardElement) {
-      let images = JSON.parse(localStorage.getItem('my_gallery_images') || '[]');
-      images = images.filter(img => img !== src);
-      localStorage.setItem('my_gallery_images', JSON.stringify(images));
-      
-      cardElement.remove();
-
-      if (gallery.children.length === 1) { // باقي بس رسالة emptyMsg
-        emptyMsg.style.display = 'block';
-      }
-    }
   </script>
 </body>
 </html>
