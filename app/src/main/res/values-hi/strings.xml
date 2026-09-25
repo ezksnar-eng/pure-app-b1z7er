@@ -1,0 +1,124 @@
+<resources>
+  <string name="app_name">स्क्रीन अनुवादक</string>
+
+  <!-- Notification Permission -->
+  <string name="message_permission_notification">आवश्यक अनुमति:\nसूचनाएं</string>
+  <string name="message_permission_notification_detail">स्क्रीन अनुवादक लॉन्च करने के लिए, आपको सूचना की अनुमति देनी होगी।</string>
+
+  <!-- Overlay Permission -->
+  <string name="message_permission_overlay">आवश्यक अनुमति:\nअन्य ऐप्स के ऊपर दिखाएं</string>
+  <string name="message_permission_overlay_detail">स्क्रीन अनुवादक लॉन्च करने के लिए, आपको अन्य ऐप्स के ऊपर प्रदर्शित करने की अनुमति देनी होगी।</string>
+
+  <!-- MediaProjection token 요청 -->
+  <string name="message_media_projection">आवश्यक अनुमति:\nस्क्रीन रिकॉर्डिंग</string>
+  <string name="message_media_projection_detail">स्क्रीन अनुवादक लॉन्च करने के लिए, आपको स्क्रीन रिकॉर्डिंग की अनुमति देनी होगी।\n\nस्क्रीन की जानकारी केवल अनुवाद के उद्देश्य के लिए उपयोग की जाएगी और कहीं और स्थानांतरित या संग्रहीत नहीं की जाएगी।</string>
+
+  <!-- Foreground Service 시작 알림 -->
+  <string name="notification_foreground_service">अनुवाद कार्य के लिए स्क्रीन कैप्चर फ़ंक्शन का उपयोग किया जा रहा है।</string>
+
+  <!-- OverlayService -->
+  <string name="service_menu_finish">समाप्त करें</string>
+
+  <!-- LanguageListView -->
+  <string name="title_language_list_view_source">से अनुवाद करें</string>
+  <string name="title_language_list_view_target">में अनुवाद करें</string>
+
+  <!-- VoiceListView -->
+  <string name="title_voice_list_view">TTS आवाज़ चुनें</string>
+
+  <!-- Dialog -->
+  <string name="message_force_update">अपडेट आवश्यक</string>
+  <string name="message_force_update_detail">यह संस्करण अब समर्थित नहीं है।\nस्टोर पर जाएं।</string>
+  <string name="message_service_unavailable">सेवा अनुपलब्ध है</string>
+  <string name="message_service_unavailable_detail">सेवा रखरखाव में है।</string>
+  <string name="message_network_unavailable">नेटवर्क अनुपलब्ध है</string>
+  <string name="message_network_unavailable_detail">नेटवर्क उपलब्ध नहीं है।\nकृपया जाँच करें और पुनः प्रयास करें।</string>
+  <string name="message_translate_fixedarea_warn">बैटरी चेतावनी</string>
+  <string name="message_translate_fixedarea_warn_detail">बैटरी जल्दी खत्म हो सकती है।</string>
+  <string name="ad_gate_loading">विज्ञापन तैयार किया जा रहा है…</string>
+  <string name="ad_gate_reward_notice">विज्ञापन को अंत तक देखें, ऐप बंद करने तक और कोई विज्ञापन नहीं दिखेगा।</string>
+
+  <!-- SettingsActivity -->
+  <string name="settings_title">सेटिंग्स</string>
+  <string name="settings_menu_cat_pointer">पॉइंटर</string>
+  <string name="settings_menu_pointer_docking_delay">डॉकिंग विलंब</string>
+  <string name="settings_menu_haptic_feedback_to_detection">पता चलने पर हैप्टिक</string>
+  <string name="settings_menu_cat_menubar">मेन्यू बार</string>
+    <string name="settings_menu_menubar_visible">मेन्यू बार दिखाएँ</string>
+  <string name="settings_menu_menubar_transparency">मेन्यू पारदर्शिता</string>
+  <string name="settings_menu_menubar_composition">मेन्यू बार संरचना</string>
+  <string name="settings_menu_cat_translation">अनुवाद</string>
+  <string name="settings_menu_translation_transparency">अनुवाद पारदर्शिता</string>
+  <string name="settings_menu_translation_close_delay">बंद करने में देरी</string>
+  <string name="settings_menu_automated_read_aloud">अनुवाद का स्वचालित पढ़ना</string>
+  <string name="settings_menu_reply_transparency">जवाब पारदर्शिता</string>
+  <string name="settings_menu_cat_tts">टेक्स्ट-टू-स्पीच</string>
+  <string name="settings_menu_tts_read_target">पढ़ने का लक्ष्य</string>
+  <string name="settings_tts_read_target_source">मूल</string>
+  <string name="settings_tts_read_target_target">अनुवाद</string>
+  <string name="settings_menu_tts_voices">TTS आवाज़ें</string>
+  <string name="settings_menu_tts_rate">TTS गति</string>
+  <string name="settings_menu_cat_about">जानकारी</string>
+  <string name="settings_menu_app_version">ऐप संस्करण</string>
+  <string name="settings_menu_app_version_latest">(नवीनतम)</string>
+
+  <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+  <string name="help_text_no_limit_free">कोई मात्रा सीमा नहीं, कोई समय सीमा नहीं</string>
+  <string name="help_text_deepl_own_key">आपकी व्यक्तिगत DeepL API कुंजी का उपयोग करता है</string>
+  <string name="deepl_key_guide">DeepL अनुवाद का उपयोग करने के लिए अपनी DeepL API कुंजी दर्ज करें।</string>
+  <string name="deepl_key_signup_guide">DeepL पर साइन अप करें और आप मुफ़्त प्लान की सदस्यता ले सकते हैं।</string>
+  <string name="deepl_key_link_subscription">मुफ़्त प्लान की सदस्यता लें</string>
+  <string name="deepl_key_link_keys">अपनी API कुंजी जांचें</string>
+  <string name="deepl_key_active">सक्रिय</string>
+  <string name="label_save">सहेजें</string>
+  <string name="deepl_key_invalid">API कुंजी मान्य नहीं है।</string>
+  <string name="deepl_key_validating">सत्यापित किया जा रहा है…</string>
+  <string name="deepl_key_network_error">नेटवर्क त्रुटि के कारण कुंजी सत्यापित नहीं की जा सकी। कुंजी सहेज ली गई है।</string>
+
+  <!-- Detect-mode descriptions -->
+  <string name="detect_mode_description_sentence">वाक्य स्वतः चयनित होते हैं।</string>
+  <string name="detect_mode_description_paragraph">पैराग्राफ इकाइयों को स्वचालित रूप से पहचाना जाता है।</string>
+  <string name="detect_mode_description_select">आप उस सीमा को भी निर्दिष्ट कर सकते हैं जिसे आप चाहते हैं।</string>
+  <string name="detect_mode_description_word">किसी शब्द पर इशारा करें, वह तुरंत अनुवादित हो जाएगा।</string>
+  <string name="detect_mode_description_fixed_area">आप फ़िल्मों के सबटाइटल जैसी स्थिर क्षेत्रों का लगातार अनुवाद कर सकते हैं।</string>
+  <string name="say_here">मैं यहाँ हूँ!</string>
+  <string name="hint_settings_reopen">सेटिंग फिर से खोलने के लिए हैंडल पर दो बार टैप करें</string>
+  <string name="openai_key_guide">OpenAI मॉडल से अनुवाद करने के लिए अपनी OpenAI API कुंजी दर्ज करें।</string>
+  <string name="openai_key_signup_guide">OpenAI डैशबोर्ड में एक कुंजी बनाएं। उपयोग का शुल्क आपके OpenAI खाते पर लगाया जाता है।</string>
+  <string name="openai_key_link_keys">अपनी API कुंजी प्राप्त करें</string>
+  <string name="openai_key_link_billing">बिलिंग और उपयोग</string>
+  <string name="openai_model_label">मॉडल</string>
+  <string name="help_text_openai_own_key">आपकी व्यक्तिगत OpenAI API कुंजी का उपयोग करता है</string>
+  <string name="gemini_key_guide">Gemini मॉडल से अनुवाद करने के लिए अपनी Gemini API कुंजी दर्ज करें।</string>
+  <string name="help_text_gemini_own_key">आपकी व्यक्तिगत Gemini API कुंजी का उपयोग करता है</string>
+  <string name="gemini_key_signup_guide">Google AI Studio में एक API कुंजी बनाएं। एक निःशुल्क स्तर उपलब्ध है।</string>
+  <string name="claude_key_guide">Claude मॉडल से अनुवाद करने के लिए अपनी Claude API कुंजी दर्ज करें।</string>
+  <string name="help_text_claude_own_key">आपकी व्यक्तिगत Claude API कुंजी का उपयोग करता है</string>
+  <string name="claude_key_signup_guide">Anthropic Console में एक API कुंजी बनाएं। उपयोग का बिल आपके Anthropic खाते में भेजा जाता है।</string>
+  <string name="settings_menu_how_to_use">उपयोग विधि</string>
+  <string name="settings_menu_privacy_policy">गोपनीयता नीति</string>
+  <string name="source_language_no_screen_reader">स्क्रीन टेक्स्ट पहचान समर्थित नहीं है</string>
+  <string name="ocr_model_preparing">अनुवाद इंजन तैयार हो रहा है। कृपया थोड़ी प्रतीक्षा करें।</string>
+  <string name="error_translate_invalid_key">API कुंजी अमान्य है। सेटिंग्स में जाँचें।</string>
+  <string name="error_translate_no_credit">खाते में क्रेडिट नहीं बचा। प्रदाता के कंसोल में रिचार्ज करें।</string>
+  <string name="error_translate_rate_limited">उपयोग सीमा पूरी हो गई। बाद में फिर प्रयास करें।</string>
+  <string name="error_translate_model_unavailable">यह अनुवाद मॉडल उपलब्ध नहीं है। कृपया ऐप अपडेट करें।</string>
+  <string name="error_translate_network">नेटवर्क त्रुटि। कनेक्शन जाँचें।</string>
+  <string name="error_translate_generic">अनुवाद विफल रहा। फिर से प्रयास करें।</string>
+  <string name="key_saved_credit_hint">कुंजी सत्यापित। अनुवाद के लिए खाते में क्रेडिट या मुफ़्त कोटा भी चाहिए।</string>
+    <string name="translation_context_label">संदर्भ</string>
+    <string name="translation_context_off">बंद</string>
+    <string name="translation_context_nearby">आसपास के वाक्य</string>
+    <string name="translation_context_screen">पूरी स्क्रीन</string>
+    <string name="translation_context_guide">सर्वनाम और अस्पष्ट शब्दों को समझने के लिए आसपास का टेक्स्ट भी भेजता है। अधिक टोकन खर्च होते हैं।</string>
+    <string name="translation_strength_label">अनुवाद शैली</string>
+    <string name="translation_strength_literal">शब्दशः</string>
+    <string name="translation_strength_natural">स्वाभाविक</string>
+    <string name="translation_strength_free">भावानुवाद</string>
+    <string name="translation_domain_label">विषय</string>
+    <string name="translation_domain_general">सामान्य</string>
+    <string name="translation_domain_game">गेम</string>
+    <string name="translation_domain_comic">कॉमिक</string>
+    <string name="translation_domain_tech">तकनीकी</string>
+    <string name="translation_domain_business">व्यवसाय</string>
+</resources>

@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">Traduzione dello schermo</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">Reikalingas leidimas:\nPranešimai</string>
+    <string name="message_permission_notification_detail">Norėdami paleisti Ekrano vertėją, turite suteikti leidimą pranešimams.</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">Reikalingas leidimas:\nRodyti virš kitų programų</string>
+    <string name="message_permission_overlay_detail">Norėdami paleisti Ekrano vertėją, turite suteikti leidimą rodyti virš kitų programų.</string>
+
+    <!-- MediaProjection token -->
+    <string name="message_media_projection">Reikalingas leidimas:\nEkrano įrašymas</string>
+    <string name="message_media_projection_detail">Norėdami paleisti Ekrano vertėją, turite suteikti leidimą įrašyti ekraną.\n\nInformacija ekrane bus naudojama tik vertimui ir nebus saugoma ar perduodama.</string>
+
+    <!-- Foreground Service -->
+    <string name="notification_foreground_service">Ekrano fiksavimo funkcija naudojama vertimui.</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">Uždaryti</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">Versti iš</string>
+    <string name="title_language_list_view_target">Versti į</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">Pasirinkite TTS balsą</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">Būtinas atnaujinimas</string>
+    <string name="message_force_update_detail">Ši versija nebepalaikoma.\nEikite į parduotuvę.</string>
+    <string name="message_service_unavailable">Paslauga nepasiekiama</string>
+    <string name="message_service_unavailable_detail">Paslauga šiuo metu prižiūrima.</string>
+    <string name="message_network_unavailable">Tinklas nepasiekiamas</string>
+    <string name="message_network_unavailable_detail">Tinklas nepasiekiamas.\nPatikrinkite ir bandykite dar kartą.</string>
+    <string name="message_translate_fixedarea_warn">Baterijos įspėjimas</string>
+    <string name="message_translate_fixedarea_warn_detail">Baterija gali greitai išsikrauti.</string>
+    <string name="ad_gate_loading">Ruošiama reklama…</string>
+    <string name="ad_gate_reward_notice">Peržiūrėkite reklamą iki galo ir daugiau reklamų nebus rodoma, kol neuždarysite programos.</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">Nustatymai</string>
+    <string name="settings_menu_cat_pointer">Žymeklis</string>
+    <string name="settings_menu_pointer_docking_delay">Prijungimo delsimas</string>
+    <string name="settings_menu_haptic_feedback_to_detection">Haptinis atsakas aptikus</string>
+    <string name="settings_menu_cat_menubar">Meniu juosta</string>
+    <string name="settings_menu_menubar_visible">Rodyti meniu juostą</string>
+    <string name="settings_menu_menubar_transparency">Meniu skaidrumas</string>
+    <string name="settings_menu_menubar_composition">Meniu juostos sudėtis</string>
+    <string name="settings_menu_cat_translation">Vertimas</string>
+    <string name="settings_menu_translation_transparency">Vertimo skaidrumas</string>
+    <string name="settings_menu_translation_close_delay">Uždarymo delsimas</string>
+    <string name="settings_menu_automated_read_aloud">Automatinis vertimo skaitymas</string>
+    <string name="settings_menu_reply_transparency">Atsakymo skaidrumas</string>
+    <string name="settings_menu_cat_tts">Tekstas į kalbą</string>
+    <string name="settings_menu_tts_read_target">Skaitomas tekstas</string>
+    <string name="settings_tts_read_target_source">Originalas</string>
+    <string name="settings_tts_read_target_target">Vertimas</string>
+    <string name="settings_menu_tts_voices">TTS balsai</string>
+    <string name="settings_menu_tts_rate">TTS greitis</string>
+    <string name="settings_menu_cat_about">Apie</string>
+    <string name="settings_menu_app_version">Programos versija</string>
+    <string name="settings_menu_app_version_latest">(Naujausia)</string>
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">Nėra kiekio ar laiko apribojimų</string>
+    <string name="help_text_deepl_own_key">Naudoja jūsų asmeninį DeepL API raktą</string>
+    <string name="deepl_key_guide">Įveskite savo DeepL API raktą, kad galėtumėte naudoti DeepL vertimą.</string>
+    <string name="deepl_key_signup_guide">Užsiregistruokite DeepL ir galėsite užsiprenumeruoti nemokamą planą.</string>
+    <string name="deepl_key_link_subscription">Užsiprenumeruoti nemokamą planą</string>
+    <string name="deepl_key_link_keys">Patikrinkite savo API raktą</string>
+    <string name="deepl_key_active">Aktyvuota</string>
+    <string name="label_save">Išsaugoti</string>
+    <string name="deepl_key_invalid">API raktas netinkamas.</string>
+    <string name="deepl_key_validating">Tikrinama…</string>
+    <string name="deepl_key_network_error">Nepavyko patikrinti rakto dėl tinklo klaidos. Raktas išsaugotas.</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">Sakiniai parenkami automatiškai.</string>
+    <string name="detect_mode_description_paragraph">Pastraipos aptinkamos automatiškai.</string>
+    <string name="detect_mode_description_select">Galite pasirinkti norimą sritį rankiniu būdu.</string>
+    <string name="detect_mode_description_word">Nurodykite žodį ir jis bus iškart išverstas.</string>
+    <string name="detect_mode_description_fixed_area">Galite nuolat versti fiksuotas sritis, tokias kaip filmų subtitrai.</string>
+  <string name="say_here">Aš čia!</string>
+  <string name="hint_settings_reopen">Dukart bakstelėkite rankenėlę, kad vėl atidarytumėte nustatymus</string>
+  <string name="openai_key_guide">Įveskite savo OpenAI API raktą, kad galėtumėte versti su OpenAI modeliais.</string>
+  <string name="openai_key_signup_guide">Sukurkite raktą OpenAI valdymo skydelyje. Naudojimas apmokestinamas jūsų OpenAI paskyroje.</string>
+  <string name="openai_key_link_keys">Gaukite savo API raktą</string>
+  <string name="openai_key_link_billing">Atsiskaitymas ir naudojimas</string>
+  <string name="openai_model_label">Modelis</string>
+  <string name="help_text_openai_own_key">Naudoja jūsų asmeninį OpenAI API raktą</string>
+  <string name="gemini_key_guide">Įveskite savo Gemini API raktą, kad galėtumėte versti su Gemini modeliais.</string>
+  <string name="help_text_gemini_own_key">Naudoja jūsų asmeninį Gemini API raktą</string>
+  <string name="gemini_key_signup_guide">Sukurkite API raktą sistemoje Google AI Studio. Galimas nemokamas lygis.</string>
+  <string name="claude_key_guide">Įveskite savo Claude API raktą, kad galėtumėte versti su Claude modeliais.</string>
+  <string name="help_text_claude_own_key">Naudoja jūsų asmeninį Claude API raktą</string>
+  <string name="claude_key_signup_guide">Sukurkite API raktą Anthropic Console. Naudojimas apmokestinamas jūsų Anthropic paskyroje.</string>
+    <string name="settings_menu_how_to_use">Naudojimo instrukcija</string>
+    <string name="settings_menu_privacy_policy">Privatumo politika</string>
+    <string name="source_language_no_screen_reader">Ekrano teksto atpažinimas nepalaikomas</string>
+    <string name="ocr_model_preparing">Ruošiamas vertimo variklis. Šiek tiek palaukite.</string>
+    <string name="error_translate_invalid_key">API raktas negalioja. Patikrinkite jį nustatymuose.</string>
+    <string name="error_translate_no_credit">Paskyroje neliko kreditų. Papildykite tiekėjo konsolėje.</string>
+    <string name="error_translate_rate_limited">Pasiektas naudojimo limitas. Bandykite vėliau.</string>
+    <string name="error_translate_model_unavailable">Šis vertimo modelis nepasiekiamas. Atnaujinkite programą.</string>
+    <string name="error_translate_network">Tinklo klaida. Patikrinkite ryšį.</string>
+    <string name="error_translate_generic">Versti nepavyko. Bandykite dar kartą.</string>
+    <string name="key_saved_credit_hint">Raktas patvirtintas. Vertimui taip pat reikia kreditų arba nemokamos kvotos paskyroje.</string>
+    <string name="translation_context_label">Kontekstas</string>
+    <string name="translation_context_off">Išjungta</string>
+    <string name="translation_context_nearby">Gretimi sakiniai</string>
+    <string name="translation_context_screen">Visas ekranas</string>
+    <string name="translation_context_guide">Siunčia aplinkinį tekstą, kad būtų galima nustatyti įvardžius ir daugiareikšmius žodžius. Sunaudoja daugiau žetonų.</string>
+    <string name="translation_strength_label">Vertimo stilius</string>
+    <string name="translation_strength_literal">Pažodinis</string>
+    <string name="translation_strength_natural">Natūralus</string>
+    <string name="translation_strength_free">Laisvas</string>
+    <string name="translation_domain_label">Sritis</string>
+    <string name="translation_domain_general">Bendra</string>
+    <string name="translation_domain_game">Žaidimai</string>
+    <string name="translation_domain_comic">Komiksai</string>
+    <string name="translation_domain_tech">Techninė</string>
+    <string name="translation_domain_business">Verslas</string>
+</resources>

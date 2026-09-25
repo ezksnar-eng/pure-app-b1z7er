@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">ეკრანის მთარგმნელი</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">საჭიროა ნებართვა:\nშეტყობინებები</string>
+    <string name="message_permission_notification_detail">ეკრანის თარჯიმნის გასაშვებად, საჭიროა შეტყობინებების ნებართვის მინიჭება.</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">საჭიროა ნებართვა:\nსხვა აპებზე ზემოდან ჩვენება</string>
+    <string name="message_permission_overlay_detail">ეკრანის თარჯიმნის გასაშვებად, საჭიროა ნებართვა სხვა აპებზე ზემოდან გამოსატანად.</string>
+
+    <!-- MediaProjection token 요청 -->
+    <string name="message_media_projection">საჭიროა ნებართვა:\nეკრანის ჩაწერა</string>
+    <string name="message_media_projection_detail">ეკრანის თარჯიმნის გასაშვებად, საჭიროა ეკრანის ჩაწერის ნებართვა.\n\nეკრანზე არსებული ინფორმაცია გამოიყენება მხოლოდ თარგმნისთვის და არ ინახება ან გადაიგზავნება სხვაგან.</string>
+
+    <!-- Foreground Service 시작 알림 -->
+    <string name="notification_foreground_service">ეკრანის გადაღების ფუნქცია გამოიყენება თარგმნისთვის.</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">დასრულება</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">თარგმნე ამ ენიდან</string>
+    <string name="title_language_list_view_target">თარგმნე ამ ენაზე</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">აირჩიეთ TTS ხმა</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">განახლება აუცილებელია</string>
+    <string name="message_force_update_detail">ამ ვერსიას აღარ აქვს მხარდაჭერა.\nგადასვლა Store-ში.</string>
+    <string name="message_service_unavailable">სერვისი მიუწვდომელია</string>
+    <string name="message_service_unavailable_detail">სერვისი ტექნიკური მომსახურების რეჟიმშია.</string>
+    <string name="message_network_unavailable">ქსელი მიუწვდომელია</string>
+    <string name="message_network_unavailable_detail">ქსელი მიუწვდომელია.\nშეამოწმეთ და სცადეთ ხელახლა.</string>
+    <string name="message_translate_fixedarea_warn">ბატარეის გაფრთხილება</string>
+    <string name="message_translate_fixedarea_warn_detail">ბატარეა შეიძლება სწრაფად დაიცალოს.</string>
+    <string name="ad_gate_loading">რეკლამა მზადდება…</string>
+    <string name="ad_gate_reward_notice">უყურეთ რეკლამას ბოლომდე და აპის დახურვამდე რეკლამა აღარ გამოჩნდება.</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">პარამეტრები</string>
+    <string name="settings_menu_cat_pointer">კურსორი</string>
+    <string name="settings_menu_pointer_docking_delay">შენიშვნის დაყოვნება</string>
+    <string name="settings_menu_haptic_feedback_to_detection">ჰაპტიკური გამოხმაურება აღმოჩენისას</string>
+    <string name="settings_menu_cat_menubar">მენიუს ზოლი</string>
+    <string name="settings_menu_menubar_visible">მენიუს ზოლის ჩვენება</string>
+    <string name="settings_menu_menubar_transparency">მენიუს გამჭვირვალობა</string>
+    <string name="settings_menu_menubar_composition">მენიუს ზოლის შემადგენლობა</string>
+    <string name="settings_menu_cat_translation">თარგმანი</string>
+    <string name="settings_menu_translation_transparency">თარგმნის გამჭვირვალობა</string>
+    <string name="settings_menu_translation_close_delay">დახურვის დაყოვნება</string>
+    <string name="settings_menu_automated_read_aloud">თარგმანის ავტომატური წაკითხვა</string>
+    <string name="settings_menu_reply_transparency">პასუხის გამჭვირვალობა</string>
+    <string name="settings_menu_cat_tts">ტექსტი-სიტყვად</string>
+    <string name="settings_menu_tts_read_target">წაკითხვის ობიექტი</string>
+    <string name="settings_tts_read_target_source">ორიგინალი</string>
+    <string name="settings_tts_read_target_target">თარგმანი</string>
+    <string name="settings_menu_tts_voices">TTS ხმები</string>
+    <string name="settings_menu_tts_rate">TTS სიჩქარე</string>
+    <string name="settings_menu_cat_about">შესახებ</string>
+    <string name="settings_menu_app_version">აპის ვერსია</string>
+    <string name="settings_menu_app_version_latest">(უახლესი)</string>
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">არც რაოდენობრივი და არც დროის შეზღუდვა</string>
+    <string name="help_text_deepl_own_key">იყენებს თქვენს პირად DeepL API გასაღებს</string>
+    <string name="deepl_key_guide">DeepL თარგმანის გამოსაყენებლად შეიყვანეთ თქვენი DeepL API გასაღები.</string>
+    <string name="deepl_key_signup_guide">დარეგისტრირდით DeepL-ზე და შეგიძლიათ გამოიწეროთ უფასო გეგმა.</string>
+    <string name="deepl_key_link_subscription">უფასო გეგმის გამოწერა</string>
+    <string name="deepl_key_link_keys">შეამოწმეთ თქვენი API გასაღები</string>
+    <string name="deepl_key_active">აქტივირებულია</string>
+    <string name="label_save">შენახვა</string>
+    <string name="deepl_key_invalid">API გასაღები არასწორია.</string>
+    <string name="deepl_key_validating">მოწმდება…</string>
+    <string name="deepl_key_network_error">ქსელის შეცდომის გამო გასაღების შემოწმება ვერ მოხერხდა. გასაღები შენახულია.</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">წინადადებები ავტომატურად შეირჩევა.</string>
+    <string name="detect_mode_description_paragraph">პარაგრაფები ავტომატურად ამოიცნობა.</string>
+    <string name="detect_mode_description_select">ასევე შეგიძლიათ აირჩიოთ სასურველი არეალი.</string>
+    <string name="detect_mode_description_word">მიუთითეთ სიტყვაზე და ის მაშინვე ითარგმნება.</string>
+    <string name="detect_mode_description_fixed_area">თქვენ შეგიძლიათ გააგრძელოთ ფიქსირებული უბნების თარგმნა, მაგალითად, ფილმის სუბტიტრები.</string>
+  <string name="say_here">აქ ვარ!</string>
+  <string name="hint_settings_reopen">სახელურზე ორმაგად შეეხეთ პარამეტრების ხელახლა გასახსნელად</string>
+  <string name="openai_key_guide">შეიყვანეთ თქვენი OpenAI API გასაღები OpenAI მოდელებით სათარგმნად.</string>
+  <string name="openai_key_signup_guide">შექმენით გასაღები OpenAI დაფაზე. გამოყენება ერიცხება თქვენს OpenAI ანგარიშს.</string>
+  <string name="openai_key_link_keys">მიიღეთ თქვენი API გასაღები</string>
+  <string name="openai_key_link_billing">გადახდა და გამოყენება</string>
+  <string name="openai_model_label">მოდელი</string>
+  <string name="help_text_openai_own_key">იყენებს თქვენს პირად OpenAI API გასაღებს</string>
+  <string name="gemini_key_guide">შეიყვანეთ თქვენი Gemini API გასაღები Gemini მოდელებით სათარგმნად.</string>
+  <string name="help_text_gemini_own_key">იყენებს თქვენს პირად Gemini API გასაღებს</string>
+  <string name="gemini_key_signup_guide">შექმენით API გასაღები Google AI Studio-ში. ხელმისაწვდომია უფასო დონე.</string>
+  <string name="claude_key_guide">შეიყვანეთ თქვენი Claude API გასაღები Claude მოდელებით სათარგმნად.</string>
+  <string name="help_text_claude_own_key">იყენებს თქვენს პირად Claude API გასაღებს</string>
+  <string name="claude_key_signup_guide">შექმენით API გასაღები Anthropic Console-ში. გამოყენება ერიცხება თქვენს Anthropic ანგარიშს.</string>
+    <string name="settings_menu_how_to_use">გამოყენების ინსტრუქცია</string>
+    <string name="settings_menu_privacy_policy">კონფიდენციალურობის პოლიტიკა</string>
+    <string name="source_language_no_screen_reader">ეკრანის ტექსტის ამოცნობა არ არის მხარდაჭერილი</string>
+    <string name="ocr_model_preparing">თარგმნის ძრავა მზადდება. გთხოვთ, ცოტა ხანი მოიცადოთ.</string>
+    <string name="error_translate_invalid_key">API გასაღები არასწორია. შეამოწმეთ პარამეტრებში.</string>
+    <string name="error_translate_no_credit">ანგარიშზე კრედიტები აღარ არის. შეავსეთ პროვაიდერის კონსოლში.</string>
+    <string name="error_translate_rate_limited">გამოყენების ლიმიტი ამოიწურა. სცადეთ მოგვიანებით.</string>
+    <string name="error_translate_model_unavailable">ეს თარგმნის მოდელი მიუწვდომელია. განაახლეთ აპი.</string>
+    <string name="error_translate_network">ქსელის შეცდომა. შეამოწმეთ კავშირი.</string>
+    <string name="error_translate_generic">თარგმნა ვერ მოხერხდა. სცადეთ ხელახლა.</string>
+    <string name="key_saved_credit_hint">გასაღები დადასტურდა. თარგმნას ასევე სჭირდება კრედიტები ან უფასო კვოტა ანგარიშზე.</string>
+    <string name="translation_context_label">კონტექსტი</string>
+    <string name="translation_context_off">გამორთული</string>
+    <string name="translation_context_nearby">მეზობელი წინადადებები</string>
+    <string name="translation_context_screen">მთელი ეკრანი</string>
+    <string name="translation_context_guide">აგზავნის გარშემო არსებულ ტექსტს, რომ ნაცვალსახელები და ორაზროვანი სიტყვები გაირკვეს. მეტ ტოკენს ხარჯავს.</string>
+    <string name="translation_strength_label">თარგმანის სტილი</string>
+    <string name="translation_strength_literal">სიტყვასიტყვითი</string>
+    <string name="translation_strength_natural">ბუნებრივი</string>
+    <string name="translation_strength_free">თავისუფალი</string>
+    <string name="translation_domain_label">სფერო</string>
+    <string name="translation_domain_general">ზოგადი</string>
+    <string name="translation_domain_game">თამაშები</string>
+    <string name="translation_domain_comic">კომიქსი</string>
+    <string name="translation_domain_tech">ტექნიკური</string>
+    <string name="translation_domain_business">ბიზნესი</string>
+</resources>

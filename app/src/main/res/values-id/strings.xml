@@ -1,0 +1,124 @@
+<resources>
+  <string name="app_name">Terjemahan layar</string>
+
+  <!-- Notification Permission -->
+  <string name="message_permission_notification">Izin yang dibutuhkan:\nNotifikasi</string>
+  <string name="message_permission_notification_detail">Untuk menjalankan Penerjemah Layar, Anda perlu memberikan izin notifikasi.</string>
+
+  <!-- Overlay Permission -->
+  <string name="message_permission_overlay">Izin yang dibutuhkan:\nTampilkan di atas aplikasi lain</string>
+  <string name="message_permission_overlay_detail">Untuk menjalankan Penerjemah Layar, Anda perlu memberikan izin untuk tampil di atas aplikasi lain.</string>
+
+  <!-- MediaProjection token 요청 -->
+  <string name="message_media_projection">Izin yang dibutuhkan:\nPerekaman layar</string>
+  <string name="message_media_projection_detail">Untuk menjalankan Penerjemah Layar, Anda perlu memberikan izin perekaman layar.\n\nInformasi di layar hanya digunakan untuk keperluan terjemahan dan tidak akan disimpan atau dikirim ke mana pun.</string>
+
+  <!-- Foreground Service 시작 알림 -->
+  <string name="notification_foreground_service">Fungsi tangkap layar sedang digunakan untuk keperluan penerjemahan.</string>
+
+  <!-- OverlayService -->
+  <string name="service_menu_finish">Selesai</string>
+
+  <!-- LanguageListView -->
+  <string name="title_language_list_view_source">Terjemahkan dari</string>
+  <string name="title_language_list_view_target">Terjemahkan ke</string>
+
+  <!-- VoiceListView -->
+  <string name="title_voice_list_view">Pilih suara TTS</string>
+
+  <!-- Dialog -->
+  <string name="message_force_update">Perlu diperbarui</string>
+  <string name="message_force_update_detail">Versi ini tidak lagi didukung.\nBuka Play Store.</string>
+  <string name="message_service_unavailable">Layanan tidak tersedia</string>
+  <string name="message_service_unavailable_detail">Layanan sedang dalam pemeliharaan.</string>
+  <string name="message_network_unavailable">Jaringan tidak tersedia</string>
+  <string name="message_network_unavailable_detail">Jaringan tidak tersedia.\nPeriksa dan coba lagi.</string>
+  <string name="message_translate_fixedarea_warn">Peringatan baterai</string>
+  <string name="message_translate_fixedarea_warn_detail">Baterai mungkin cepat habis.</string>
+  <string name="ad_gate_loading">Menyiapkan iklan…</string>
+  <string name="ad_gate_reward_notice">Tonton iklan sampai selesai dan iklan tidak akan muncul lagi sampai Anda menutup aplikasi.</string>
+
+  <!-- SettingsActivity -->
+  <string name="settings_title">Pengaturan</string>
+  <string name="settings_menu_cat_pointer">Penunjuk</string>
+  <string name="settings_menu_pointer_docking_delay">Tunda pemasangan</string>
+  <string name="settings_menu_haptic_feedback_to_detection">Umpan balik haptik saat terdeteksi</string>
+  <string name="settings_menu_cat_menubar">Bilah menu</string>
+    <string name="settings_menu_menubar_visible">Tampilkan bilah menu</string>
+  <string name="settings_menu_menubar_transparency">Transparansi menu</string>
+  <string name="settings_menu_menubar_composition">Komposisi bilah menu</string>
+  <string name="settings_menu_cat_translation">Terjemahan</string>
+  <string name="settings_menu_translation_transparency">Transparansi terjemahan</string>
+  <string name="settings_menu_translation_close_delay">Tunda penutupan</string>
+  <string name="settings_menu_automated_read_aloud">Baca terjemahan otomatis</string>
+  <string name="settings_menu_reply_transparency">Transparansi balasan</string>
+  <string name="settings_menu_cat_tts">Teks ke Ucapan</string>
+  <string name="settings_menu_tts_read_target">Teks yang dibaca</string>
+  <string name="settings_tts_read_target_source">Asli</string>
+  <string name="settings_tts_read_target_target">Terjemahan</string>
+  <string name="settings_menu_tts_voices">Suara TTS</string>
+  <string name="settings_menu_tts_rate">Kecepatan TTS</string>
+  <string name="settings_menu_cat_about">Tentang</string>
+  <string name="settings_menu_app_version">Versi aplikasi</string>
+  <string name="settings_menu_app_version_latest">(Terbaru)</string>
+
+  <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+  <string name="help_text_no_limit_free">Tanpa batas jumlah, tanpa batas waktu</string>
+  <string name="help_text_deepl_own_key">Menggunakan kunci API DeepL pribadi Anda</string>
+  <string name="deepl_key_guide">Masukkan kunci API DeepL Anda untuk menggunakan terjemahan DeepL.</string>
+  <string name="deepl_key_signup_guide">Daftar di DeepL dan Anda dapat berlangganan paket gratis.</string>
+  <string name="deepl_key_link_subscription">Berlangganan paket gratis</string>
+  <string name="deepl_key_link_keys">Periksa kunci API Anda</string>
+  <string name="deepl_key_active">Diaktifkan</string>
+  <string name="label_save">Simpan</string>
+  <string name="deepl_key_invalid">Kunci API tidak valid.</string>
+  <string name="deepl_key_validating">Memverifikasi…</string>
+  <string name="deepl_key_network_error">Kunci tidak dapat diverifikasi karena kesalahan jaringan. Kunci telah disimpan.</string>
+
+  <!-- Detect-mode descriptions -->
+  <string name="detect_mode_description_sentence">Kalimat dipilih secara otomatis.</string>
+  <string name="detect_mode_description_paragraph">Unit paragraf dikenali secara otomatis.</string>
+  <string name="detect_mode_description_select">Anda juga dapat menentukan area yang ingin diterjemahkan.</string>
+  <string name="detect_mode_description_word">Arahkan ke sebuah kata untuk menerjemahkannya seketika.</string>
+  <string name="detect_mode_description_fixed_area">Anda dapat menerjemahkan area tetap secara terus-menerus, seperti subtitle film.</string>
+  <string name="say_here">Saya di sini!</string>
+  <string name="hint_settings_reopen">Ketuk dua kali gagang untuk membuka setelan lagi</string>
+  <string name="openai_key_guide">Masukkan kunci OpenAI API Anda untuk menerjemahkan dengan model OpenAI.</string>
+  <string name="openai_key_signup_guide">Buat kunci di dasbor OpenAI. Penggunaan ditagihkan ke akun OpenAI Anda.</string>
+  <string name="openai_key_link_keys">Dapatkan kunci API Anda</string>
+  <string name="openai_key_link_billing">Penagihan dan penggunaan</string>
+  <string name="openai_model_label">Model</string>
+  <string name="help_text_openai_own_key">Menggunakan kunci API OpenAI pribadi Anda</string>
+  <string name="gemini_key_guide">Masukkan kunci Gemini API Anda untuk menerjemahkan dengan model Gemini.</string>
+  <string name="help_text_gemini_own_key">Menggunakan kunci API Gemini pribadi Anda</string>
+  <string name="gemini_key_signup_guide">Buat kunci API di Google AI Studio. Tersedia paket gratis.</string>
+  <string name="claude_key_guide">Masukkan kunci Claude API Anda untuk menerjemahkan dengan model Claude.</string>
+  <string name="help_text_claude_own_key">Menggunakan kunci API Claude pribadi Anda</string>
+  <string name="claude_key_signup_guide">Buat kunci API di Anthropic Console. Penggunaan ditagihkan ke akun Anthropic Anda.</string>
+  <string name="settings_menu_how_to_use">Cara penggunaan</string>
+  <string name="settings_menu_privacy_policy">Kebijakan privasi</string>
+  <string name="source_language_no_screen_reader">Pengenalan teks layar tidak didukung</string>
+  <string name="ocr_model_preparing">Menyiapkan mesin terjemahan. Harap tunggu sebentar.</string>
+  <string name="error_translate_invalid_key">Kunci API tidak valid. Periksa di Setelan.</string>
+  <string name="error_translate_no_credit">Kredit di akun habis. Isi ulang di konsol penyedia.</string>
+  <string name="error_translate_rate_limited">Batas penggunaan tercapai. Coba lagi nanti.</string>
+  <string name="error_translate_model_unavailable">Model terjemahan ini tidak tersedia. Perbarui aplikasi.</string>
+  <string name="error_translate_network">Kesalahan jaringan. Periksa koneksi Anda.</string>
+  <string name="error_translate_generic">Terjemahan gagal. Coba lagi.</string>
+  <string name="key_saved_credit_hint">Kunci terverifikasi. Menerjemahkan juga memerlukan kredit atau kuota gratis di akun.</string>
+    <string name="translation_context_label">Konteks</string>
+    <string name="translation_context_off">Nonaktif</string>
+    <string name="translation_context_nearby">Kalimat sekitar</string>
+    <string name="translation_context_screen">Seluruh layar</string>
+    <string name="translation_context_guide">Mengirim teks di sekitar agar kata ganti dan kata ambigu dapat dipahami. Menggunakan lebih banyak token.</string>
+    <string name="translation_strength_label">Gaya terjemahan</string>
+    <string name="translation_strength_literal">Harfiah</string>
+    <string name="translation_strength_natural">Alami</string>
+    <string name="translation_strength_free">Bebas</string>
+    <string name="translation_domain_label">Bidang</string>
+    <string name="translation_domain_general">Umum</string>
+    <string name="translation_domain_game">Game</string>
+    <string name="translation_domain_comic">Komik</string>
+    <string name="translation_domain_tech">Teknis</string>
+    <string name="translation_domain_business">Bisnis</string>
+</resources>

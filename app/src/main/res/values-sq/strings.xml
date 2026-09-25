@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">Përkthimi në ekran</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">Leje e nevojshme:\nNjoftimet</string>
+    <string name="message_permission_notification_detail">Për të nisur Përkthyesin e Ekranit, duhet të jepni leje për njoftimet.</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">Leje e nevojshme:\nShfaq mbi aplikacione të tjera</string>
+    <string name="message_permission_overlay_detail">Për të nisur Përkthyesin e Ekranit, duhet të jepni leje për shfaqje mbi aplikacione të tjera.</string>
+
+    <!-- MediaProjection token 요청 -->
+    <string name="message_media_projection">Leje e nevojshme:\nRegjistrimi i ekranit</string>
+    <string name="message_media_projection_detail">Për të nisur Përkthyesin e Ekranit, duhet të jepni leje për regjistrimin e ekranit.\n\nInformacioni në ekran përdoret vetëm për përkthim dhe nuk ruhet apo dërgohet askund.</string>
+
+    <!-- Foreground Service 시작 알림 -->
+    <string name="notification_foreground_service">Funksioni i kapjes së ekranit po përdoret për përkthim.</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">Mbaro</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">Përkthe nga</string>
+    <string name="title_language_list_view_target">Përkthe në</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">Zgjidhni zërin TTS</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">Përditësim i nevojshëm</string>
+    <string name="message_force_update_detail">Kjo version nuk mbështetet më.\nShkoni te Dyqani.</string>
+    <string name="message_service_unavailable">Shërbimi nuk është i disponueshëm</string>
+    <string name="message_service_unavailable_detail">Shërbimi është në mirëmbajtje.</string>
+    <string name="message_network_unavailable">Rrjeti nuk është i disponueshëm</string>
+    <string name="message_network_unavailable_detail">Rrjeti nuk është i disponueshëm.\nJu lutem kontrolloni dhe provoni përsëri.</string>
+    <string name="message_translate_fixedarea_warn">Paralajmërim për baterinë</string>
+    <string name="message_translate_fixedarea_warn_detail">Bateria mund të shkarkohet shpejt.</string>
+    <string name="ad_gate_loading">Reklama po përgatitet…</string>
+    <string name="ad_gate_reward_notice">Shikojeni reklamën deri në fund dhe nuk do të shfaqen më reklama derisa ta mbyllni aplikacionin.</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">Cilësimet</string>
+    <string name="settings_menu_cat_pointer">Tregues</string>
+    <string name="settings_menu_pointer_docking_delay">Vonese lidhjeje</string>
+    <string name="settings_menu_haptic_feedback_to_detection">Përgjigje haptike kur zbulohet</string>
+    <string name="settings_menu_cat_menubar">Shirit menu</string>
+    <string name="settings_menu_menubar_visible">Shfaq shiritin e menysë</string>
+    <string name="settings_menu_menubar_transparency">Përshkueshmëria e menusë</string>
+    <string name="settings_menu_menubar_composition">Përbërja e shiritit të menysë</string>
+    <string name="settings_menu_cat_translation">Përkthim</string>
+    <string name="settings_menu_translation_transparency">Përshkueshmëria e përkthimit</string>
+    <string name="settings_menu_translation_close_delay">Vonese mbylljeje</string>
+    <string name="settings_menu_automated_read_aloud">Lexim automatik i përkthimit</string>
+    <string name="settings_menu_reply_transparency">Përshkueshmëria e përgjigjes</string>
+    <string name="settings_menu_cat_tts">Tekst në të folur</string>
+    <string name="settings_menu_tts_read_target">Teksti që lexohet</string>
+    <string name="settings_tts_read_target_source">Origjinali</string>
+    <string name="settings_tts_read_target_target">Përkthimi</string>
+    <string name="settings_menu_tts_voices">Zëra TTS</string>
+    <string name="settings_menu_tts_rate">Shpejtësia TTS</string>
+    <string name="settings_menu_cat_about">Rreth</string>
+    <string name="settings_menu_app_version">Versioni i aplikacionit</string>
+    <string name="settings_menu_app_version_latest">(Më i fundit)</string>
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">Pa kufizime në sasi, pa kufizime në kohë</string>
+    <string name="help_text_deepl_own_key">Përdor çelësin tuaj personal API të DeepL</string>
+    <string name="deepl_key_guide">Vendosni çelësin tuaj API të DeepL për të përdorur përkthimin e DeepL.</string>
+    <string name="deepl_key_signup_guide">Regjistrohuni në DeepL dhe mund të abonoheni në planin falas.</string>
+    <string name="deepl_key_link_subscription">Abonohuni në planin falas</string>
+    <string name="deepl_key_link_keys">Kontrolloni çelësin tuaj API</string>
+    <string name="deepl_key_active">Aktivizuar</string>
+    <string name="label_save">Ruaj</string>
+    <string name="deepl_key_invalid">Çelësi API nuk është i vlefshëm.</string>
+    <string name="deepl_key_validating">Po verifikohet…</string>
+    <string name="deepl_key_network_error">Çelësi nuk mund të verifikohej për shkak të një gabimi rrjeti. Çelësi u ruajt.</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">Fjalitë zgjidhen automatikisht.</string>
+    <string name="detect_mode_description_paragraph">Paragrafët njihen automatikisht.</string>
+    <string name="detect_mode_description_select">Mund të përzgjedhësh zonën që dëshiron.</string>
+    <string name="detect_mode_description_word">Drejtojeni te një fjalë që të përkthehet menjëherë.</string>
+    <string name="detect_mode_description_fixed_area">Mund të përktheni vazhdimisht zona fikse, si p.sh. titrat e filmave.</string>
+  <string name="say_here">Jam këtu!</string>
+  <string name="hint_settings_reopen">Trokitni dy herë mbi dorezën për të hapur sërish cilësimet</string>
+  <string name="openai_key_guide">Vendosni çelësin tuaj OpenAI API për të përkthyer me modelet e OpenAI.</string>
+  <string name="openai_key_signup_guide">Krijoni një çelës në panelin e OpenAI. Përdorimi faturohet në llogarinë tuaj OpenAI.</string>
+  <string name="openai_key_link_keys">Merrni çelësin tuaj API</string>
+  <string name="openai_key_link_billing">Faturimi dhe përdorimi</string>
+  <string name="openai_model_label">Modeli</string>
+  <string name="help_text_openai_own_key">Përdor çelësin tuaj personal API të OpenAI</string>
+  <string name="gemini_key_guide">Vendosni çelësin tuaj Gemini API për të përkthyer me modelet e Gemini.</string>
+  <string name="help_text_gemini_own_key">Përdor çelësin tuaj personal API të Gemini</string>
+  <string name="gemini_key_signup_guide">Krijoni një çelës API në Google AI Studio. Ofrohet një nivel falas.</string>
+  <string name="claude_key_guide">Vendosni çelësin tuaj Claude API për të përkthyer me modelet e Claude.</string>
+  <string name="help_text_claude_own_key">Përdor çelësin tuaj personal API të Claude</string>
+  <string name="claude_key_signup_guide">Krijoni një çelës API në Anthropic Console. Përdorimi faturohet në llogarinë tuaj Anthropic.</string>
+    <string name="settings_menu_how_to_use">Si të përdoret</string>
+    <string name="settings_menu_privacy_policy">Politika e privatësisë</string>
+    <string name="source_language_no_screen_reader">Njohja e tekstit në ekran nuk mbështetet</string>
+    <string name="ocr_model_preparing">Motori i përkthimit po përgatitet. Ju lutemi prisni pak.</string>
+    <string name="error_translate_invalid_key">Çelësi API është i pavlefshëm. Kontrollojeni te cilësimet.</string>
+    <string name="error_translate_no_credit">Nuk kanë mbetur kredite në llogari. Rimbushni në konsolën e ofruesit.</string>
+    <string name="error_translate_rate_limited">U arrit kufiri i përdorimit. Provoni më vonë.</string>
+    <string name="error_translate_model_unavailable">Ky model përkthimi nuk është i disponueshëm. Përditësoni aplikacionin.</string>
+    <string name="error_translate_network">Gabim rrjeti. Kontrolloni lidhjen.</string>
+    <string name="error_translate_generic">Përkthimi dështoi. Provoni përsëri.</string>
+    <string name="key_saved_credit_hint">Çelësi u verifikua. Përkthimi kërkon edhe kredite ose kuotë falas në llogari.</string>
+    <string name="translation_context_label">Konteksti</string>
+    <string name="translation_context_off">Joaktiv</string>
+    <string name="translation_context_nearby">Fjalitë përreth</string>
+    <string name="translation_context_screen">I gjithë ekrani</string>
+    <string name="translation_context_guide">Dërgon tekstin përreth që të kuptohen përemrat dhe fjalët e paqarta. Përdor më shumë token.</string>
+    <string name="translation_strength_label">Stili i përkthimit</string>
+    <string name="translation_strength_literal">Fjalë për fjalë</string>
+    <string name="translation_strength_natural">Natyral</string>
+    <string name="translation_strength_free">I lirë</string>
+    <string name="translation_domain_label">Fusha</string>
+    <string name="translation_domain_general">E përgjithshme</string>
+    <string name="translation_domain_game">Lojëra</string>
+    <string name="translation_domain_comic">Komik</string>
+    <string name="translation_domain_tech">Teknike</string>
+    <string name="translation_domain_business">Biznes</string>
+</resources>

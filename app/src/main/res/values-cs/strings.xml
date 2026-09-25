@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">Překlad obrazovky</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">Požadované oprávnění:\nOznámení</string>
+    <string name="message_permission_notification_detail">Pro spuštění Překladače Obrazovky je nutné povolit oznámení.</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">Požadované oprávnění:\nZobrazit nad ostatními aplikacemi</string>
+    <string name="message_permission_overlay_detail">Pro spuštění Překladače Obrazovky je nutné povolit překrytí nad ostatními aplikacemi.</string>
+
+    <!-- MediaProjection token 요청 -->
+    <string name="message_media_projection">Požadované oprávnění:\nZáznam obrazovky</string>
+    <string name="message_media_projection_detail">Pro spuštění Překladače Obrazovky je nutné povolit záznam obrazovky.\n\nZachycený obsah slouží pouze k překladům a nebude nikde uložen ani odeslán.</string>
+
+    <!-- Foreground Service 시작 알림 -->
+    <string name="notification_foreground_service">Funkce snímání obrazovky je využívána pro překlad.</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">Ukončit</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">Překládat z</string>
+    <string name="title_language_list_view_target">Překládat do</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">Vyberte hlas TTS</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">Je vyžadována aktualizace</string>
+    <string name="message_force_update_detail">Tato verze již není podporována.\nPřejděte do obchodu.</string>
+    <string name="message_service_unavailable">Služba není dostupná</string>
+    <string name="message_service_unavailable_detail">Služba je momentálně v údržbě.</string>
+    <string name="message_network_unavailable">Síť není dostupná</string>
+    <string name="message_network_unavailable_detail">Síť není dostupná.\nZkontrolujte připojení a zkuste to znovu.</string>
+    <string name="message_translate_fixedarea_warn">Upozornění na baterii</string>
+    <string name="message_translate_fixedarea_warn_detail">Baterie se může rychle vybít.</string>
+    <string name="ad_gate_loading">Připravuje se reklama…</string>
+    <string name="ad_gate_reward_notice">Zhlédněte reklamu až do konce a další reklamy se nezobrazí, dokud aplikaci nezavřete.</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">Nastavení</string>
+    <string name="settings_menu_cat_pointer">Ukazatel</string>
+    <string name="settings_menu_pointer_docking_delay">Zpoždění dokování</string>
+    <string name="settings_menu_haptic_feedback_to_detection">Haptická odezva při detekci</string>
+    <string name="settings_menu_cat_menubar">Panel menu</string>
+    <string name="settings_menu_menubar_visible">Zobraziť panel nabídek</string>
+    <string name="settings_menu_menubar_transparency">Průhlednost menu</string>
+    <string name="settings_menu_menubar_composition">Uspořádání panelu nabídek</string>
+    <string name="settings_menu_cat_translation">Překlad</string>
+    <string name="settings_menu_translation_transparency">Průhlednost překladu</string>
+    <string name="settings_menu_translation_close_delay">Zpoždění zavření</string>
+    <string name="settings_menu_automated_read_aloud">Automatické čtení překladu</string>
+    <string name="settings_menu_reply_transparency">Průhlednost odpovědi</string>
+    <string name="settings_menu_cat_tts">Převod textu</string>
+    <string name="settings_menu_tts_read_target">Čtený text</string>
+    <string name="settings_tts_read_target_source">Originál</string>
+    <string name="settings_tts_read_target_target">Překlad</string>
+    <string name="settings_menu_tts_voices">Hlasy TTS</string>
+    <string name="settings_menu_tts_rate">Rychlost TTS</string>
+    <string name="settings_menu_cat_about">O aplikaci</string>
+    <string name="settings_menu_app_version">Verze aplikace</string>
+    <string name="settings_menu_app_version_latest">(Nejnovější)</string>
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">Bez omezení množství, bez časového omezení</string>
+    <string name="help_text_deepl_own_key">Používá váš osobní klíč API DeepL</string>
+    <string name="deepl_key_guide">Zadejte svůj klíč API DeepL a používejte překlad DeepL.</string>
+    <string name="deepl_key_signup_guide">Zaregistrujte se u DeepL a můžete si předplatit bezplatný plán.</string>
+    <string name="deepl_key_link_subscription">Předplatit bezplatný plán</string>
+    <string name="deepl_key_link_keys">Zkontrolovat váš klíč API</string>
+    <string name="deepl_key_active">Aktivováno</string>
+    <string name="label_save">Uložit</string>
+    <string name="deepl_key_invalid">Klíč API není platný.</string>
+    <string name="deepl_key_validating">Ověřování…</string>
+    <string name="deepl_key_network_error">Klíč se nepodařilo ověřit kvůli chybě sítě. Klíč byl uložen.</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">Věty se vybírají automaticky.</string>
+    <string name="detect_mode_description_paragraph">Odstavce jsou rozpoznány automaticky.</string>
+    <string name="detect_mode_description_select">Můžete také vybrat konkrétní oblast pro překlad.</string>
+    <string name="detect_mode_description_word">Ukažte na slovo a ihned se přeloží.</string>
+    <string name="detect_mode_description_fixed_area">Můžete nepřetržitě překládat pevné oblasti, jako jsou filmové titulky.</string>
+  <string name="say_here">Jsem tady!</string>
+  <string name="hint_settings_reopen">Dvojitým klepnutím na úchyt znovu otevřete nastavení</string>
+  <string name="openai_key_guide">Zadejte svůj klíč OpenAI API pro překlad pomocí modelů OpenAI.</string>
+  <string name="openai_key_signup_guide">Vytvořte klíč na řídicím panelu OpenAI. Používání se účtuje na váš účet OpenAI.</string>
+  <string name="openai_key_link_keys">Získejte svůj klíč API</string>
+  <string name="openai_key_link_billing">Fakturace a využití</string>
+  <string name="openai_model_label">Model</string>
+  <string name="help_text_openai_own_key">Používá váš osobní klíč API OpenAI</string>
+  <string name="gemini_key_guide">Zadejte svůj klíč Gemini API pro překlad pomocí modelů Gemini.</string>
+  <string name="help_text_gemini_own_key">Používá váš osobní klíč API Gemini</string>
+  <string name="gemini_key_signup_guide">Vytvořte klíč API v Google AI Studio. K dispozici je bezplatná úroveň.</string>
+  <string name="claude_key_guide">Zadejte svůj klíč Claude API pro překlad pomocí modelů Claude.</string>
+  <string name="help_text_claude_own_key">Používá váš osobní klíč API Claude</string>
+  <string name="claude_key_signup_guide">Vytvořte klíč API v Anthropic Console. Použití se účtuje na váš účet Anthropic.</string>
+    <string name="settings_menu_how_to_use">Jak používat</string>
+    <string name="settings_menu_privacy_policy">Zásady ochrany osobních údajů</string>
+    <string name="source_language_no_screen_reader">Rozpoznávání textu na obrazovce není podporováno</string>
+    <string name="ocr_model_preparing">Připravuje se překladový modul. Chvíli počkejte, prosím.</string>
+    <string name="error_translate_invalid_key">Klíč API je neplatný. Zkontrolujte ho v nastavení.</string>
+    <string name="error_translate_no_credit">Na účtu nezbývají kredity. Dobijte je v konzoli poskytovatele.</string>
+    <string name="error_translate_rate_limited">Bylo dosaženo limitu využití. Zkuste to později.</string>
+    <string name="error_translate_model_unavailable">Tento překladový model není dostupný. Aktualizujte aplikaci.</string>
+    <string name="error_translate_network">Chyba sítě. Zkontrolujte připojení.</string>
+    <string name="error_translate_generic">Překlad se nezdařil. Zkuste to znovu.</string>
+    <string name="key_saved_credit_hint">Klíč ověřen. Překlad vyžaduje také kredity nebo bezplatnou kvótu na účtu.</string>
+    <string name="translation_context_label">Kontext</string>
+    <string name="translation_context_off">Vypnuto</string>
+    <string name="translation_context_nearby">Okolní věty</string>
+    <string name="translation_context_screen">Celá obrazovka</string>
+    <string name="translation_context_guide">Odešle okolní text, aby bylo možné určit zájmena a víceznačná slova. Spotřebuje více tokenů.</string>
+    <string name="translation_strength_label">Styl překladu</string>
+    <string name="translation_strength_literal">Doslovný</string>
+    <string name="translation_strength_natural">Přirozený</string>
+    <string name="translation_strength_free">Volný</string>
+    <string name="translation_domain_label">Obor</string>
+    <string name="translation_domain_general">Obecné</string>
+    <string name="translation_domain_game">Hry</string>
+    <string name="translation_domain_comic">Komiks</string>
+    <string name="translation_domain_tech">Technika</string>
+    <string name="translation_domain_business">Byznys</string>
+</resources>

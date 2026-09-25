@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">Ekraanitõlge</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">Nõutav luba:\nTeavitused</string>
+    <string name="message_permission_notification_detail">Ekraanitõlkija kasutamiseks peate lubama teavitused.</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">Nõutav luba:\nKuva teiste rakenduste kohal</string>
+    <string name="message_permission_overlay_detail">Ekraanitõlkija kasutamiseks peate lubama kuvamise teiste rakenduste kohal.</string>
+
+    <!-- MediaProjection token -->
+    <string name="message_media_projection">Nõutav luba:\nEkraani salvestamine</string>
+    <string name="message_media_projection_detail">Ekraanitõlkija kasutamiseks peate lubama ekraani salvestamise.\n\nEkraanilt kogutud teavet kasutatakse ainult tõlkimiseks ega salvestata ega jagata.</string>
+
+    <!-- Foreground Service -->
+    <string name="notification_foreground_service">Ekraani salvestamise funktsioon on tõlkimiseks aktiivne.</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">Lõpeta</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">Tõlgi keelest</string>
+    <string name="title_language_list_view_target">Tõlgi keelde</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">Vali TTS-hääl</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">Värskendus vajalik</string>
+    <string name="message_force_update_detail">See versioon ei ole enam toetatud.\nPalun külastage poodi.</string>
+    <string name="message_service_unavailable">Teenuse ajutine katkestus</string>
+    <string name="message_service_unavailable_detail">Teenust hooldatakse praegu.</string>
+    <string name="message_network_unavailable">Võrk pole saadaval</string>
+    <string name="message_network_unavailable_detail">Võrk pole saadaval.\nKontrollige ühendust ja proovige uuesti.</string>
+    <string name="message_translate_fixedarea_warn">Akutähtsus</string>
+    <string name="message_translate_fixedarea_warn_detail">Aku võib kiiresti tühjeneda.</string>
+    <string name="ad_gate_loading">Reklaami ettevalmistamine…</string>
+    <string name="ad_gate_reward_notice">Vaata reklaam lõpuni ja rohkem reklaame ei kuvata enne, kui rakenduse sulged.</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">Seaded</string>
+    <string name="settings_menu_cat_pointer">Kursor</string>
+    <string name="settings_menu_pointer_docking_delay">Dokkimise viivitus</string>
+    <string name="settings_menu_haptic_feedback_to_detection">Haptiline tagasiside tuvastusel</string>
+    <string name="settings_menu_cat_menubar">Menüüriba</string>
+    <string name="settings_menu_menubar_visible">Kuva menüüriba</string>
+    <string name="settings_menu_menubar_transparency">Menüü läbipaistvus</string>
+    <string name="settings_menu_menubar_composition">Menüüriba paigutus</string>
+    <string name="settings_menu_cat_translation">Tõlge</string>
+    <string name="settings_menu_translation_transparency">Tõlke läbipaistvus</string>
+    <string name="settings_menu_translation_close_delay">Sulgemise viivitus</string>
+    <string name="settings_menu_automated_read_aloud">Tõlke automaatne ettelugemine</string>
+    <string name="settings_menu_reply_transparency">Vastuse läbipaistvus</string>
+    <string name="settings_menu_cat_tts">Tekst kõneks</string>
+    <string name="settings_menu_tts_read_target">Loetav tekst</string>
+    <string name="settings_tts_read_target_source">Originaal</string>
+    <string name="settings_tts_read_target_target">Tõlge</string>
+    <string name="settings_menu_tts_voices">TTS hääled</string>
+    <string name="settings_menu_tts_rate">TTS kiirus</string>
+    <string name="settings_menu_cat_about">Teave</string>
+    <string name="settings_menu_app_version">Rakenduse versioon</string>
+    <string name="settings_menu_app_version_latest">(Uusim)</string>
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">Ei mingit koguse ega ajapiirangut</string>
+    <string name="help_text_deepl_own_key">Kasutab teie isiklikku DeepL-i API-võtit</string>
+    <string name="deepl_key_guide">DeepL-i tõlke kasutamiseks sisestage oma DeepL-i API-võti.</string>
+    <string name="deepl_key_signup_guide">Registreeruge DeepL-is ja saate tellida tasuta paketi.</string>
+    <string name="deepl_key_link_subscription">Telli tasuta pakett</string>
+    <string name="deepl_key_link_keys">Kontrolli oma API-võtit</string>
+    <string name="deepl_key_active">Aktiveeritud</string>
+    <string name="label_save">Salvesta</string>
+    <string name="deepl_key_invalid">API-võti ei ole kehtiv.</string>
+    <string name="deepl_key_validating">Kontrollimine…</string>
+    <string name="deepl_key_network_error">Võtit ei õnnestunud võrguvea tõttu kontrollida. Võti salvestati.</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">Laused valitakse automaatselt.</string>
+    <string name="detect_mode_description_paragraph">Lõigud tuvastatakse automaatselt.</string>
+    <string name="detect_mode_description_select">Saate ka soovitud ala käsitsi valida.</string>
+    <string name="detect_mode_description_word">Osuta sõnale, et see kohe tõlkida.</string>
+    <string name="detect_mode_description_fixed_area">Saad pidevalt tõlkida fikseeritud alasid, näiteks filmide subtiitreid.</string>
+  <string name="say_here">Olen siin!</string>
+  <string name="hint_settings_reopen">Seadete uuesti avamiseks topeltpuudutage pidet</string>
+  <string name="openai_key_guide">Sisestage oma OpenAI API-võti, et tõlkida OpenAI mudelitega.</string>
+  <string name="openai_key_signup_guide">Looge võti OpenAI juhtpaneelil. Kasutus arveldatakse teie OpenAI kontole.</string>
+  <string name="openai_key_link_keys">Hankige oma API-võti</string>
+  <string name="openai_key_link_billing">Arveldus ja kasutus</string>
+  <string name="openai_model_label">Mudel</string>
+  <string name="help_text_openai_own_key">Kasutab teie isiklikku OpenAI-i API-võtit</string>
+  <string name="gemini_key_guide">Sisestage oma Gemini API-võti, et tõlkida Gemini mudelitega.</string>
+  <string name="help_text_gemini_own_key">Kasutab teie isiklikku Gemini-i API-võtit</string>
+  <string name="gemini_key_signup_guide">Looge Google AI Studios API-võti. Saadaval on tasuta tase.</string>
+  <string name="claude_key_guide">Sisestage oma Claude API-võti, et tõlkida Claude mudelitega.</string>
+  <string name="help_text_claude_own_key">Kasutab teie isiklikku Claude-i API-võtit</string>
+  <string name="claude_key_signup_guide">Looge API-võti keskkonnas Anthropic Console. Kasutuse eest esitatakse arve teie Anthropic kontole.</string>
+    <string name="settings_menu_how_to_use">Kasutusjuhend</string>
+    <string name="settings_menu_privacy_policy">Privaatsuspoliitika</string>
+    <string name="source_language_no_screen_reader">Ekraaniteksti tuvastamist ei toetata</string>
+    <string name="ocr_model_preparing">Tõlkemootori ettevalmistamine. Palun oota hetk.</string>
+    <string name="error_translate_invalid_key">API võti on kehtetu. Kontrolli seda seadetes.</string>
+    <string name="error_translate_no_credit">Kontol pole krediiti. Lisa seda teenusepakkuja konsoolis.</string>
+    <string name="error_translate_rate_limited">Kasutuslimiit on täis. Proovi hiljem uuesti.</string>
+    <string name="error_translate_model_unavailable">See tõlkemudel pole saadaval. Palun uuenda rakendust.</string>
+    <string name="error_translate_network">Võrguviga. Kontrolli ühendust.</string>
+    <string name="error_translate_generic">Tõlkimine ebaõnnestus. Proovi uuesti.</string>
+    <string name="key_saved_credit_hint">Võti kinnitatud. Tõlkimiseks on vaja ka krediiti või tasuta kvooti kontol.</string>
+    <string name="translation_context_label">Kontekst</string>
+    <string name="translation_context_off">Väljas</string>
+    <string name="translation_context_nearby">Lähedased laused</string>
+    <string name="translation_context_screen">Kogu ekraan</string>
+    <string name="translation_context_guide">Saadab ümbritseva teksti, et tuvastada asesõnad ja mitmetähenduslikud sõnad. Kulutab rohkem tokeneid.</string>
+    <string name="translation_strength_label">Tõlkestiil</string>
+    <string name="translation_strength_literal">Sõnasõnaline</string>
+    <string name="translation_strength_natural">Loomulik</string>
+    <string name="translation_strength_free">Vaba</string>
+    <string name="translation_domain_label">Valdkond</string>
+    <string name="translation_domain_general">Üldine</string>
+    <string name="translation_domain_game">Mängud</string>
+    <string name="translation_domain_comic">Koomiks</string>
+    <string name="translation_domain_tech">Tehniline</string>
+    <string name="translation_domain_business">Äri</string>
+</resources>
+
+

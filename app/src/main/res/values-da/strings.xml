@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">Skærmoversættelse</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">Påkrævet tilladelse:\nNotifikation</string>
+    <string name="message_permission_notification_detail">For at starte Skærmoversætter skal du give tilladelse til notifikationer.</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">Påkrævet tilladelse:\nVis over andre apps</string>
+    <string name="message_permission_overlay_detail">For at starte Skærmoversætter skal du give tilladelse til at vise over andre apps.</string>
+
+    <!-- MediaProjection token -->
+    <string name="message_media_projection">Påkrævet tilladelse:\nSkærmoptagelse</string>
+    <string name="message_media_projection_detail">For at starte Skærmoversætter skal du give tilladelse til skærmoptagelse.\n\nOplysningerne på skærmen bruges kun til oversættelse og gemmes eller deles ikke.</string>
+
+    <!-- Foreground Service -->
+    <string name="notification_foreground_service">Skærmoptagelse bruges til oversættelse.</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">Afslut</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">Oversæt fra</string>
+    <string name="title_language_list_view_target">Oversæt til</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">Vælg TTS-stemme</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">Opdatering nødvendig</string>
+    <string name="message_force_update_detail">Denne version understøttes ikke længere.\nGå til butikken.</string>
+    <string name="message_service_unavailable">Tjeneste utilgængelig</string>
+    <string name="message_service_unavailable_detail">Tjenesten er under vedligeholdelse.</string>
+    <string name="message_network_unavailable">Netværk utilgængeligt</string>
+    <string name="message_network_unavailable_detail">Netværket er utilgængeligt.\nKontroller og prøv igen.</string>
+    <string name="message_translate_fixedarea_warn">Batteriadvarsel</string>
+    <string name="message_translate_fixedarea_warn_detail">Batteriet kan blive drænet hurtigt.</string>
+    <string name="ad_gate_loading">Forbereder en annonce…</string>
+    <string name="ad_gate_reward_notice">Se annoncen til ende, så vises der ikke flere annoncer, før du lukker appen.</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">Indstillinger</string>
+    <string name="settings_menu_cat_pointer">Markør</string>
+    <string name="settings_menu_pointer_docking_delay">Forankringsforsinkelse</string>
+    <string name="settings_menu_haptic_feedback_to_detection">Haptisk feedback ved registrering</string>
+    <string name="settings_menu_cat_menubar">Menulinje</string>
+    <string name="settings_menu_menubar_visible">Vis menulinjen</string>
+    <string name="settings_menu_menubar_transparency">Menugennemsigtighed</string>
+    <string name="settings_menu_menubar_composition">Menulinjens sammensætning</string>
+    <string name="settings_menu_cat_translation">Oversættelse</string>
+    <string name="settings_menu_translation_transparency">Oversættelsens gennems.</string>
+    <string name="settings_menu_translation_close_delay">Lukningsforsinkelse</string>
+    <string name="settings_menu_automated_read_aloud">Automatisk oplæsning af oversættelse</string>
+    <string name="settings_menu_reply_transparency">Svargennemsigtighed</string>
+    <string name="settings_menu_cat_tts">Tekst-til-tale</string>
+    <string name="settings_menu_tts_read_target">Oplæsningsmål</string>
+    <string name="settings_tts_read_target_source">Original</string>
+    <string name="settings_tts_read_target_target">Oversættelse</string>
+    <string name="settings_menu_tts_voices">TTS-stemmer</string>
+    <string name="settings_menu_tts_rate">TTS-hastighed</string>
+    <string name="settings_menu_cat_about">Om</string>
+    <string name="settings_menu_app_version">Appversion</string>
+    <string name="settings_menu_app_version_latest">(Seneste)</string>
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">Ingen mængdegrænse, ingen tidsbegrænsning</string>
+    <string name="help_text_deepl_own_key">Bruger din personlige DeepL API-nøgle</string>
+    <string name="deepl_key_guide">Indtast din DeepL API-nøgle for at bruge DeepL-oversættelse.</string>
+    <string name="deepl_key_signup_guide">Tilmeld dig DeepL, og du kan abonnere på gratisplanen.</string>
+    <string name="deepl_key_link_subscription">Abonner på gratisplanen</string>
+    <string name="deepl_key_link_keys">Tjek din API-nøgle</string>
+    <string name="deepl_key_active">Aktiveret</string>
+    <string name="label_save">Gem</string>
+    <string name="deepl_key_invalid">API-nøglen er ikke gyldig.</string>
+    <string name="deepl_key_validating">Verificerer…</string>
+    <string name="deepl_key_network_error">Nøglen kunne ikke verificeres på grund af en netværksfejl. Nøglen blev gemt.</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">Sætninger vælges automatisk.</string>
+    <string name="detect_mode_description_paragraph">Afsnit genkendes automatisk.</string>
+    <string name="detect_mode_description_select">Du kan også vælge det ønskede område.</string>
+    <string name="detect_mode_description_word">Peg på et ord for at oversætte det med det samme.</string>
+    <string name="detect_mode_description_fixed_area">Du kan løbende oversætte faste områder, såsom filmundertekster.</string>
+  <string name="say_here">Jeg er her!</string>
+  <string name="hint_settings_reopen">Dobbelttryk på håndtaget for at åbne indstillinger igen</string>
+  <string name="openai_key_guide">Indtast din OpenAI API-nøgle for at oversætte med OpenAI-modeller.</string>
+  <string name="openai_key_signup_guide">Opret en nøgle i OpenAI-dashboardet. Forbrug faktureres til din OpenAI-konto.</string>
+  <string name="openai_key_link_keys">Hent din API-nøgle</string>
+  <string name="openai_key_link_billing">Fakturering og forbrug</string>
+  <string name="openai_model_label">Model</string>
+  <string name="help_text_openai_own_key">Bruger din personlige OpenAI API-nøgle</string>
+  <string name="gemini_key_guide">Indtast din Gemini API-nøgle for at oversætte med Gemini-modeller.</string>
+  <string name="help_text_gemini_own_key">Bruger din personlige Gemini API-nøgle</string>
+  <string name="gemini_key_signup_guide">Opret en API-nøgle i Google AI Studio. Et gratis niveau er tilgængeligt.</string>
+  <string name="claude_key_guide">Indtast din Claude API-nøgle for at oversætte med Claude-modeller.</string>
+  <string name="help_text_claude_own_key">Bruger din personlige Claude API-nøgle</string>
+  <string name="claude_key_signup_guide">Opret en API-nøgle i Anthropic Console. Forbrug faktureres til din Anthropic-konto.</string>
+    <string name="settings_menu_how_to_use">Sådan bruges appen</string>
+    <string name="settings_menu_privacy_policy">Privatlivspolitik</string>
+    <string name="source_language_no_screen_reader">Genkendelse af skærmtekst understøttes ikke</string>
+    <string name="ocr_model_preparing">Oversættelsesmotoren forberedes. Vent et øjeblik.</string>
+    <string name="error_translate_invalid_key">API-nøglen er ugyldig. Tjek den i Indstillinger.</string>
+    <string name="error_translate_no_credit">Ingen kreditter tilbage på kontoen. Tank op i udbyderens konsol.</string>
+    <string name="error_translate_rate_limited">Forbrugsgrænsen er nået. Prøv igen senere.</string>
+    <string name="error_translate_model_unavailable">Denne oversættelsesmodel er ikke tilgængelig. Opdater appen.</string>
+    <string name="error_translate_network">Netværksfejl. Tjek din forbindelse.</string>
+    <string name="error_translate_generic">Oversættelsen mislykkedes. Prøv igen.</string>
+    <string name="key_saved_credit_hint">Nøglen er bekræftet. Oversættelse kræver også kreditter eller gratis kvote på kontoen.</string>
+    <string name="translation_context_label">Kontekst</string>
+    <string name="translation_context_off">Fra</string>
+    <string name="translation_context_nearby">Nærliggende sætninger</string>
+    <string name="translation_context_screen">Hele skærmen</string>
+    <string name="translation_context_guide">Sender den omgivende tekst med, så stedord og flertydige ord kan tolkes. Bruger flere tokens.</string>
+    <string name="translation_strength_label">Oversættelsesstil</string>
+    <string name="translation_strength_literal">Ordret</string>
+    <string name="translation_strength_natural">Naturlig</string>
+    <string name="translation_strength_free">Fri</string>
+    <string name="translation_domain_label">Område</string>
+    <string name="translation_domain_general">Generelt</string>
+    <string name="translation_domain_game">Spil</string>
+    <string name="translation_domain_comic">Tegneserie</string>
+    <string name="translation_domain_tech">Teknisk</string>
+    <string name="translation_domain_business">Forretning</string>
+</resources>

@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">સ્ક્રીન અનુવાદ</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">જરૂરી પરવાનગી:\nનોટિફિકેશન</string>
+    <string name="message_permission_notification_detail">સ્ક્રીન અનુવાદક શરૂ કરવા માટે, તમારે નોટિફિકેશન માટે પરવાનગી આપવી પડશે.</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">જરૂરી પરવાનગી:\nઅન્ય એપ્સ ઉપર બતાવો</string>
+    <string name="message_permission_overlay_detail">સ્ક્રીન અનુવાદક શરૂ કરવા માટે, તમારે અન્ય એપ્સ ઉપર દર્શાવવાની પરવાનગી આપવી પડશે.</string>
+
+    <!-- MediaProjection token 요청 -->
+    <string name="message_media_projection">જરૂરી પરવાનગી:\nસ્ક્રીન રેકોર્ડિંગ</string>
+    <string name="message_media_projection_detail">સ્ક્રીન અનુવાદક શરૂ કરવા માટે, તમારે સ્ક્રીન રેકોર્ડિંગ માટે પરવાનગી આપવી પડશે.\n\nસ્ક્રીન પરની માહિતી માત્ર અનુવાદ માટે ઉપયોગ થાય છે અને અન્યત્ર સંગ્રહિત અથવા ટ્રાન્સફર કરવામાં નથી આવે.</string>
+
+    <!-- Foreground Service 시작 알림 -->
+    <string name="notification_foreground_service">અનુવાદ માટે સ્ક્રીન કેપ્ચર કાર્ય ચાલુ છે.</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">સમાપ્ત</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">અનુવાદ કરો અહીંથી</string>
+    <string name="title_language_list_view_target">અહીં અનુવાદ કરો</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">TTS અવાજ પસંદ કરો</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">અપડેટ જરૂરી છે</string>
+    <string name="message_force_update_detail">આ સંસ્કરણ હવે સપોર્ટેડ નથી.\nસ્ટોર પર જાઓ.</string>
+    <string name="message_service_unavailable">સેવા ઉપલબ્ધ નથી</string>
+    <string name="message_service_unavailable_detail">સેવામાં રક્ષણ ચાલુ છે.</string>
+    <string name="message_network_unavailable">નેટવર્ક ઉપલબ્ધ નથી</string>
+    <string name="message_network_unavailable_detail">નેટવર્ક ઉપલબ્ધ નથી.\nકૃપા કરીને તપાસો અને ફરી પ્રયાસ કરો.</string>
+    <string name="message_translate_fixedarea_warn">બેટરી ચેતવણી</string>
+    <string name="message_translate_fixedarea_warn_detail">બેટરી ઝડપથી ખૂટી શકે છે.</string>
+    <string name="ad_gate_loading">જાહેરાત તૈયાર થઈ રહી છે…</string>
+    <string name="ad_gate_reward_notice">જાહેરાત અંત સુધી જુઓ, એપ બંધ ન કરો ત્યાં સુધી બીજી કોઈ જાહેરાત દેખાશે નહીં.</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">સેટિંગ્સ</string>
+    <string name="settings_menu_cat_pointer">પોઇન્ટર</string>
+    <string name="settings_menu_pointer_docking_delay">ડોક વિલંબ</string>
+    <string name="settings_menu_haptic_feedback_to_detection">શોધ પર હૅપ્ટિક</string>
+    <string name="settings_menu_cat_menubar">મેનુ બાર</string>
+    <string name="settings_menu_menubar_visible">મેનુ બાર બતાવો</string>
+    <string name="settings_menu_menubar_transparency">મેનુ પારદર્શિતા</string>
+    <string name="settings_menu_menubar_composition">મેનુ બાર રચના</string>
+    <string name="settings_menu_cat_translation">અનુવાદ</string>
+    <string name="settings_menu_translation_transparency">અનુવાદ પારદર્શિતા</string>
+    <string name="settings_menu_translation_close_delay">બંદ વિલંબ</string>
+    <string name="settings_menu_automated_read_aloud">અનુવાદનું ઓટો વાંચન</string>
+    <string name="settings_menu_reply_transparency">જવાબ પારદર્શિતા</string>
+    <string name="settings_menu_cat_tts">ટેક્સ્ટ-ટુ-સ્પીચ</string>
+    <string name="settings_menu_tts_read_target">વાંચન લક્ષ્ય</string>
+    <string name="settings_tts_read_target_source">મૂળ</string>
+    <string name="settings_tts_read_target_target">અનુવાદ</string>
+    <string name="settings_menu_tts_voices">TTS અવાજો</string>
+    <string name="settings_menu_tts_rate">TTS ઝડપ</string>
+    <string name="settings_menu_cat_about">વિશે</string>
+    <string name="settings_menu_app_version">એપ્લિકેશન સંસ્કરણ</string>
+    <string name="settings_menu_app_version_latest">(નવીનતમ)</string>
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">કોઈ જ માત્રા મર્યાદા નથી, કોઈ જ સમય મર્યાદા નથી</string>
+    <string name="help_text_deepl_own_key">તમારી વ્યક્તિગત DeepL API કી વાપરે છે</string>
+    <string name="deepl_key_guide">DeepL અનુવાદ વાપરવા માટે તમારી DeepL API કી દાખલ કરો.</string>
+    <string name="deepl_key_signup_guide">DeepL પર સાઇન અપ કરો અને તમે મફત પ્લાન સબ્સ્ક્રાઇબ કરી શકો છો.</string>
+    <string name="deepl_key_link_subscription">મફત પ્લાન સબ્સ્ક્રાઇબ કરો</string>
+    <string name="deepl_key_link_keys">તમારી API કી તપાસો</string>
+    <string name="deepl_key_active">સક્રિય થયું</string>
+    <string name="label_save">સાચવો</string>
+    <string name="deepl_key_invalid">API કી માન્ય નથી.</string>
+    <string name="deepl_key_validating">ચકાસી રહ્યું છે…</string>
+    <string name="deepl_key_network_error">નેટવર્ક ભૂલને કારણે કી ચકાસી શકાઈ નથી. કી સાચવવામાં આવી છે.</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">વાક્યો આપમેળે પસંદ થાય છે.</string>
+    <string name="detect_mode_description_paragraph">પેરાગ્રાફ યુનિટ આપમેળે ઓળખાય છે.</string>
+    <string name="detect_mode_description_select">તમે પસંદગીઅનુસાર વિસ્તારો નિર્ધારિત કરી શકો છો.</string>
+    <string name="detect_mode_description_word">કોઈ શબ્દ પર નિર્દેશ કરો, તે તરત જ અનુવાદ થશે.</string>
+    <string name="detect_mode_description_fixed_area">તમે મૂવીના ઉપશીર્ષકો જેવી નિશ્ચિત વિસ્તારોનું સતત અનુવાદ કરી શકો છો.</string>
+  <string name="say_here">હું અહીં છું!</string>
+  <string name="hint_settings_reopen">સેટિંગ્સ ફરીથી ખોલવા હેન્ડલ પર બે વાર ટૅપ કરો</string>
+  <string name="openai_key_guide">OpenAI મોડલ સાથે અનુવાદ કરવા માટે તમારી OpenAI API કી દાખલ કરો.</string>
+  <string name="openai_key_signup_guide">OpenAI ડેશબોર્ડમાં કી બનાવો. વપરાશ તમારા OpenAI એકાઉન્ટમાં બિલ કરવામાં આવે છે.</string>
+  <string name="openai_key_link_keys">તમારી API કી મેળવો</string>
+  <string name="openai_key_link_billing">બિલિંગ અને વપરાશ</string>
+  <string name="openai_model_label">મોડલ</string>
+  <string name="help_text_openai_own_key">તમારી વ્યક્તિગત OpenAI API કી વાપરે છે</string>
+  <string name="gemini_key_guide">Gemini મોડલ સાથે અનુવાદ કરવા માટે તમારી Gemini API કી દાખલ કરો.</string>
+  <string name="help_text_gemini_own_key">તમારી વ્યક્તિગત Gemini API કી વાપરે છે</string>
+  <string name="gemini_key_signup_guide">Google AI Studio માં API કી બનાવો. મફત સ્તર ઉપલબ્ધ છે.</string>
+  <string name="claude_key_guide">Claude મોડલ સાથે અનુવાદ કરવા માટે તમારી Claude API કી દાખલ કરો.</string>
+  <string name="help_text_claude_own_key">તમારી વ્યક્તિગત Claude API કી વાપરે છે</string>
+  <string name="claude_key_signup_guide">Anthropic Console માં API કી બનાવો. વપરાશનું બિલ તમારા Anthropic એકાઉન્ટમાં કરવામાં આવે છે.</string>
+    <string name="settings_menu_how_to_use">ઉપયોગ કેવી રીતે કરવો</string>
+    <string name="settings_menu_privacy_policy">ગોપનીયતા નીતિ</string>
+    <string name="source_language_no_screen_reader">સ્ક્રીન ટેક્સ્ટ ઓળખ સમર્થિત નથી</string>
+    <string name="ocr_model_preparing">અનુવાદ એન્જિન તૈયાર થઈ રહ્યું છે. કૃપા કરીને થોડી રાહ જુઓ.</string>
+    <string name="error_translate_invalid_key">API કી અમાન્ય છે. સેટિંગ્સમાં તપાસો.</string>
+    <string name="error_translate_no_credit">તમારા એકાઉન્ટમાં ક્રેડિટ બાકી નથી. પ્રદાતાના કન્સોલમાં ટોપ-અપ કરો.</string>
+    <string name="error_translate_rate_limited">વપરાશ મર્યાદા પહોંચી ગઈ. પછી ફરી પ્રયાસ કરો.</string>
+    <string name="error_translate_model_unavailable">આ અનુવાદ મોડેલ ઉપલબ્ધ નથી. કૃપા કરીને ઍપ અપડેટ કરો.</string>
+    <string name="error_translate_network">નેટવર્ક ભૂલ. તમારું કનેક્શન તપાસો.</string>
+    <string name="error_translate_generic">અનુવાદ નિષ્ફળ ગયો. ફરી પ્રયાસ કરો.</string>
+    <string name="key_saved_credit_hint">કી ચકાસાઈ. અનુવાદ માટે એકાઉન્ટમાં ક્રેડિટ અથવા મફત ક્વોટા પણ જરૂરી છે.</string>
+    <string name="translation_context_label">સંદર્ભ</string>
+    <string name="translation_context_off">બંધ</string>
+    <string name="translation_context_nearby">નજીકના વાક્યો</string>
+    <string name="translation_context_screen">આખી સ્ક્રીન</string>
+    <string name="translation_context_guide">સર્વનામ અને દ્વિઅર્થી શબ્દો સમજવા માટે આસપાસનું લખાણ પણ મોકલે છે. વધુ ટોકન વપરાય છે.</string>
+    <string name="translation_strength_label">અનુવાદ શૈલી</string>
+    <string name="translation_strength_literal">શબ્દશઃ</string>
+    <string name="translation_strength_natural">સ્વાભાવિક</string>
+    <string name="translation_strength_free">ભાવાનુવાદ</string>
+    <string name="translation_domain_label">વિષય</string>
+    <string name="translation_domain_general">સામાન્ય</string>
+    <string name="translation_domain_game">ગેમ</string>
+    <string name="translation_domain_comic">કોમિક</string>
+    <string name="translation_domain_tech">ટેકનિકલ</string>
+    <string name="translation_domain_business">વ્યવસાય</string>
+</resources>

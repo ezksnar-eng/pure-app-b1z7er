@@ -1,0 +1,124 @@
+<resources>
+  <string name="app_name">ການແປພາສາໜ້າຈໍ</string>
+
+  <!-- Notification Permission -->
+  <string name="message_permission_notification">ການອະນຸຍາດທີ່ຈໍາເປັນ:\nແຈ້ງເຕືອນ</string>
+  <string name="message_permission_notification_detail">ເພື່ອເລີ່ມແອັບ ແປພາສາຈາກຫນ້າຈໍ ເຈົ້າຈໍາເປັນຕ້ອງອະນຸຍາດໃຫ້ສິດແຈ້ງເຕືອນ</string>
+
+  <!-- Overlay Permission -->
+  <string name="message_permission_overlay">ການອະນຸຍາດທີ່ຈໍາເປັນ:\nສະແດງເທິງແອັບອື່ນ</string>
+  <string name="message_permission_overlay_detail">ເພື່ອເລີ່ມແອັບ ແປພາສາຈາກຫນ້າຈໍ ເຈົ້າຈໍາເປັນຕ້ອງອະນຸຍາດໃຫ້ສິດສະແດງເທິງແອັບອື່ນ</string>
+
+  <!-- MediaProjection token -->
+  <string name="message_media_projection">ການອະນຸຍາດທີ່ຈໍາເປັນ:\nບັນທຶກໜ້າຈໍ</string>
+  <string name="message_media_projection_detail">ເພື່ອເລີ່ມແອັບ ແປພາສາຈາກຫນ້າຈໍ ເຈົ້າຕ້ອງອະນຸຍາດໃຫ້ບັນທຶກໜ້າຈໍ\n\nຂໍ້ມູນໃນຫນ້າຈໍຖືກນໍາໃຊ້ເພື່ອການແປພາສາເທົ່ານັ້ນ ແລະຈະບໍ່ຖືກບັນທຶກ ຫຼື ສົ່ງອອກ</string>
+
+  <!-- Foreground Service -->
+  <string name="notification_foreground_service">ຟັງຊັນບັນທຶກໜ້າຈໍກໍາລັງໃຊ້ສໍາລັບການແປພາສາ</string>
+
+  <!-- OverlayService -->
+  <string name="service_menu_finish">ສິ້ນສຸດ</string>
+
+  <!-- LanguageListView -->
+  <string name="title_language_list_view_source">ແປຈາກ</string>
+  <string name="title_language_list_view_target">ແປເປັນ</string>
+
+  <!-- VoiceListView -->
+  <string name="title_voice_list_view">ເລືອກສຽງ TTS</string>
+
+  <!-- Dialog -->
+  <string name="message_force_update">ຕ້ອງການອັບເດດ</string>
+  <string name="message_force_update_detail">ເວີຊັນນີ້ບໍ່ຖືກຮອງຮັບອີກຕໍ່ໄປ\nໄປທີ່ຮ້ານຄ້າ</string>
+  <string name="message_service_unavailable">ບໍລິການບໍ່ພ້ອມໃຊ້</string>
+  <string name="message_service_unavailable_detail">ບໍລິການກໍາລັງຢູ່ໃນການປັບປຸງ</string>
+  <string name="message_network_unavailable">ເຄື່ອຂ່າຍບໍ່ສາມາດໃຊ້ງານ</string>
+  <string name="message_network_unavailable_detail">ເຄື່ອຂ່າຍບໍ່ພ້ອມໃຊ້\nກະລຸນາກວດສອບແລະລອງໃໝ່</string>
+  <string name="message_translate_fixedarea_warn">ຄໍາເຕືອນແບັດເຕີຣີ</string>
+  <string name="message_translate_fixedarea_warn_detail">ແບັດເຕີຣີອາດຈະໝົດໄວ.</string>
+  <string name="ad_gate_loading">ກຳລັງກຽມໂຄສະນາ…</string>
+  <string name="ad_gate_reward_notice">ເບິ່ງໂຄສະນາຈົນຈົບ ແລ້ວຈະບໍ່ມີໂຄສະນາສະແດງອີກຈົນກວ່າທ່ານຈະປິດແອັບ.</string>
+
+  <!-- SettingsActivity -->
+  <string name="settings_title">ການຕັ້ງຄ່າ</string>
+  <string name="settings_menu_cat_pointer">ເຄື່ອງຊີ້</string>
+  <string name="settings_menu_pointer_docking_delay">ຄວາມລ່າຊ້າ Dock</string>
+  <string name="settings_menu_haptic_feedback_to_detection">ການຕອບສະໜອງສຳຜັດເມື່ອพົບ</string>
+  <string name="settings_menu_cat_menubar">ແຖບເມນູ</string>
+    <string name="settings_menu_menubar_visible">ສະແດງແຖບເມນູ</string>
+  <string name="settings_menu_menubar_transparency">ຄວາມໂປ່ງໃສເມນູ</string>
+  <string name="settings_menu_menubar_composition">ອົງປະກອບຂອງແຖບເມນູ</string>
+  <string name="settings_menu_cat_translation">ການແປ</string>
+  <string name="settings_menu_translation_transparency">ຄວາມໂປ່ງໃສແປ</string>
+  <string name="settings_menu_translation_close_delay">ຊ້າໃນການປິດ</string>
+  <string name="settings_menu_automated_read_aloud">ອ່ານຄຳແປອັດຕະໂນມັດ</string>
+  <string name="settings_menu_reply_transparency">ຄວາມໂປ່ງໃສຕອບ</string>
+  <string name="settings_menu_cat_tts">ຂໍ້ຄວາມເປັນສຽງ</string>
+  <string name="settings_menu_tts_read_target">ເປົ້າໝາຍການອ່ານ</string>
+  <string name="settings_tts_read_target_source">ຕົ້ນສະບັບ</string>
+  <string name="settings_tts_read_target_target">ຄຳແປ</string>
+  <string name="settings_menu_tts_voices">ສຽງ TTS</string>
+  <string name="settings_menu_tts_rate">ຄວາມໄວ TTS</string>
+  <string name="settings_menu_cat_about">ກ່ຽວກັບ</string>
+  <string name="settings_menu_app_version">ເວີຊັນແອັບ</string>
+  <string name="settings_menu_app_version_latest">(ລ່າສຸດ)</string>
+
+  <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+  <string name="help_text_no_limit_free">ບໍ່ຈໍາກັດຈໍານວນ, ບໍ່ຈໍາກັດເວລາ</string>
+  <string name="help_text_deepl_own_key">ໃຊ້ກະແຈ DeepL API ສ່ວນຕົວຂອງທ່ານ</string>
+  <string name="deepl_key_guide">ປ້ອນກະແຈ DeepL API ຂອງທ່ານເພື່ອໃຊ້ການແປ DeepL.</string>
+  <string name="deepl_key_signup_guide">ລົງທະບຽນ DeepL ແລ້ວທ່ານສາມາດສະໝັກແຜນຟຣີໄດ້.</string>
+  <string name="deepl_key_link_subscription">ສະໝັກແຜນຟຣີ</string>
+  <string name="deepl_key_link_keys">ກວດສອບກະແຈ API ຂອງທ່ານ</string>
+  <string name="deepl_key_active">ເປີດໃຊ້ງານແລ້ວ</string>
+  <string name="label_save">ບັນທຶກ</string>
+  <string name="deepl_key_invalid">ກະແຈ API ບໍ່ຖືກຕ້ອງ.</string>
+  <string name="deepl_key_validating">ກຳລັງກວດສອບ…</string>
+  <string name="deepl_key_network_error">ບໍ່ສາມາດກວດສອບກະແຈໄດ້ ເນື່ອງຈາກຂໍ້ຜິດພາດເຄືອຂ່າຍ. ກະແຈຖືກບັນທຶກແລ້ວ.</string>
+
+  <!-- Detect-mode descriptions -->
+  <string name="detect_mode_description_sentence">ປະໂຫຍກຖືກເລືອກໂດຍອັດຕະໂນມັດ</string>
+  <string name="detect_mode_description_paragraph">ຈັບຂໍ້ຄວາມແບບຍໍ່ໄດ້ອັດຕະໂນມັດ</string>
+  <string name="detect_mode_description_select">ເຈົ້າສາມາດເລືອກຂອບເຂດໄດ້</string>
+  <string name="detect_mode_description_word">ຊີ້ໄປທີ່ຄໍາ ເພື່ອແປໃນທັນທີ.</string>
+  <string name="detect_mode_description_fixed_area">ທ່ານສາມາດແປພື້ນທີ່ຄົງທີ່ໄດ້ຕະຫຼອດ, ເຊັ່ນ ຄຳບັນຍາຍໃນຮູບເງົາ.</string>
+  <string name="say_here">ຢູ່ນີ້!</string>
+  <string name="hint_settings_reopen">ແຕະສອງເທື່ອທີ່ບ່ອນຈັບເພື່ອເປີດການຕັ້ງຄ່າອີກຄັ້ງ</string>
+  <string name="openai_key_guide">ໃສ່ກະແຈ OpenAI API ຂອງທ່ານເພື່ອແປດ້ວຍໂມເດວ OpenAI.</string>
+  <string name="openai_key_signup_guide">ສ້າງກະແຈໃນແດັຊບອດ OpenAI. ການນຳໃຊ້ຈະຖືກຄິດໄລ່ໃສ່ບັນຊີ OpenAI ຂອງທ່ານ.</string>
+  <string name="openai_key_link_keys">ຮັບກະແຈ API ຂອງທ່ານ</string>
+  <string name="openai_key_link_billing">ການເກັບເງິນ ແລະ ການນຳໃຊ້</string>
+  <string name="openai_model_label">ໂມເດວ</string>
+  <string name="help_text_openai_own_key">ໃຊ້ກະແຈ OpenAI API ສ່ວນຕົວຂອງທ່ານ</string>
+  <string name="gemini_key_guide">ໃສ່ກະແຈ Gemini API ຂອງທ່ານເພື່ອແປດ້ວຍໂມເດວ Gemini.</string>
+  <string name="help_text_gemini_own_key">ໃຊ້ກະແຈ Gemini API ສ່ວນຕົວຂອງທ່ານ</string>
+  <string name="gemini_key_signup_guide">ສ້າງກະແຈ API ໃນ Google AI Studio. ມີລະດັບຟຣີໃຫ້ນຳໃຊ້.</string>
+  <string name="claude_key_guide">ໃສ່ກະແຈ Claude API ຂອງທ່ານເພື່ອແປດ້ວຍໂມເດວ Claude.</string>
+  <string name="help_text_claude_own_key">ໃຊ້ກະແຈ Claude API ສ່ວນຕົວຂອງທ່ານ</string>
+  <string name="claude_key_signup_guide">ສ້າງກະແຈ API ໃນ Anthropic Console. ການນຳໃຊ້ຈະຖືກເກັບເງິນໃສ່ບັນຊີ Anthropic ຂອງທ່ານ.</string>
+  <string name="settings_menu_how_to_use">ວິທີໃຊ້</string>
+  <string name="settings_menu_privacy_policy">ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ</string>
+  <string name="source_language_no_screen_reader">ບໍ່ຮອງຮັບການຈົດຈຳຂໍ້ຄວາມເທິງໜ້າຈໍ</string>
+  <string name="ocr_model_preparing">ກຳລັງກຽມເຄື່ອງມືແປພາສາ. ກະລຸນາລໍຖ້າຈັກໜ້ອຍ.</string>
+  <string name="error_translate_invalid_key">ກະແຈ API ບໍ່ຖືກຕ້ອງ. ກວດເບິ່ງໃນການຕັ້ງຄ່າ.</string>
+  <string name="error_translate_no_credit">ບໍ່ມີເຄຣດິດໃນບັນຊີ. ເຕີມໃນຄອນໂຊຜູ້ໃຫ້ບໍລິການ.</string>
+  <string name="error_translate_rate_limited">ຮອດຂີດຈຳກັດການໃຊ້ແລ້ວ. ລອງໃໝ່ພາຍຫຼັງ.</string>
+  <string name="error_translate_model_unavailable">ໂມເດວແປພາສານີ້ໃຊ້ບໍ່ໄດ້. ກະລຸນາອັບເດດແອັບ.</string>
+  <string name="error_translate_network">ຜິດພາດເຄືອຂ່າຍ. ກວດການເຊື່ອມຕໍ່.</string>
+  <string name="error_translate_generic">ການແປລົ້ມເຫຼວ. ລອງໃໝ່ອີກຄັ້ງ.</string>
+  <string name="key_saved_credit_hint">ຢືນຢັນກະແຈແລ້ວ. ການແປຍັງຕ້ອງມີເຄຣດິດ ຫຼືໂຄຕາຟຣີໃນບັນຊີ.</string>
+    <string name="translation_context_label">ບໍລິບົດ</string>
+    <string name="translation_context_off">ປິດ</string>
+    <string name="translation_context_nearby">ປະໂຫຍກໃກ້ຄຽງ</string>
+    <string name="translation_context_screen">ໜ້າຈໍທັງໝົດ</string>
+    <string name="translation_context_guide">ສົ່ງຂໍ້ຄວາມອ້ອມຂ້າງໄປນຳເພື່ອຕີຄວາມສັບພະນາມ ແລະ ຄຳກຳກວມ. ໃຊ້ໂທເຄັນຫຼາຍຂຶ້ນ.</string>
+    <string name="translation_strength_label">ຮູບແບບການແປ</string>
+    <string name="translation_strength_literal">ແປຕາມຕົວ</string>
+    <string name="translation_strength_natural">ເປັນທຳມະຊາດ</string>
+    <string name="translation_strength_free">ແປອິດສະຫຼະ</string>
+    <string name="translation_domain_label">ສາຂາ</string>
+    <string name="translation_domain_general">ທົ່ວໄປ</string>
+    <string name="translation_domain_game">ເກມ</string>
+    <string name="translation_domain_comic">ກາຕູນ</string>
+    <string name="translation_domain_tech">ເຕັກນິກ</string>
+    <string name="translation_domain_business">ທຸລະກິດ</string>
+</resources>

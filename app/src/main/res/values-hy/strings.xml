@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">Էկրանային Թարգմանիչ</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">Պահանջվող թույլտվություն:\nԾանուցումներ</string>
+    <string name="message_permission_notification_detail">Էկրան թարգմանիչը գործարկելու համար անհրաժեշտ է թույլատրել ծանուցումները։</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">Պահանջվող թույլտվություն:\nՑուցադրել այլ հավելվածների վրա</string>
+    <string name="message_permission_overlay_detail">Էկրան թարգմանիչը գործարկելու համար անհրաժեշտ է թույլատրել ցուցադրումը այլ հավելվածների վրա։</string>
+
+    <!-- MediaProjection token -->
+    <string name="message_media_projection">Պահանջվող թույլտվություն:\nԷկրանի ձայնագրում</string>
+    <string name="message_media_projection_detail">Էկրան թարգմանիչը գործարկելու համար անհրաժեշտ է թույլատրել էկրանի ձայնագրումը։\n\nԷկրանից ստացված տեղեկատվությունը կօգտագործվի միայն թարգմանության համար և չի պահվելու կամ տարածվելու։</string>
+
+    <!-- Foreground Service -->
+    <string name="notification_foreground_service">Էկրանի գրավման ֆունկցիան օգտագործվում է թարգմանության համար։</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">Ավարտել</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">Թարգմանելից</string>
+    <string name="title_language_list_view_target">Թարգմանել դեպի</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">Ընտրել TTS ձայնը</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">Պահանջվում է թարմացում</string>
+    <string name="message_force_update_detail">Այս տարբերակը այլևս չի աջակցվում։\nԽնդրում ենք անցնել խանութ։</string>
+    <string name="message_service_unavailable">Ծառայությունը ժամանակավորապես անհասանելի է</string>
+    <string name="message_service_unavailable_detail">Ծառայությունը ներկայումս սպասարկման մեջ է։</string>
+    <string name="message_network_unavailable">Ցանցը անհասանելի է</string>
+    <string name="message_network_unavailable_detail">Ցանցը անհասանելի է։\nԽնդրում ենք ստուգել կապը և կրկին փորձել։</string>
+    <string name="message_translate_fixedarea_warn">Մարտկոցի նախազգուշացում</string>
+    <string name="message_translate_fixedarea_warn_detail">Մարտկոցը կարող է արագ լիցքաթափվել։</string>
+    <string name="ad_gate_loading">Գովազդը պատրաստվում է…</string>
+    <string name="ad_gate_reward_notice">Դիտեք գովազդը մինչև վերջ, և հավելվածը փակելուց առաջ այլևս գովազդ չի ցուցադրվի։</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">Կարգավորումներ</string>
+    <string name="settings_menu_cat_pointer">Ցուցիչ</string>
+    <string name="settings_menu_pointer_docking_delay">Հապաղում միացման</string>
+    <string name="settings_menu_haptic_feedback_to_detection">Հպման արձագանք հայտնաբերելիս</string>
+    <string name="settings_menu_cat_menubar">Մենյուի գիծ</string>
+    <string name="settings_menu_menubar_visible">Ցուցադրել ընտրացանկի գոտին</string>
+    <string name="settings_menu_menubar_transparency">Մենյուի թափանցիկություն</string>
+    <string name="settings_menu_menubar_composition">Ընտրացանկի գոտու դասավորություն</string>
+    <string name="settings_menu_cat_translation">Թարգմանություն</string>
+    <string name="settings_menu_translation_transparency">Թարգմանության թափանցիկություն</string>
+    <string name="settings_menu_translation_close_delay">Փակման հապաղում</string>
+    <string name="settings_menu_automated_read_aloud">Թարգմանության ինքն. ընթերցում</string>
+    <string name="settings_menu_reply_transparency">Պատասխանի թափանցիկություն</string>
+    <string name="settings_menu_cat_tts">Տեքստից խոսք</string>
+    <string name="settings_menu_tts_read_target">Ընթերցման թիրախ</string>
+    <string name="settings_tts_read_target_source">Բնագիր</string>
+    <string name="settings_tts_read_target_target">Թարգմանություն</string>
+    <string name="settings_menu_tts_voices">TTS ձայներ</string>
+    <string name="settings_menu_tts_rate">TTS արագություն</string>
+    <string name="settings_menu_cat_about">Մասին</string>
+    <string name="settings_menu_app_version">Հավելվածի տարբերակ</string>
+    <string name="settings_menu_app_version_latest">(Վերջին)</string>
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">Առանց քանակական կամ ժամանակային սահմանափակումների</string>
+    <string name="help_text_deepl_own_key">Օգտագործում է ձեր անձնական DeepL API բանալին</string>
+    <string name="deepl_key_guide">Մուտքագրեք ձեր DeepL API բանալին՝ DeepL թարգմանությունն օգտագործելու համար։</string>
+    <string name="deepl_key_signup_guide">Գրանցվեք DeepL-ում և կարող եք բաժանորդագրվել անվճար պլանին։</string>
+    <string name="deepl_key_link_subscription">Բաժանորդագրվել անվճար պլանին</string>
+    <string name="deepl_key_link_keys">Ստուգեք ձեր API բանալին</string>
+    <string name="deepl_key_active">Ակտիվացված է</string>
+    <string name="label_save">Պահպանել</string>
+    <string name="deepl_key_invalid">API բանալին վավեր չէ։</string>
+    <string name="deepl_key_validating">Ստուգվում է…</string>
+    <string name="deepl_key_network_error">Ցանցի սխալի պատճառով բանալին չհաջողվեց ստուգել։ Բանալին պահպանվեց։</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">Նախադասություններն ընտրվում են ավտոմատ։</string>
+    <string name="detect_mode_description_paragraph">Պարբերությունները հայտնաբերվում են ավտոմատ կերպով։</string>
+    <string name="detect_mode_description_select">Դուք կարող եք նաև նշել ձեր ուզած հատվածը։</string>
+    <string name="detect_mode_description_word">Ցույց տվեք բառը, և այն անմիջապես կթարգմանվի։</string>
+    <string name="detect_mode_description_fixed_area">Դուք կարող եք շարունակաբար թարգմանել ֆիքսված տարածքները, օրինակ՝ ֆիլմերի ենթագրերը։</string>
+  <string name="say_here">Ես այստեղ եմ!</string>
+  <string name="hint_settings_reopen">Կրկնակի հպեք բռնակին՝ կարգավորումները նորից բացելու համար</string>
+  <string name="openai_key_guide">Մուտքագրեք ձեր OpenAI API բանալին՝ OpenAI մոդելներով թարգմանելու համար։</string>
+  <string name="openai_key_signup_guide">Ստեղծեք բանալի OpenAI վահանակում։ Օգտագործումը գանձվում է ձեր OpenAI հաշվից։</string>
+  <string name="openai_key_link_keys">Ստացեք ձեր API բանալին</string>
+  <string name="openai_key_link_billing">Վճարում և օգտագործում</string>
+  <string name="openai_model_label">Մոդել</string>
+  <string name="help_text_openai_own_key">Օգտագործում է ձեր անձնական OpenAI API բանալին</string>
+  <string name="gemini_key_guide">Մուտքագրեք ձեր Gemini API բանալին՝ Gemini մոդելներով թարգմանելու համար։</string>
+  <string name="help_text_gemini_own_key">Օգտագործում է ձեր անձնական Gemini API բանալին</string>
+  <string name="gemini_key_signup_guide">Ստեղծեք API բանալի Google AI Studio-ում։ Հասանելի է անվճար մակարդակ։</string>
+  <string name="claude_key_guide">Մուտքագրեք ձեր Claude API բանալին՝ Claude մոդելներով թարգմանելու համար։</string>
+  <string name="help_text_claude_own_key">Օգտագործում է ձեր անձնական Claude API բանալին</string>
+  <string name="claude_key_signup_guide">Ստեղծեք API բանալի Anthropic Console-ում։ Օգտագործումը գանձվում է ձեր Anthropic հաշվին։</string>
+    <string name="settings_menu_how_to_use">Օգտագործման ուղեցույց</string>
+    <string name="settings_menu_privacy_policy">Գաղտնիության քաղաքականություն</string>
+    <string name="source_language_no_screen_reader">Էկրանի տեքստի ճանաչումը չի աջակցվում</string>
+    <string name="ocr_model_preparing">Թարգմանության շարժիչը պատրաստվում է։ Խնդրում ենք մի փոքր սպասել։</string>
+    <string name="error_translate_invalid_key">API բանալին անվավեր է։ Ստուգեք այն կարգավորումներում։</string>
+    <string name="error_translate_no_credit">Հաշվում կրեդիտներ չկան։ Համալրեք մատակարարի վահանակում։</string>
+    <string name="error_translate_rate_limited">Օգտագործման սահմանը սպառվել է։ Փորձեք ավելի ուշ։</string>
+    <string name="error_translate_model_unavailable">Այս թարգմանության մոդելը հասանելի չէ։ Թարմացրեք հավելվածը։</string>
+    <string name="error_translate_network">Ցանցի սխալ։ Ստուգեք կապը։</string>
+    <string name="error_translate_generic">Թարգմանությունը ձախողվեց։ Փորձեք նորից։</string>
+    <string name="key_saved_credit_hint">Բանալին հաստատվեց։ Թարգմանության համար նաև կրեդիտ կամ անվճար քվոտա է պետք հաշվում։</string>
+    <string name="translation_context_label">Համատեքստ</string>
+    <string name="translation_context_off">Անջատված</string>
+    <string name="translation_context_nearby">Հարակից նախադասություններ</string>
+    <string name="translation_context_screen">Ամբողջ էկրանը</string>
+    <string name="translation_context_guide">Ուղարկում է շրջապատող տեքստը՝ դերանուններն ու բազմիմաստ բառերը հասկանալու համար։ Ծախսում է ավելի շատ թոքեն։</string>
+    <string name="translation_strength_label">Թարգմանության ոճ</string>
+    <string name="translation_strength_literal">Բառացի</string>
+    <string name="translation_strength_natural">Բնական</string>
+    <string name="translation_strength_free">Ազատ</string>
+    <string name="translation_domain_label">Ոլորտ</string>
+    <string name="translation_domain_general">Ընդհանուր</string>
+    <string name="translation_domain_game">Խաղեր</string>
+    <string name="translation_domain_comic">Կոմիքս</string>
+    <string name="translation_domain_tech">Տեխնիկական</string>
+    <string name="translation_domain_business">Բիզնես</string>
+</resources>
+
+

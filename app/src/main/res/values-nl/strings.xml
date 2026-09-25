@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">Scherm vertaling</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">Vereiste toestemming:\nMeldingen</string>
+    <string name="message_permission_notification_detail">Om Schermvertaler te starten, moet je toestemming geven voor meldingen.</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">Vereiste toestemming:\nWeergeven over andere apps</string>
+    <string name="message_permission_overlay_detail">Om Schermvertaler te starten, moet je toestemming geven om bovenop andere apps te worden weergegeven.</string>
+
+    <!-- MediaProjection token -->
+    <string name="message_media_projection">Vereiste toestemming:\nSchermopname</string>
+    <string name="message_media_projection_detail">Om Schermvertaler te starten, moet je toestemming geven voor schermopname.\n\nDe informatie op het scherm wordt alleen gebruikt voor vertaling en wordt niet opgeslagen of overgedragen.</string>
+
+    <!-- Foreground Service -->
+    <string name="notification_foreground_service">De schermopnamefunctie wordt gebruikt voor vertaalwerk.</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">Beëindigen</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">Vertalen van</string>
+    <string name="title_language_list_view_target">Vertalen naar</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">TTS-stem selecteren</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">Update vereist</string>
+    <string name="message_force_update_detail">Deze versie wordt niet langer ondersteund.\nGa naar de Store.</string>
+    <string name="message_service_unavailable">Service niet beschikbaar</string>
+    <string name="message_service_unavailable_detail">De service is tijdelijk niet beschikbaar vanwege onderhoud.</string>
+    <string name="message_network_unavailable">Netwerk niet beschikbaar</string>
+    <string name="message_network_unavailable_detail">Netwerk niet beschikbaar.\nControleer je verbinding en probeer het opnieuw.</string>
+    <string name="message_translate_fixedarea_warn">Batterijwaarschuwing</string>
+    <string name="message_translate_fixedarea_warn_detail">De batterij kan snel leeglopen.</string>
+    <string name="ad_gate_loading">Advertentie wordt voorbereid…</string>
+    <string name="ad_gate_reward_notice">Bekijk de advertentie tot het einde en er verschijnen geen advertenties meer totdat je de app sluit.</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">Instellingen</string>
+    <string name="settings_menu_cat_pointer">Aanwijzer</string>
+    <string name="settings_menu_pointer_docking_delay">Vertraging bij vastmaken</string>
+    <string name="settings_menu_haptic_feedback_to_detection">Haptische feedback bij detectie</string>
+    <string name="settings_menu_cat_menubar">Menubalk</string>
+    <string name="settings_menu_menubar_visible">Menubalk weergeven</string>
+    <string name="settings_menu_menubar_transparency">Menu-transparantie</string>
+    <string name="settings_menu_menubar_composition">Menubalk-indeling</string>
+    <string name="settings_menu_cat_translation">Vertaling</string>
+    <string name="settings_menu_translation_transparency">Transparantie vertaling</string>
+    <string name="settings_menu_translation_close_delay">Vertraging sluiten</string>
+    <string name="settings_menu_automated_read_aloud">Vertaling automatisch voorlezen</string>
+    <string name="settings_menu_reply_transparency">Transparantie antwoord</string>
+    <string name="settings_menu_cat_tts">Tekst-naar-spraak</string>
+    <string name="settings_menu_tts_read_target">Voorleesdoel</string>
+    <string name="settings_tts_read_target_source">Origineel</string>
+    <string name="settings_tts_read_target_target">Vertaling</string>
+    <string name="settings_menu_tts_voices">TTS-stemmen</string>
+    <string name="settings_menu_tts_rate">TTS-snelheid</string>
+    <string name="settings_menu_cat_about">Over</string>
+    <string name="settings_menu_app_version">App-versie</string>
+    <string name="settings_menu_app_version_latest">(Nieuwste)</string>
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">Geen hoeveelheidlimiet, geen tijdslimiet</string>
+    <string name="help_text_deepl_own_key">Gebruikt je persoonlijke DeepL API-sleutel</string>
+    <string name="deepl_key_guide">Voer je DeepL API-sleutel in om DeepL-vertaling te gebruiken.</string>
+    <string name="deepl_key_signup_guide">Meld je aan bij DeepL en je kunt je abonneren op het gratis abonnement.</string>
+    <string name="deepl_key_link_subscription">Abonneren op het gratis abonnement</string>
+    <string name="deepl_key_link_keys">Controleer je API-sleutel</string>
+    <string name="deepl_key_active">Geactiveerd</string>
+    <string name="label_save">Opslaan</string>
+    <string name="deepl_key_invalid">De API-sleutel is niet geldig.</string>
+    <string name="deepl_key_validating">Verifiëren…</string>
+    <string name="deepl_key_network_error">De sleutel kon niet worden geverifieerd vanwege een netwerkfout. De sleutel is opgeslagen.</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">Zinnen worden automatisch geselecteerd.</string>
+    <string name="detect_mode_description_paragraph">Paragrafen worden automatisch herkend.</string>
+    <string name="detect_mode_description_select">Je kunt ook zelf het bereik aangeven.</string>
+    <string name="detect_mode_description_word">Wijs een woord aan om het direct te vertalen.</string>
+    <string name="detect_mode_description_fixed_area">Je kunt vaste gebieden, zoals filmondertitels, continu vertalen.</string>
+  <string name="say_here">Ik ben hier!</string>
+  <string name="hint_settings_reopen">Dubbeltik op de handgreep om de instellingen opnieuw te openen</string>
+  <string name="openai_key_guide">Voer je OpenAI API-sleutel in om te vertalen met OpenAI-modellen.</string>
+  <string name="openai_key_signup_guide">Maak een sleutel aan in het OpenAI-dashboard. Gebruik wordt in rekening gebracht op je OpenAI-account.</string>
+  <string name="openai_key_link_keys">Haal je API-sleutel op</string>
+  <string name="openai_key_link_billing">Facturering en gebruik</string>
+  <string name="openai_model_label">Model</string>
+  <string name="help_text_openai_own_key">Gebruikt je persoonlijke OpenAI API-sleutel</string>
+  <string name="gemini_key_guide">Voer je Gemini API-sleutel in om te vertalen met Gemini-modellen.</string>
+  <string name="help_text_gemini_own_key">Gebruikt je persoonlijke Gemini API-sleutel</string>
+  <string name="gemini_key_signup_guide">Maak een API-sleutel in Google AI Studio. Er is een gratis niveau beschikbaar.</string>
+  <string name="claude_key_guide">Voer je Claude API-sleutel in om te vertalen met Claude-modellen.</string>
+  <string name="help_text_claude_own_key">Gebruikt je persoonlijke Claude API-sleutel</string>
+  <string name="claude_key_signup_guide">Maak een API-sleutel in de Anthropic Console. Gebruik wordt in rekening gebracht op je Anthropic-account.</string>
+    <string name="settings_menu_how_to_use">Gebruiksaanwijzing</string>
+    <string name="settings_menu_privacy_policy">Privacybeleid</string>
+    <string name="source_language_no_screen_reader">Herkenning van schermtekst wordt niet ondersteund</string>
+    <string name="ocr_model_preparing">De vertaalmachine wordt voorbereid. Even geduld alstublieft.</string>
+    <string name="error_translate_invalid_key">De API-sleutel is ongeldig. Controleer deze in Instellingen.</string>
+    <string name="error_translate_no_credit">Geen tegoed meer op je account. Waardeer op in de console van de aanbieder.</string>
+    <string name="error_translate_rate_limited">Gebruikslimiet bereikt. Probeer het later opnieuw.</string>
+    <string name="error_translate_model_unavailable">Dit vertaalmodel is niet beschikbaar. Werk de app bij.</string>
+    <string name="error_translate_network">Netwerkfout. Controleer je verbinding.</string>
+    <string name="error_translate_generic">Vertalen mislukt. Probeer het opnieuw.</string>
+    <string name="key_saved_credit_hint">Sleutel geverifieerd. Vertalen vereist ook tegoed of een gratis quotum op je account.</string>
+    <string name="translation_context_label">Context</string>
+    <string name="translation_context_off">Uit</string>
+    <string name="translation_context_nearby">Omliggende zinnen</string>
+    <string name="translation_context_screen">Hele scherm</string>
+    <string name="translation_context_guide">Stuurt de omringende tekst mee om voornaamwoorden en dubbelzinnige woorden te duiden. Gebruikt meer tokens.</string>
+    <string name="translation_strength_label">Vertaalstijl</string>
+    <string name="translation_strength_literal">Letterlijk</string>
+    <string name="translation_strength_natural">Natuurlijk</string>
+    <string name="translation_strength_free">Vrij</string>
+    <string name="translation_domain_label">Vakgebied</string>
+    <string name="translation_domain_general">Algemeen</string>
+    <string name="translation_domain_game">Game</string>
+    <string name="translation_domain_comic">Strip</string>
+    <string name="translation_domain_tech">Technisch</string>
+    <string name="translation_domain_business">Zakelijk</string>
+</resources>

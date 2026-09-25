@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">Экран аудармасы</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">Қажетті рұқсат:\nХабарландыру</string>
+    <string name="message_permission_notification_detail">Screen Translator қосымшасын іске қосу үшін хабарландыруға рұқсат беруіңіз керек.</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">Қажетті рұқсат:\nБасқа қолданбалардың үстінен көрсету</string>
+    <string name="message_permission_overlay_detail">Screen Translator қосымшасын іске қосу үшін басқа қолданбалардың үстінен көрсетуге рұқсат беруіңіз керек.</string>
+
+    <!-- MediaProjection token 요청 -->
+    <string name="message_media_projection">Қажетті рұқсат:\nЭкранды жазу</string>
+    <string name="message_media_projection_detail">Screen Translator қосымшасын іске қосу үшін экранды жазуға рұқсат беруіңіз керек.\n\nЭкрандағы ақпарат тек аударма үшін пайдаланылады және ешқайда сақталмайды немесе жіберілмейді.</string>
+
+    <!-- Foreground Service 시작 알림 -->
+    <string name="notification_foreground_service">Экран мазмұнын аудару үшін түсіру функциясы қолданылады.</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">Аяқтау</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">Аударылатын тіл</string>
+    <string name="title_language_list_view_target">Аудару тілі</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">TTS дауысын таңдау</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">Жаңарту қажет</string>
+    <string name="message_force_update_detail">Бұл нұсқа енді қолдау көрсетілмейді.\nДүкенге өтіңіз.</string>
+    <string name="message_service_unavailable">Қызмет қол жетімді емес</string>
+    <string name="message_service_unavailable_detail">Қызмет техникалық жұмыстарға жабық.</string>
+    <string name="message_network_unavailable">Желі жоқ</string>
+    <string name="message_network_unavailable_detail">Желі жоқ.\nТексеріп, қайталап көріңіз.</string>
+    <string name="message_translate_fixedarea_warn">Батарея туралы ескерту</string>
+    <string name="message_translate_fixedarea_warn_detail">Батарея тез таусылуы мүмкін.</string>
+    <string name="ad_gate_loading">Жарнама дайындалуда…</string>
+    <string name="ad_gate_reward_notice">Жарнаманы соңына дейін көріңіз, қолданбаны жапқанша жарнама енді көрсетілмейді.</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">Параметрлер</string>
+    <string name="settings_menu_cat_pointer">Көрсеткіш</string>
+    <string name="settings_menu_pointer_docking_delay">Тіру кідірісі</string>
+    <string name="settings_menu_haptic_feedback_to_detection">Анықтау кезінде хаптика</string>
+    <string name="settings_menu_cat_menubar">Мәзір жолағы</string>
+    <string name="settings_menu_menubar_visible">Мәзір жолағын көрсету</string>
+    <string name="settings_menu_menubar_transparency">Мәзір мөлдірлігі</string>
+    <string name="settings_menu_menubar_composition">Мәзір жолағының құрамы</string>
+    <string name="settings_menu_cat_translation">Аударма</string>
+    <string name="settings_menu_translation_transparency">Аударма мөлдірлігі</string>
+    <string name="settings_menu_translation_close_delay">Жабу кідірісі</string>
+    <string name="settings_menu_automated_read_aloud">Аударманы авто оқу</string>
+    <string name="settings_menu_reply_transparency">Жауап мөлдірлігі</string>
+    <string name="settings_menu_cat_tts">Мәтін дауыспен</string>
+    <string name="settings_menu_tts_read_target">Оқу нысаны</string>
+    <string name="settings_tts_read_target_source">Түпнұсқа</string>
+    <string name="settings_tts_read_target_target">Аударма</string>
+    <string name="settings_menu_tts_voices">TTS дауыстар</string>
+    <string name="settings_menu_tts_rate">TTS жылдамдығы</string>
+    <string name="settings_menu_cat_about">Қосымша туралы</string>
+    <string name="settings_menu_app_version">Қосымша нұсқасы</string>
+    <string name="settings_menu_app_version_latest">(Соңғы)</string>
+
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">Шектеусіз мөлшер, шектеусіз уақыт</string>
+    <string name="help_text_deepl_own_key">Жеке DeepL API кілтіңізді пайдаланады</string>
+    <string name="deepl_key_guide">DeepL аудармасын пайдалану үшін DeepL API кілтіңізді енгізіңіз.</string>
+    <string name="deepl_key_signup_guide">DeepL-де тіркеліп, тегін жоспарға жазыла аласыз.</string>
+    <string name="deepl_key_link_subscription">Тегін жоспарға жазылу</string>
+    <string name="deepl_key_link_keys">API кілтіңізді тексеру</string>
+    <string name="deepl_key_active">Белсендірілді</string>
+    <string name="label_save">Сақтау</string>
+    <string name="deepl_key_invalid">API кілті жарамсыз.</string>
+    <string name="deepl_key_validating">Тексерілуде…</string>
+    <string name="deepl_key_network_error">Желі қатесіне байланысты кілтті тексеру мүмкін болмады. Кілт сақталды.</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">Сөйлемдер автоматты түрде таңдалады.</string>
+    <string name="detect_mode_description_paragraph">Параграфтар автоматты түрде танылады.</string>
+    <string name="detect_mode_description_select">Қалаған аймақты өзіңіз таңдаңыз.</string>
+    <string name="detect_mode_description_word">Сөзді көрсетіңіз, ол бірден аударылады.</string>
+    <string name="detect_mode_description_fixed_area">Сіз фильм субтитрлері сияқты тіркелген аймақтарды үздіксіз аудара аласыз.</string>
+  <string name="say_here">Мен мұндамын!</string>
+  <string name="hint_settings_reopen">Параметрлерді қайта ашу үшін тұтқаны екі рет түртіңіз</string>
+  <string name="openai_key_guide">OpenAI үлгілерімен аудару үшін OpenAI API кілтіңізді енгізіңіз.</string>
+  <string name="openai_key_signup_guide">OpenAI басқару тақтасында кілт жасаңыз. Пайдалану OpenAI тіркелгіңізге есептеледі.</string>
+  <string name="openai_key_link_keys">API кілтіңізді алыңыз</string>
+  <string name="openai_key_link_billing">Төлем және пайдалану</string>
+  <string name="openai_model_label">Үлгі</string>
+  <string name="help_text_openai_own_key">Жеке OpenAI API кілтіңізді пайдаланады</string>
+  <string name="gemini_key_guide">Gemini үлгілерімен аудару үшін Gemini API кілтіңізді енгізіңіз.</string>
+  <string name="help_text_gemini_own_key">Жеке Gemini API кілтіңізді пайдаланады</string>
+  <string name="gemini_key_signup_guide">Google AI Studio-да API кілтін жасаңыз. Тегін деңгей қолжетімді.</string>
+  <string name="claude_key_guide">Claude үлгілерімен аудару үшін Claude API кілтіңізді енгізіңіз.</string>
+  <string name="help_text_claude_own_key">Жеке Claude API кілтіңізді пайдаланады</string>
+  <string name="claude_key_signup_guide">Anthropic Console-де API кілтін жасаңыз. Пайдалану Anthropic есептік жазбаңызға есептеледі.</string>
+    <string name="settings_menu_how_to_use">Пайдалану нұсқаулығы</string>
+    <string name="settings_menu_privacy_policy">Құпиялылық саясаты</string>
+    <string name="source_language_no_screen_reader">Экрандағы мәтінді тану қолдау көрсетілмейді</string>
+    <string name="ocr_model_preparing">Аударма жүйесі дайындалуда. Сәл күте тұрыңыз.</string>
+    <string name="error_translate_invalid_key">API кілті жарамсыз. Оны параметрлерден тексеріңіз.</string>
+    <string name="error_translate_no_credit">Есептік жазбада кредит қалмады. Провайдер консолінде толтырыңыз.</string>
+    <string name="error_translate_rate_limited">Пайдалану шегіне жетті. Кейінірек қайталап көріңіз.</string>
+    <string name="error_translate_model_unavailable">Бұл аударма моделі қолжетімсіз. Қолданбаны жаңартыңыз.</string>
+    <string name="error_translate_network">Желі қатесі. Байланысты тексеріңіз.</string>
+    <string name="error_translate_generic">Аударма сәтсіз аяқталды. Қайталап көріңіз.</string>
+    <string name="key_saved_credit_hint">Кілт расталды. Аударма үшін есептік жазбада кредит немесе тегін квота да қажет.</string>
+    <string name="translation_context_label">Контекст</string>
+    <string name="translation_context_off">Өшірулі</string>
+    <string name="translation_context_nearby">Маңайдағы сөйлемдер</string>
+    <string name="translation_context_screen">Бүкіл экран</string>
+    <string name="translation_context_guide">Есімдіктер мен көп мағыналы сөздерді анықтау үшін айналадағы мәтінді де жібереді. Көбірек токен жұмсайды.</string>
+    <string name="translation_strength_label">Аударма стилі</string>
+    <string name="translation_strength_literal">Сөзбе-сөз</string>
+    <string name="translation_strength_natural">Табиғи</string>
+    <string name="translation_strength_free">Еркін</string>
+    <string name="translation_domain_label">Сала</string>
+    <string name="translation_domain_general">Жалпы</string>
+    <string name="translation_domain_game">Ойын</string>
+    <string name="translation_domain_comic">Комикс</string>
+    <string name="translation_domain_tech">Техникалық</string>
+    <string name="translation_domain_business">Бизнес</string>
+</resources>

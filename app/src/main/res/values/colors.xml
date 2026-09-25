@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="imageview_tint_color_enable">#3B6FDB</color> <!-- 01bca9 04B404 2E9AFE 58ACFA 4688f2 3B6FDB -->
+    <color name="selected_text_color">#3B6FDB</color>
+    <color name="selected_text_color_dark">#5882FA</color>
+    <color name="vision_text_color">#3B6FDB</color>
+    <color name="vision_text_color_dark">#5882FA</color>
+
+    <color name="fixed_area_color">#006600</color>
+    <color name="fixed_area_color_dark">#009900</color>
+</resources>

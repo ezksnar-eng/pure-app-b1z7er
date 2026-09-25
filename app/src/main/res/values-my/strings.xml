@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">ဖန်သားပြင်ဘာသာပြန်</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">လိုအပ်သောခွင့်ပြုချက်:\nအသိပေးချက်</string>
+    <string name="message_permission_notification_detail">ဖန်သားပြင်ဘာသာပြန်ကိုစတင်ရန် အသိပေးချက်ခွင့်ပြုချက်ပေးရန် လိုအပ်ပါသည်။</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">လိုအပ်သောခွင့်ပြုချက်:\nအခြားအက်ပ်များပေါ်တွင်ပြရန်</string>
+    <string name="message_permission_overlay_detail">ဖန်သားပြင်ဘာသာပြန်ကိုစတင်ရန် အခြားအက်ပ်များပေါ်တွင်ပြရန်ခွင့်ပြုချက်ပေးရန် လိုအပ်ပါသည်။</string>
+
+    <!-- MediaProjection token 요청 -->
+    <string name="message_media_projection">လိုအပ်သောခွင့်ပြုချက်:\nဖန်သားပြင်မှတ်တမ်းတင်ခြင်း</string>
+    <string name="message_media_projection_detail">ဖန်သားပြင်ဘာသာပြန်ကိုစတင်ရန် ဖန်သားပြင်မှတ်တမ်းတင်ခွင့်ပြုချက်ပေးရန် လိုအပ်ပါသည်။\n\nဖန်သားပြင်ပေါ်ရှိအချက်အလက်များကိုဘာသာပြန်ရေးအတွက်သာအသုံးပြုမည်ဖြစ်ပြီး သိမ်းဆည်းခြင်း သို့မဟုတ် ပို့ဆောင်ခြင်း မပြုပါ။</string>
+
+    <!-- Foreground Service 시작 알림 -->
+    <string name="notification_foreground_service">ဘာသာပြန်လုပ်ငန်းအတွက် ဖန်သားပြင်ဖမ်းယူမှုကို အသုံးပြုနေသည်။</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">ပြီးဆုံးမည်</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">ဘာသာပြန်မည့်ဘာသာ</string>
+    <string name="title_language_list_view_target">ဘာသာပြန်သည့်ဘာသာ</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">TTS အသံ ရွေးချယ်ရန်</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">အပ်ဒိတ်လိုအပ်ပါသည်</string>
+    <string name="message_force_update_detail">ဤဗားရှင်းကို ထောက်ပံ့တော့မည်မဟုတ်ပါ။\nStore သို့သွားပါ။</string>
+    <string name="message_service_unavailable">ဝန်ဆောင်မှုမရနိုင်ပါ</string>
+    <string name="message_service_unavailable_detail">ဝန်ဆောင်မှုကို ပြုပြင်ထိန်းသိမ်းနေပါသည်။</string>
+    <string name="message_network_unavailable">ကွန်ယက်မရှိပါ</string>
+    <string name="message_network_unavailable_detail">ကွန်ယက်မရရှိပါ။\nအတည်ပြုပြီးနောက်ထပ်ကြိုးစားပါ။</string>
+    <string name="message_translate_fixedarea_warn">ဘက်ထရီသတိပေးချက်</string>
+    <string name="message_translate_fixedarea_warn_detail">ဘက်ထရီအလျင်အမြန် ဆွဲချပေးနိုင်ပါတယ်။</string>
+    <string name="ad_gate_loading">ကြော်ငြာ ပြင်ဆင်နေသည်…</string>
+    <string name="ad_gate_reward_notice">ကြော်ငြာကို အဆုံးထိကြည့်ပါ၊ အက်ပ်ကို ပိတ်သည်အထိ ကြော်ငြာ ထပ်မပေါ်တော့ပါ။</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">ဆက်တင်</string>
+    <string name="settings_menu_cat_pointer">ညွှန်ပြ</string>
+    <string name="settings_menu_pointer_docking_delay">တွဲဆက်နောက်ကျချိန်</string>
+    <string name="settings_menu_haptic_feedback_to_detection">တွေ့ရှိချိန် ဟက်ပတစ်</string>
+    <string name="settings_menu_cat_menubar">မီနူးဘား</string>
+    <string name="settings_menu_menubar_visible">မီနူးဘားကို ပြရန်</string>
+    <string name="settings_menu_menubar_transparency">မီနူး အထင်ကြည်မှု</string>
+    <string name="settings_menu_menubar_composition">မီနူးဘား ဖွဲ့စည်းပုံ</string>
+    <string name="settings_menu_cat_translation">ဘာသာပြန်</string>
+    <string name="settings_menu_translation_transparency">ဘာသာပြန် အထင်ကြည်မှု</string>
+    <string name="settings_menu_translation_close_delay">ပိတ်ချိန်နောက်ကျမှု</string>
+    <string name="settings_menu_automated_read_aloud">ဘာသာပြန်ကို အလိုအလျောက်ဖတ်</string>
+    <string name="settings_menu_reply_transparency">ပြန်ကြားမှု အထင်ကြည်မှု</string>
+    <string name="settings_menu_cat_tts">စာလုံးသံပြောင်း</string>
+    <string name="settings_menu_tts_read_target">ဖတ်မည့်စာသား</string>
+    <string name="settings_tts_read_target_source">မူရင်း</string>
+    <string name="settings_tts_read_target_target">ဘာသာပြန်</string>
+    <string name="settings_menu_tts_voices">TTS အသံများ</string>
+    <string name="settings_menu_tts_rate">TTS အမြန်နှုန်း</string>
+    <string name="settings_menu_cat_about">အကြောင်း</string>
+    <string name="settings_menu_app_version">အပ်ဗားရှင်း</string>
+    <string name="settings_menu_app_version_latest">(နောက်ဆုံးထွက်)</string>
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">အရေအတွက်ကန့်သတ်မရှိ၊ အချိန်ကန့်သတ်မရှိ</string>
+    <string name="help_text_deepl_own_key">သင့်ကိုယ်ပိုင် DeepL API သော့ကို အသုံးပြုသည်</string>
+    <string name="deepl_key_guide">DeepL ဘာသာပြန်ကို အသုံးပြုရန် သင့် DeepL API သော့ကို ထည့်ပါ။</string>
+    <string name="deepl_key_signup_guide">DeepL တွင် စာရင်းသွင်းပြီး အခမဲ့ အစီအစဉ်ကို စာရင်းသွင်းနိုင်ပါသည်။</string>
+    <string name="deepl_key_link_subscription">အခမဲ့ အစီအစဉ်ကို စာရင်းသွင်းပါ</string>
+    <string name="deepl_key_link_keys">သင့် API သော့ကို စစ်ဆေးပါ</string>
+    <string name="deepl_key_active">ဖွင့်ထားသည်</string>
+    <string name="label_save">သိမ်းဆည်းပါ</string>
+    <string name="deepl_key_invalid">API သော့ မမှန်ကန်ပါ။</string>
+    <string name="deepl_key_validating">စစ်ဆေးနေသည်…</string>
+    <string name="deepl_key_network_error">ကွန်ရက်အမှားကြောင့် သော့ကို အတည်ပြု၍မရပါ။ သော့ကို သိမ်းဆည်းပြီးပါပြီ။</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">ဝါကျများကို အလိုအလျောက် ရွေးချယ်ပေးသည်။</string>
+    <string name="detect_mode_description_paragraph">စာပိုဒ်များကိုအလိုအလျောက်သိနိုင်သည်။</string>
+    <string name="detect_mode_description_select">သင့်လိုအပ်သောအပိုင်းကိုရွေးနိုင်သည်။</string>
+    <string name="detect_mode_description_word">စကားလုံးတစ်လုံးကို ညွှန်ပြပါ၊ ချက်ချင်းဘာသာပြန်ပေးပါမည်။</string>
+    <string name="detect_mode_description_fixed_area">ရုပ်ရှင်စာတန်းထိုးများကဲ့သို့သော တည်မြဲသောနေရာများကို သင်အမြဲတမ်းဘာသာပြန်နိုင်ပါသည်။</string>
+  <string name="say_here">ဒီမှာပါ!</string>
+  <string name="hint_settings_reopen">ဆက်တင်များ ပြန်ဖွင့်ရန် လက်ကိုင်ကို နှစ်ချက်တို့ပါ</string>
+  <string name="openai_key_guide">OpenAI မော်ဒယ်များဖြင့် ဘာသာပြန်ရန် သင့် OpenAI API သော့ကို ထည့်သွင်းပါ။</string>
+  <string name="openai_key_signup_guide">OpenAI ဒက်ရှ်ဘုတ်တွင် သော့တစ်ခု ဖန်တီးပါ။ အသုံးပြုမှုကို သင့် OpenAI အကောင့်သို့ ငွေတောင်းခံပါမည်။</string>
+  <string name="openai_key_link_keys">သင့် API သော့ကို ရယူပါ</string>
+  <string name="openai_key_link_billing">ငွေတောင်းခံခြင်းနှင့် အသုံးပြုမှု</string>
+  <string name="openai_model_label">မော်ဒယ်</string>
+  <string name="help_text_openai_own_key">သင့်ကိုယ်ပိုင် OpenAI API သော့ကို အသုံးပြုသည်</string>
+  <string name="gemini_key_guide">Gemini မော်ဒယ်များဖြင့် ဘာသာပြန်ရန် သင့် Gemini API သော့ကို ထည့်သွင်းပါ။</string>
+  <string name="help_text_gemini_own_key">သင့်ကိုယ်ပိုင် Gemini API သော့ကို အသုံးပြုသည်</string>
+  <string name="gemini_key_signup_guide">Google AI Studio တွင် API key တစ်ခု ဖန်တီးပါ။ အခမဲ့ အဆင့် ရရှိနိုင်ပါသည်။</string>
+  <string name="claude_key_guide">Claude မော်ဒယ်များဖြင့် ဘာသာပြန်ရန် သင့် Claude API သော့ကို ထည့်သွင်းပါ။</string>
+  <string name="help_text_claude_own_key">သင့်ကိုယ်ပိုင် Claude API သော့ကို အသုံးပြုသည်</string>
+  <string name="claude_key_signup_guide">Anthropic Console တွင် API key တစ်ခု ဖန်တီးပါ။ အသုံးပြုမှုကို သင့် Anthropic အကောင့်သို့ ငွေတောင်းခံပါသည်။</string>
+    <string name="settings_menu_how_to_use">အသုံးပြုနည်း</string>
+    <string name="settings_menu_privacy_policy">ကိုယ်ရေးအချက်အလက်ဆိုင်ရာ မူဝါဒ</string>
+    <string name="source_language_no_screen_reader">မျက်နှာပြင်စာသား မှတ်သားခြင်းကို မပံ့ပိုးပါ</string>
+    <string name="ocr_model_preparing">ဘာသာပြန်အင်ဂျင်ကို ပြင်ဆင်နေသည်။ ခဏစောင့်ပါ။</string>
+    <string name="error_translate_invalid_key">API ကီး မမှန်ကန်ပါ။ ဆက်တင်တွင် စစ်ဆေးပါ။</string>
+    <string name="error_translate_no_credit">အကောင့်တွင် ခရက်ဒစ် မကျန်ပါ။ ဝန်ဆောင်မှုပေးသူ၏ ကွန်ဆိုးလ်တွင် ဖြည့်ပါ။</string>
+    <string name="error_translate_rate_limited">အသုံးပြုမှု ကန့်သတ်ချက် ပြည့်သွားပါပြီ။ နောက်မှ ထပ်စမ်းပါ။</string>
+    <string name="error_translate_model_unavailable">ဤဘာသာပြန်မော်ဒယ်ကို အသုံးမပြုနိုင်ပါ။ အက်ပ်ကို အပ်ဒိတ်လုပ်ပါ။</string>
+    <string name="error_translate_network">ကွန်ရက် အမှား။ ချိတ်ဆက်မှုကို စစ်ပါ။</string>
+    <string name="error_translate_generic">ဘာသာပြန်ခြင်း မအောင်မြင်ပါ။ ထပ်စမ်းပါ။</string>
+    <string name="key_saved_credit_hint">ကီးကို အတည်ပြုပြီးပါပြီ။ ဘာသာပြန်ရန် အကောင့်တွင် ခရက်ဒစ် သို့မဟုတ် အခမဲ့ကိုတာလည်း လိုအပ်သည်။</string>
+    <string name="translation_context_label">အကြောင်းအရာ</string>
+    <string name="translation_context_off">ပိတ်</string>
+    <string name="translation_context_nearby">အနီးအနားရှိ ဝါကျများ</string>
+    <string name="translation_context_screen">မျက်နှာပြင်တစ်ခုလုံး</string>
+    <string name="translation_context_guide">နာမ်စားများနှင့် အဓိပ္ပာယ်နှစ်ခွဖြစ်သော စကားလုံးများကို နားလည်စေရန် ပတ်ဝန်းကျင်စာသားကိုပါ ပို့ပါသည်။ တိုကင် ပိုသုံးပါသည်။</string>
+    <string name="translation_strength_label">ဘာသာပြန်ပုံစံ</string>
+    <string name="translation_strength_literal">စာသားအတိုင်း</string>
+    <string name="translation_strength_natural">သဘာဝကျ</string>
+    <string name="translation_strength_free">လွတ်လပ်</string>
+    <string name="translation_domain_label">နယ်ပယ်</string>
+    <string name="translation_domain_general">အထွေထွေ</string>
+    <string name="translation_domain_game">ဂိမ်း</string>
+    <string name="translation_domain_comic">ကာတွန်း</string>
+    <string name="translation_domain_tech">နည်းပညာ</string>
+    <string name="translation_domain_business">စီးပွားရေး</string>
+</resources>

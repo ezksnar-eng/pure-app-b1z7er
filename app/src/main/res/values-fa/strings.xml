@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">مترجم صفحه‌نمایش</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">دسترسی لازم:\nاعلان‌ها</string>
+    <string name="message_permission_notification_detail">برای اجرای مترجم صفحه‌نمایش، باید دسترسی اعلان‌ها را فعال کنید.</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">دسترسی لازم:\nنمایش روی سایر برنامه‌ها</string>
+    <string name="message_permission_overlay_detail">برای اجرای مترجم صفحه‌نمایش، باید اجازه نمایش روی برنامه‌های دیگر را بدهید.</string>
+
+    <!-- MediaProjection token 요청 -->
+    <string name="message_media_projection">دسترسی لازم:\nضبط صفحه‌نمایش</string>
+    <string name="message_media_projection_detail">برای اجرای مترجم صفحه‌نمایش، باید اجازه ضبط صفحه را بدهید.\n\nاطلاعات صفحه فقط برای اهداف ترجمه استفاده می‌شوند و ذخیره یا منتقل نمی‌شوند.</string>
+
+    <!-- Foreground Service 시작 알림 -->
+    <string name="notification_foreground_service">عملکرد ضبط صفحه برای ترجمه در حال استفاده است.</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">پایان</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">ترجمه از</string>
+    <string name="title_language_list_view_target">ترجمه به</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">انتخاب صدای TTS</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">نیاز به به‌روزرسانی</string>
+    <string name="message_force_update_detail">این نسخه دیگر پشتیبانی نمی‌شود.\nبه فروشگاه بروید.</string>
+    <string name="message_service_unavailable">سرویس در دسترس نیست</string>
+    <string name="message_service_unavailable_detail">سرویس در حال تعمیر و نگهداری است.</string>
+    <string name="message_network_unavailable">شبکه در دسترس نیست</string>
+    <string name="message_network_unavailable_detail">شبکه در دسترس نیست.\nلطفاً بررسی کرده و دوباره تلاش کنید.</string>
+    <string name="message_translate_fixedarea_warn">هشدار باتری</string>
+    <string name="message_translate_fixedarea_warn_detail">ممکن است باتری به‌سرعت خالی شود.</string>
+    <string name="ad_gate_loading">در حال آماده‌سازی آگهی…</string>
+    <string name="ad_gate_reward_notice">تبلیغ را تا انتها تماشا کنید؛ تا زمانی که برنامه را ببندید دیگر تبلیغی نمایش داده نمی‌شود.</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">تنظیمات</string>
+    <string name="settings_menu_cat_pointer">نشانگر</string>
+    <string name="settings_menu_pointer_docking_delay">تأخیر اتصال</string>
+    <string name="settings_menu_haptic_feedback_to_detection">بازخورد لمسی هنگام شناسایی</string>
+    <string name="settings_menu_cat_menubar">نوار منو</string>
+    <string name="settings_menu_menubar_visible">نمایش نوار منو</string>
+    <string name="settings_menu_menubar_transparency">شفافیت منو</string>
+    <string name="settings_menu_menubar_composition">چیدمان نوار منو</string>
+    <string name="settings_menu_cat_translation">ترجمه</string>
+    <string name="settings_menu_translation_transparency">شفافیت ترجمه</string>
+    <string name="settings_menu_translation_close_delay">تأخیر بستن</string>
+    <string name="settings_menu_automated_read_aloud">خواندن خودکار ترجمه</string>
+    <string name="settings_menu_reply_transparency">شفافیت پاسخ</string>
+    <string name="settings_menu_cat_tts">متن به گفتار</string>
+    <string name="settings_menu_tts_read_target">هدف خواندن</string>
+    <string name="settings_tts_read_target_source">اصل</string>
+    <string name="settings_tts_read_target_target">ترجمه</string>
+    <string name="settings_menu_tts_voices">صداهای TTS</string>
+    <string name="settings_menu_tts_rate">سرعت TTS</string>
+    <string name="settings_menu_cat_about">درباره</string>
+    <string name="settings_menu_app_version">نسخه برنامه</string>
+    <string name="settings_menu_app_version_latest">(جدیدترین)</string>
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">بدون محدودیت در مقدار یا زمان</string>
+    <string name="help_text_deepl_own_key">از کلید API شخصی DeepL شما استفاده می‌کند</string>
+    <string name="deepl_key_guide">برای استفاده از ترجمه DeepL، کلید API DeepL خود را وارد کنید.</string>
+    <string name="deepl_key_signup_guide">در DeepL ثبت‌نام کنید تا بتوانید در طرح رایگان مشترک شوید.</string>
+    <string name="deepl_key_link_subscription">اشتراک در طرح رایگان</string>
+    <string name="deepl_key_link_keys">کلید API خود را بررسی کنید</string>
+    <string name="deepl_key_active">فعال شد</string>
+    <string name="label_save">ذخیره</string>
+    <string name="deepl_key_invalid">کلید API معتبر نیست.</string>
+    <string name="deepl_key_validating">در حال بررسی…</string>
+    <string name="deepl_key_network_error">به دلیل خطای شبکه نمی‌توان کلید را تأیید کرد. کلید ذخیره شد.</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">جملات به‌طور خودکار انتخاب می‌شوند.</string>
+    <string name="detect_mode_description_paragraph">واحدهای پاراگراف به‌صورت خودکار شناسایی می‌شوند.</string>
+    <string name="detect_mode_description_select">می‌توانید محدوده دلخواه را نیز انتخاب کنید.</string>
+    <string name="detect_mode_description_word">به یک کلمه اشاره کنید تا فوراً ترجمه شود.</string>
+    <string name="detect_mode_description_fixed_area">می‌توانید بخش‌های ثابت مانند زیرنویس فیلم را به‌صورت مداوم ترجمه کنید.</string>
+  <string name="say_here">من اینجا هستم!</string>
+  <string name="hint_settings_reopen">برای باز کردن دوباره تنظیمات، دو بار روی دستگیره ضربه بزنید</string>
+  <string name="openai_key_guide">برای ترجمه با مدل‌های OpenAI، کلید OpenAI API خود را وارد کنید.</string>
+  <string name="openai_key_signup_guide">کلیدی در داشبورد OpenAI بسازید. هزینه استفاده به حساب OpenAI شما منظور می‌شود.</string>
+  <string name="openai_key_link_keys">کلید API خود را دریافت کنید</string>
+  <string name="openai_key_link_billing">صورت‌حساب و استفاده</string>
+  <string name="openai_model_label">مدل</string>
+  <string name="help_text_openai_own_key">از کلید API شخصی OpenAI شما استفاده می‌کند</string>
+  <string name="gemini_key_guide">برای ترجمه با مدل‌های Gemini، کلید Gemini API خود را وارد کنید.</string>
+  <string name="help_text_gemini_own_key">از کلید API شخصی Gemini شما استفاده می‌کند</string>
+  <string name="gemini_key_signup_guide">یک کلید API در Google AI Studio بسازید. یک سطح رایگان در دسترس است.</string>
+  <string name="claude_key_guide">برای ترجمه با مدل‌های Claude، کلید Claude API خود را وارد کنید.</string>
+  <string name="help_text_claude_own_key">از کلید API شخصی Claude شما استفاده می‌کند</string>
+  <string name="claude_key_signup_guide">یک کلید API در Anthropic Console بسازید. مصرف به حساب Anthropic شما صورت‌حساب می‌شود.</string>
+    <string name="settings_menu_how_to_use">راهنمای استفاده</string>
+    <string name="settings_menu_privacy_policy">سیاست حفظ حریم خصوصی</string>
+    <string name="source_language_no_screen_reader">تشخیص متن صفحه پشتیبانی نمی‌شود</string>
+    <string name="ocr_model_preparing">موتور ترجمه در حال آماده‌سازی است. لطفاً کمی صبر کنید.</string>
+    <string name="error_translate_invalid_key">کلید API نامعتبر است. آن را در تنظیمات بررسی کنید.</string>
+    <string name="error_translate_no_credit">اعتباری در حساب شما نمانده است. در کنسول ارائه‌دهنده شارژ کنید.</string>
+    <string name="error_translate_rate_limited">به سقف استفاده رسیدید. بعداً دوباره امتحان کنید.</string>
+    <string name="error_translate_model_unavailable">این مدل ترجمه در دسترس نیست. لطفاً برنامه را به‌روزرسانی کنید.</string>
+    <string name="error_translate_network">خطای شبکه. اتصال خود را بررسی کنید.</string>
+    <string name="error_translate_generic">ترجمه ناموفق بود. دوباره تلاش کنید.</string>
+    <string name="key_saved_credit_hint">کلید تأیید شد. ترجمه به اعتبار یا سهمیه رایگان در حساب شما هم نیاز دارد.</string>
+    <string name="translation_context_label">زمینه</string>
+    <string name="translation_context_off">خاموش</string>
+    <string name="translation_context_nearby">جمله‌های اطراف</string>
+    <string name="translation_context_screen">کل صفحه</string>
+    <string name="translation_context_guide">متن اطراف را هم می‌فرستد تا ضمیرها و واژه‌های مبهم روشن شوند. توکن بیشتری مصرف می‌کند.</string>
+    <string name="translation_strength_label">سبک ترجمه</string>
+    <string name="translation_strength_literal">تحت‌اللفظی</string>
+    <string name="translation_strength_natural">روان</string>
+    <string name="translation_strength_free">آزاد</string>
+    <string name="translation_domain_label">حوزه</string>
+    <string name="translation_domain_general">عمومی</string>
+    <string name="translation_domain_game">بازی</string>
+    <string name="translation_domain_comic">کمیک</string>
+    <string name="translation_domain_tech">فنی</string>
+    <string name="translation_domain_business">کسب‌وکار</string>
+</resources>

@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">Skjáþýðing</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">Krafist heimildar:\nTilkynningar</string>
+    <string name="message_permission_notification_detail">Til að keyra Skjáþýðanda þarftu að leyfa tilkynningar.</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">Krafist heimildar:\nBirta yfir öðrum forritum</string>
+    <string name="message_permission_overlay_detail">Til að keyra Skjáþýðanda þarftu að leyfa birtingu yfir öðrum forritum.</string>
+
+    <!-- MediaProjection token -->
+    <string name="message_media_projection">Krafist heimildar:\nSkjáupptaka</string>
+    <string name="message_media_projection_detail">Til að keyra Skjáþýðanda þarftu að leyfa skjáupptöku.\n\nUpptakan verður aðeins notuð til þýðingar og verður ekki geymd eða deilt.</string>
+
+    <!-- Foreground Service -->
+    <string name="notification_foreground_service">Skjáupptökuaðgerð er notuð til þýðingar.</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">Ljúka</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">Þýða úr</string>
+    <string name="title_language_list_view_target">Þýða á</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">Veldu TTS-rödd</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">Uppfærsla krafist</string>
+    <string name="message_force_update_detail">Þessi útgáfa er ekki lengur studd.\nVinsamlegast farðu í verslunina.</string>
+    <string name="message_service_unavailable">Þjónustan er tímabundið ekki tiltæk</string>
+    <string name="message_service_unavailable_detail">Þjónustan er nú í viðhaldi.</string>
+    <string name="message_network_unavailable">Netið er ekki tiltækt</string>
+    <string name="message_network_unavailable_detail">Netið er ekki tiltækt.\nVinsamlegast athugaðu tenginguna og reyndu aftur.</string>
+    <string name="message_translate_fixedarea_warn">Viðvörun um rafhlöðu</string>
+    <string name="message_translate_fixedarea_warn_detail">Rafhlaðan gæti tæmst hratt.</string>
+    <string name="ad_gate_loading">Undirbý auglýsingu…</string>
+    <string name="ad_gate_reward_notice">Horfðu á auglýsinguna til enda og engar auglýsingar birtast fyrr en þú lokar forritinu.</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">Stillingar</string>
+    <string name="settings_menu_cat_pointer">Bendill</string>
+    <string name="settings_menu_pointer_docking_delay">Töf við festingu</string>
+    <string name="settings_menu_haptic_feedback_to_detection">Snertisvörun við greiningu</string>
+    <string name="settings_menu_cat_menubar">Valmyndarslá</string>
+    <string name="settings_menu_menubar_visible">Sýna valmyndastikuna</string>
+    <string name="settings_menu_menubar_transparency">Gegnsæi valmyndar</string>
+    <string name="settings_menu_menubar_composition">Uppsetning valmyndastiku</string>
+    <string name="settings_menu_cat_translation">Þýðing</string>
+    <string name="settings_menu_translation_transparency">Gegnsæi þýðingar</string>
+    <string name="settings_menu_translation_close_delay">Töf við lokun</string>
+    <string name="settings_menu_automated_read_aloud">Sjálfvirkur lestur þýðingar</string>
+    <string name="settings_menu_reply_transparency">Gegnsæi svars</string>
+    <string name="settings_menu_cat_tts">Texti í tal</string>
+    <string name="settings_menu_tts_read_target">Lesefni</string>
+    <string name="settings_tts_read_target_source">Frumtexti</string>
+    <string name="settings_tts_read_target_target">Þýðing</string>
+    <string name="settings_menu_tts_voices">TTS raddir</string>
+    <string name="settings_menu_tts_rate">TTS hraði</string>
+    <string name="settings_menu_cat_about">Um forritið</string>
+    <string name="settings_menu_app_version">Útgáfa apps</string>
+    <string name="settings_menu_app_version_latest">(Nýjasta)</string>
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">Engin takmörk á magni eða tíma</string>
+    <string name="help_text_deepl_own_key">Notar persónulega DeepL API-lykilinn þinn</string>
+    <string name="deepl_key_guide">Sláðu inn DeepL API-lykilinn þinn til að nota DeepL-þýðingu.</string>
+    <string name="deepl_key_signup_guide">Skráðu þig hjá DeepL og þú getur gerst áskrifandi að ókeypis áskriftinni.</string>
+    <string name="deepl_key_link_subscription">Gerast áskrifandi að ókeypis áskriftinni</string>
+    <string name="deepl_key_link_keys">Athuga API-lykilinn þinn</string>
+    <string name="deepl_key_active">Virkjað</string>
+    <string name="label_save">Vista</string>
+    <string name="deepl_key_invalid">API-lykillinn er ógildur.</string>
+    <string name="deepl_key_validating">Staðfestir…</string>
+    <string name="deepl_key_network_error">Ekki tókst að staðfesta lykilinn vegna netvillu. Lykillinn var vistaður.</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">Setningar eru valdar sjálfkrafa.</string>
+    <string name="detect_mode_description_paragraph">Málsgreinar eru greindar sjálfkrafa.</string>
+    <string name="detect_mode_description_select">Þú getur líka valið svæðið sem þú vilt.</string>
+    <string name="detect_mode_description_word">Bentu á orð til að þýða það samstundis.</string>
+    <string name="detect_mode_description_fixed_area">Þú getur þýtt stöðug svæði eins og texta í kvikmyndum.</string>
+  <string name="say_here">Ég er hér!</string>
+  <string name="hint_settings_reopen">Tvísmelltu á handfangið til að opna stillingar aftur</string>
+  <string name="openai_key_guide">Sláðu inn OpenAI API-lykilinn þinn til að þýða með OpenAI-líkönum.</string>
+  <string name="openai_key_signup_guide">Búðu til lykil á OpenAI-stjórnborðinu. Notkun er gjaldfærð á OpenAI-reikninginn þinn.</string>
+  <string name="openai_key_link_keys">Sæktu API-lykilinn þinn</string>
+  <string name="openai_key_link_billing">Reikningagerð og notkun</string>
+  <string name="openai_model_label">Líkan</string>
+  <string name="help_text_openai_own_key">Notar persónulega OpenAI API-lykilinn þinn</string>
+  <string name="gemini_key_guide">Sláðu inn Gemini API-lykilinn þinn til að þýða með Gemini-líkönum.</string>
+  <string name="help_text_gemini_own_key">Notar persónulega Gemini API-lykilinn þinn</string>
+  <string name="gemini_key_signup_guide">Búðu til API-lykil í Google AI Studio. Ókeypis þrep er í boði.</string>
+  <string name="claude_key_guide">Sláðu inn Claude API-lykilinn þinn til að þýða með Claude-líkönum.</string>
+  <string name="help_text_claude_own_key">Notar persónulega Claude API-lykilinn þinn</string>
+  <string name="claude_key_signup_guide">Búðu til API-lykil í Anthropic Console. Notkun er gjaldfærð á Anthropic-reikninginn þinn.</string>
+    <string name="settings_menu_how_to_use">Notkunarleiðbeiningar</string>
+    <string name="settings_menu_privacy_policy">Persónuverndarstefna</string>
+    <string name="source_language_no_screen_reader">Textagreining á skjá er ekki studd</string>
+    <string name="ocr_model_preparing">Undirbý þýðingarvélina. Vinsamlegast bíddu augnablik.</string>
+    <string name="error_translate_invalid_key">API-lykillinn er ógildur. Athugaðu hann í stillingum.</string>
+    <string name="error_translate_no_credit">Engar inneignir eftir á reikningnum. Fylltu á í stjórnborði veitunnar.</string>
+    <string name="error_translate_rate_limited">Notkunarmörkum náð. Reyndu aftur síðar.</string>
+    <string name="error_translate_model_unavailable">Þetta þýðingarlíkan er ekki í boði. Uppfærðu forritið.</string>
+    <string name="error_translate_network">Netvilla. Athugaðu tenginguna.</string>
+    <string name="error_translate_generic">Þýðing mistókst. Reyndu aftur.</string>
+    <string name="key_saved_credit_hint">Lykill staðfestur. Þýðing krefst einnig inneignar eða fríkvóta á reikningnum.</string>
+    <string name="translation_context_label">Samhengi</string>
+    <string name="translation_context_off">Slökkt</string>
+    <string name="translation_context_nearby">Nálægar setningar</string>
+    <string name="translation_context_screen">Allur skjárinn</string>
+    <string name="translation_context_guide">Sendir textann í kring svo hægt sé að ráða í fornöfn og margræð orð. Notar fleiri tóka.</string>
+    <string name="translation_strength_label">Þýðingarstíll</string>
+    <string name="translation_strength_literal">Orðrétt</string>
+    <string name="translation_strength_natural">Eðlilegt</string>
+    <string name="translation_strength_free">Frjálst</string>
+    <string name="translation_domain_label">Svið</string>
+    <string name="translation_domain_general">Almennt</string>
+    <string name="translation_domain_game">Leikir</string>
+    <string name="translation_domain_comic">Myndasaga</string>
+    <string name="translation_domain_tech">Tæknilegt</string>
+    <string name="translation_domain_business">Viðskipti</string>
+</resources>
+
+

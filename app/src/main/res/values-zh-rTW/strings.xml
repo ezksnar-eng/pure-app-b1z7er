@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">屏幕翻譯</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">所需權限：\n通知</string>
+    <string name="message_permission_notification_detail">啟動螢幕翻譯器需要授予通知權限。</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">所需權限：\n顯示在其他應用程式上方</string>
+    <string name="message_permission_overlay_detail">啟動螢幕翻譯器需要授予在其他應用程式上方顯示的權限。</string>
+
+    <!-- MediaProjection token 請求 -->
+    <string name="message_media_projection">所需權限：\n螢幕錄製</string>
+    <string name="message_media_projection_detail">啟動螢幕翻譯器需要授予螢幕錄製權限。\n\n螢幕上的資訊僅用於翻譯，不會儲存或傳送至其他地方。</string>
+
+    <!-- Foreground Service 啟動通知 -->
+    <string name="notification_foreground_service">正在使用螢幕擷取功能進行翻譯。</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">結束</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">翻譯來源</string>
+    <string name="title_language_list_view_target">翻譯目標</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">選擇 TTS 語音</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">需要更新</string>
+    <string name="message_force_update_detail">此版本已不再支援。\n請前往商店更新。</string>
+    <string name="message_service_unavailable">服務不可用</string>
+    <string name="message_service_unavailable_detail">服務正在維護中。</string>
+    <string name="message_network_unavailable">網路不可用</string>
+    <string name="message_network_unavailable_detail">網路不可用。\n請檢查後再試一次。</string>
+    <string name="message_translate_fixedarea_warn">電池警告</string>
+    <string name="message_translate_fixedarea_warn_detail">電池可能很快會耗盡。</string>
+    <string name="ad_gate_loading">正在準備廣告…</string>
+    <string name="ad_gate_reward_notice">看完整段廣告後，在關閉應用程式前將不再顯示廣告。</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">設定</string>
+    <string name="settings_menu_cat_pointer">指標</string>
+    <string name="settings_menu_pointer_docking_delay">連接延遲</string>
+    <string name="settings_menu_haptic_feedback_to_detection">偵測時觸覺回饋</string>
+    <string name="settings_menu_cat_menubar">選單列</string>
+    <string name="settings_menu_menubar_visible">顯示選單列</string>
+    <string name="settings_menu_menubar_transparency">選單透明度</string>
+    <string name="settings_menu_menubar_composition">選單列組成</string>
+    <string name="settings_menu_cat_translation">翻譯</string>
+    <string name="settings_menu_translation_transparency">翻譯透明度</string>
+    <string name="settings_menu_translation_close_delay">關閉延遲</string>
+    <string name="settings_menu_automated_read_aloud">自動朗讀譯文</string>
+    <string name="settings_menu_reply_transparency">回應透明度</string>
+    <string name="settings_menu_cat_tts">文字轉語音</string>
+    <string name="settings_menu_tts_read_target">朗讀對象</string>
+    <string name="settings_tts_read_target_source">原文</string>
+    <string name="settings_tts_read_target_target">譯文</string>
+    <string name="settings_menu_tts_voices">TTS 聲音</string>
+    <string name="settings_menu_tts_rate">TTS 速度</string>
+    <string name="settings_menu_cat_about">關於</string>
+    <string name="settings_menu_app_version">應用版本</string>
+    <string name="settings_menu_app_version_latest">(最新)</string>
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">不限次數、不限時間</string>
+    <string name="help_text_deepl_own_key">使用您的個人 DeepL API 金鑰</string>
+    <string name="deepl_key_guide">輸入您的 DeepL API 金鑰即可使用 DeepL 翻譯。</string>
+    <string name="deepl_key_signup_guide">註冊 DeepL 後即可訂閱免費方案。</string>
+    <string name="deepl_key_link_subscription">訂閱免費方案</string>
+    <string name="deepl_key_link_keys">查看您的 API 金鑰</string>
+    <string name="deepl_key_active">已啟用</string>
+    <string name="label_save">儲存</string>
+    <string name="deepl_key_invalid">API 金鑰無效。</string>
+    <string name="deepl_key_validating">正在驗證…</string>
+    <string name="deepl_key_network_error">由於網路錯誤，無法驗證金鑰。金鑰已儲存。</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">自動以句子為單位選取。</string>
+    <string name="detect_mode_description_paragraph">自動識別段落單位。</string>
+    <string name="detect_mode_description_select">也可以選取自訂翻譯區域。</string>
+    <string name="detect_mode_description_word">指向一個單字即可即時翻譯。</string>
+    <string name="detect_mode_description_fixed_area">您可以持續翻譯固定區域，如電影字幕。</string>
+  <string name="say_here">我在這裡！</string>
+  <string name="hint_settings_reopen">點兩下把手即可重新開啟設定</string>
+  <string name="openai_key_guide">輸入您的 OpenAI API 金鑰即可使用 OpenAI 模型進行翻譯。</string>
+  <string name="openai_key_signup_guide">在 OpenAI 主控台中建立金鑰。使用費用將計入您的 OpenAI 帳戶。</string>
+  <string name="openai_key_link_keys">取得 API 金鑰</string>
+  <string name="openai_key_link_billing">帳單與用量</string>
+  <string name="openai_model_label">模型</string>
+  <string name="help_text_openai_own_key">使用您的個人 OpenAI API 金鑰</string>
+  <string name="gemini_key_guide">輸入您的 Gemini API 金鑰即可使用 Gemini 模型進行翻譯。</string>
+  <string name="help_text_gemini_own_key">使用您的個人 Gemini API 金鑰</string>
+  <string name="gemini_key_signup_guide">在 Google AI Studio 中建立 API 金鑰。提供免費方案。</string>
+  <string name="claude_key_guide">輸入您的 Claude API 金鑰即可使用 Claude 模型進行翻譯。</string>
+  <string name="help_text_claude_own_key">使用您的個人 Claude API 金鑰</string>
+  <string name="claude_key_signup_guide">在 Anthropic Console 中建立 API 金鑰。用量將計入您的 Anthropic 帳戶。</string>
+    <string name="settings_menu_how_to_use">使用方式</string>
+    <string name="settings_menu_privacy_policy">隱私權政策</string>
+    <string name="source_language_no_screen_reader">不支援螢幕文字辨識</string>
+    <string name="ocr_model_preparing">正在準備翻譯引擎，請稍候。</string>
+    <string name="error_translate_invalid_key">API 金鑰無效。請在設定中檢查。</string>
+    <string name="error_translate_no_credit">帳戶額度不足。請在供應商主控台儲值。</string>
+    <string name="error_translate_rate_limited">已達使用上限。請稍後再試。</string>
+    <string name="error_translate_model_unavailable">此翻譯模型無法使用。請更新應用程式。</string>
+    <string name="error_translate_network">網路錯誤。請檢查連線。</string>
+    <string name="error_translate_generic">翻譯失敗。請再試一次。</string>
+    <string name="key_saved_credit_hint">金鑰已驗證。翻譯還需要帳戶中的額度或免費配額。</string>
+    <string name="translation_context_label">上下文</string>
+    <string name="translation_context_off">關閉</string>
+    <string name="translation_context_nearby">鄰近句子</string>
+    <string name="translation_context_screen">整個螢幕</string>
+    <string name="translation_context_guide">同時傳送周圍文字，以便解析代名詞和多義詞。會消耗更多權杖。</string>
+    <string name="translation_strength_label">翻譯風格</string>
+    <string name="translation_strength_literal">直譯</string>
+    <string name="translation_strength_natural">自然</string>
+    <string name="translation_strength_free">意譯</string>
+    <string name="translation_domain_label">領域</string>
+    <string name="translation_domain_general">一般</string>
+    <string name="translation_domain_game">遊戲</string>
+    <string name="translation_domain_comic">漫畫</string>
+    <string name="translation_domain_tech">技術</string>
+    <string name="translation_domain_business">商務</string>
+</resources>

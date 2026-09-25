@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">កម្មវិធីបកប្រែអេក្រង់</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">ការអនុញ្ញាតដែលទាមទារ៖\nការជូនដំណឹង</string>
+    <string name="message_permission_notification_detail">ដើម្បីដំណើរការកម្មវិធីបកប្រែអេក្រង់ អ្នកត្រូវអនុញ្ញាតការជូនដំណឹង។</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">ការអនុញ្ញាតដែលទាមទារ៖\nបង្ហាញលើកម្មវិធីផ្សេងទៀត</string>
+    <string name="message_permission_overlay_detail">ដើម្បីដំណើរការកម្មវិធីបកប្រែអេក្រង់ អ្នកត្រូវអនុញ្ញាតឲ្យបង្ហាញលើកម្មវិធីផ្សេងទៀត។</string>
+
+    <!-- MediaProjection token 요청 -->
+    <string name="message_media_projection">ការអនុញ្ញាតដែលទាមទារ៖\nកត់ត្រាអេក្រង់</string>
+    <string name="message_media_projection_detail">ដើម្បីដំណើរការកម្មវិធីបកប្រែអេក្រង់ អ្នកត្រូវអនុញ្ញាតការកត់ត្រាអេក្រង់។\n\nព័ត៌មានលើអេក្រង់ត្រូវបានប្រើសម្រាប់បកប្រែប៉ុណ្ណោះ ហើយវាមិនត្រូវបានរក្សាទុក ឬផ្ញើទៅកន្លែងផ្សេងទេ។</string>
+
+    <!-- Foreground Service 시작 알림 -->
+    <string name="notification_foreground_service">មុខងារ ការចាប់អេក្រង់ កំពុងត្រូវបានប្រើសម្រាប់ការបកប្រែ។</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">បញ្ចប់</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">បកប្រែពី</string>
+    <string name="title_language_list_view_target">បកប្រែទៅជា</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">ជ្រើសរើសសំឡេង TTS</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">ត្រូវការធ្វើបច្ចុប្បន្នភាព</string>
+    <string name="message_force_update_detail">ជំនាន់នេះមិនត្រូវបានគាំទារចុងក្រោយទេ។\nសូមចូលទៅក្នុងហាង។</string>
+    <string name="message_service_unavailable">សេវាកម្មមិនមាន</string>
+    <string name="message_service_unavailable_detail">សេវាកម្មកំពុងធ្វើការថែទាំ។</string>
+    <string name="message_network_unavailable">បណ្ដាញមិនមាន</string>
+    <string name="message_network_unavailable_detail">បណ្ដាញមិនអាចប្រើបាន។\nសូមពិនិត្យនិងព្យាយាមម្តងទៀត។</string>
+    <string name="message_translate_fixedarea_warn">ការព្រមានអំពីថ្ម</string>
+    <string name="message_translate_fixedarea_warn_detail">ថ្មអាចផុតដោយលឿន។</string>
+    <string name="ad_gate_loading">កំពុងរៀបចំការផ្សាយពាណិជ្ជកម្ម…</string>
+    <string name="ad_gate_reward_notice">មើលការផ្សាយពាណិជ្ជកម្មរហូតដល់ចប់ ហើយនឹងមិនមានការផ្សាយពាណិជ្ជកម្មទៀតទេ រហូតដល់អ្នកបិទកម្មវិធី។</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">ការកំណត់</string>
+    <string name="settings_menu_cat_pointer">ព្រួញ</string>
+    <string name="settings_menu_pointer_docking_delay">ពេលយឺតភ្ជាប់</string>
+    <string name="settings_menu_haptic_feedback_to_detection">ការឆ្លើយតបប៉ះ ពេលរកឃើញ</string>
+    <string name="settings_menu_cat_menubar">របារមេនុយ</string>
+    <string name="settings_menu_menubar_visible">បង្ហាញរបារម៉ឺនុយ</string>
+    <string name="settings_menu_menubar_transparency">តម្លាភាពមេនុយ</string>
+    <string name="settings_menu_menubar_composition">សមាសភាពរបារម៉ឺនុយ</string>
+    <string name="settings_menu_cat_translation">ការបកប្រែ</string>
+    <string name="settings_menu_translation_transparency">តម្លាភាពបកប្រែ</string>
+    <string name="settings_menu_translation_close_delay">ពេលយឺតបិទ</string>
+    <string name="settings_menu_automated_read_aloud">អានការបកប្រែស្វ័យប្រវត្តិ</string>
+    <string name="settings_menu_reply_transparency">តម្លាភាពចម្លើយ</string>
+    <string name="settings_menu_cat_tts">អត្ថបទទៅសំលេង</string>
+    <string name="settings_menu_tts_read_target">អត្ថបទដែលត្រូវអាន</string>
+    <string name="settings_tts_read_target_source">អត្ថបទដើម</string>
+    <string name="settings_tts_read_target_target">ការបកប្រែ</string>
+    <string name="settings_menu_tts_voices">សំឡេង TTS</string>
+    <string name="settings_menu_tts_rate">ល្បឿន TTS</string>
+    <string name="settings_menu_cat_about">អំពី</string>
+    <string name="settings_menu_app_version">ជំនាន់កម្មវិធី</string>
+    <string name="settings_menu_app_version_latest">(ចុងក្រោយ)</string>
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">គ្មានដែនកំណត់ទឹកប្រាក់ គ្មានដែនកំណត់ពេលវេលា</string>
+    <string name="help_text_deepl_own_key">ប្រើកូនសោ API DeepL ផ្ទាល់ខ្លួនរបស់អ្នក</string>
+    <string name="deepl_key_guide">បញ្ចូលកូនសោ API DeepL របស់អ្នក ដើម្បីប្រើការបកប្រែ DeepL។</string>
+    <string name="deepl_key_signup_guide">ចុះឈ្មោះជាមួយ DeepL ហើយអ្នកអាចជាវគម្រោងឥតគិតថ្លៃបាន។</string>
+    <string name="deepl_key_link_subscription">ជាវគម្រោងឥតគិតថ្លៃ</string>
+    <string name="deepl_key_link_keys">ពិនិត្យកូនសោ API របស់អ្នក</string>
+    <string name="deepl_key_active">បានធ្វើឱ្យសកម្ម</string>
+    <string name="label_save">រក្សាទុក</string>
+    <string name="deepl_key_invalid">កូនសោ API មិនត្រឹមត្រូវទេ។</string>
+    <string name="deepl_key_validating">កំពុងផ្ទៀងផ្ទាត់…</string>
+    <string name="deepl_key_network_error">មិនអាចផ្ទៀងផ្ទាត់កូនសោបានទេ ដោយសារកំហុសបណ្តាញ។ កូនសោត្រូវបានរក្សាទុក។</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">ប្រយោគត្រូវបានជ្រើសរើសដោយស្វ័យប្រវត្តិ។</string>
+    <string name="detect_mode_description_paragraph">កថាខណ្ឌត្រូវបានស្វ័យប្រវត្តិក្នុងការទទួលស្គាល់។</string>
+    <string name="detect_mode_description_select">អ្នកអាចជ្រើសរើសតំបន់ដែលចង់បកប្រែបានផងដែរ។</string>
+    <string name="detect_mode_description_word">ចង្អុលទៅពាក្យមួយ ដើម្បីបកប្រែវាភ្លាមៗ។</string>
+    <string name="detect_mode_description_fixed_area">អ្នកអាចបកប្រែតំបន់ថេរដូចជាចំណងជើងរបស់ភាពយន្តបានជាប់ជានិច្ច។</string>
+  <string name="say_here">ខ្ញុំនៅទីនេះ!</string>
+  <string name="hint_settings_reopen">ចុចពីរដងលើដៃទាញ ដើម្បីបើកការកំណត់ម្តងទៀត</string>
+  <string name="openai_key_guide">បញ្ចូលសោ OpenAI API របស់អ្នក ដើម្បីបកប្រែជាមួយម៉ូដែល OpenAI។</string>
+  <string name="openai_key_signup_guide">បង្កើតសោនៅក្នុងផ្ទាំងគ្រប់គ្រង OpenAI។ ការប្រើប្រាស់ត្រូវបានគិតថ្លៃទៅគណនី OpenAI របស់អ្នក។</string>
+  <string name="openai_key_link_keys">ទទួលបានសោ API របស់អ្នក</string>
+  <string name="openai_key_link_billing">ការចេញវិក្កយបត្រ និងការប្រើប្រាស់</string>
+  <string name="openai_model_label">ម៉ូដែល</string>
+  <string name="help_text_openai_own_key">ប្រើកូនសោ API OpenAI ផ្ទាល់ខ្លួនរបស់អ្នក</string>
+  <string name="gemini_key_guide">បញ្ចូលសោ Gemini API របស់អ្នក ដើម្បីបកប្រែជាមួយម៉ូដែល Gemini។</string>
+  <string name="help_text_gemini_own_key">ប្រើកូនសោ API Gemini ផ្ទាល់ខ្លួនរបស់អ្នក</string>
+  <string name="gemini_key_signup_guide">បង្កើតកូនសោ API នៅក្នុង Google AI Studio។ មានកម្រិតឥតគិតថ្លៃ។</string>
+  <string name="claude_key_guide">បញ្ចូលសោ Claude API របស់អ្នក ដើម្បីបកប្រែជាមួយម៉ូដែល Claude។</string>
+  <string name="help_text_claude_own_key">ប្រើកូនសោ API Claude ផ្ទាល់ខ្លួនរបស់អ្នក</string>
+  <string name="claude_key_signup_guide">បង្កើតសោ API នៅក្នុង Anthropic Console។ ការប្រើប្រាស់ត្រូវបានគិតថ្លៃទៅគណនី Anthropic របស់អ្នក។</string>
+    <string name="settings_menu_how_to_use">របៀបប្រើប្រាស់</string>
+    <string name="settings_menu_privacy_policy">គោលការណ៍ឯកជនភាព</string>
+    <string name="source_language_no_screen_reader">មិនគាំទ្រការស្គាល់អត្ថបទលើអេក្រង់</string>
+    <string name="ocr_model_preparing">កំពុងរៀបចំម៉ាស៊ីនបកប្រែ។ សូមរង់ចាំបន្តិច។</string>
+    <string name="error_translate_invalid_key">សោ API មិនត្រឹមត្រូវទេ។ ពិនិត្យវានៅក្នុងការកំណត់។</string>
+    <string name="error_translate_no_credit">គ្មានឥណទាននៅក្នុងគណនីទេ។ បញ្ចូលនៅក្នុងកុងសូលអ្នកផ្តល់សេវា។</string>
+    <string name="error_translate_rate_limited">បានដល់ដែនកំណត់ប្រើប្រាស់។ សូមព្យាយាមម្តងទៀតពេលក្រោយ។</string>
+    <string name="error_translate_model_unavailable">ម៉ូដែលបកប្រែនេះមិនអាចប្រើបានទេ។ សូមធ្វើបច្ចុប្បន្នភាពកម្មវិធី។</string>
+    <string name="error_translate_network">កំហុសបណ្តាញ។ ពិនិត្យការតភ្ជាប់របស់អ្នក។</string>
+    <string name="error_translate_generic">ការបកប្រែបរាជ័យ។ សូមព្យាយាមម្តងទៀត។</string>
+    <string name="key_saved_credit_hint">បានផ្ទៀងផ្ទាត់សោ។ ការបកប្រែក៏ត្រូវការឥណទាន ឬកូតាឥតគិតថ្លៃក្នុងគណនីដែរ។</string>
+    <string name="translation_context_label">បរិបទ</string>
+    <string name="translation_context_off">បិទ</string>
+    <string name="translation_context_nearby">ប្រយោគនៅជិត</string>
+    <string name="translation_context_screen">អេក្រង់ទាំងមូល</string>
+    <string name="translation_context_guide">ផ្ញើអត្ថបទជុំវិញ ដើម្បីបកស្រាយសព្វនាម និងពាក្យមិនច្បាស់លាស់។ ប្រើថូខឹនច្រើនជាង។</string>
+    <string name="translation_strength_label">រចនាបថបកប្រែ</string>
+    <string name="translation_strength_literal">តាមព្យញ្ជនៈ</string>
+    <string name="translation_strength_natural">ធម្មជាតិ</string>
+    <string name="translation_strength_free">សេរី</string>
+    <string name="translation_domain_label">វិស័យ</string>
+    <string name="translation_domain_general">ទូទៅ</string>
+    <string name="translation_domain_game">ហ្គេម</string>
+    <string name="translation_domain_comic">រឿងតុក្កតា</string>
+    <string name="translation_domain_tech">បច្ចេកទេស</string>
+    <string name="translation_domain_business">អាជីវកម្ម</string>
+</resources>

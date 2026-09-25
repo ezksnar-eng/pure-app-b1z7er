@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">Traducció de pantalla</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">Permís necessari:\nNotificacions</string>
+    <string name="message_permission_notification_detail">Per iniciar el Traductor de Pantalla, cal atorgar permís per a notificacions.</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">Permís necessari:\nMostrar sobre altres aplicacions</string>
+    <string name="message_permission_overlay_detail">Per iniciar el Traductor de Pantalla, cal atorgar permís per mostrar-se sobre altres aplicacions.</string>
+
+    <!-- MediaProjection token 요청 -->
+    <string name="message_media_projection">Permís necessari:\nGravació de pantalla</string>
+    <string name="message_media_projection_detail">Per iniciar el Traductor de Pantalla, cal atorgar permís per gravar la pantalla.\n\nLa informació capturada només s\'utilitzarà per traducció i no es guardarà ni es compartirà.</string>
+
+    <!-- Foreground Service 시작 알림 -->
+    <string name="notification_foreground_service">La funció de captura de pantalla s’està utilitzant per a la traducció.</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">Finalitza</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">Traduir des de</string>
+    <string name="title_language_list_view_target">Traduir a</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">Selecciona la veu TTS</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">Cal actualitzar</string>
+    <string name="message_force_update_detail">Aquesta versió ja no és compatible.\nObre la botiga per actualitzar-la.</string>
+    <string name="message_service_unavailable">Servei no disponible</string>
+    <string name="message_service_unavailable_detail">El servei està en manteniment.</string>
+    <string name="message_network_unavailable">Xarxa no disponible</string>
+    <string name="message_network_unavailable_detail">No hi ha connexió a la xarxa.\nComproveu-ho i torneu-ho a intentar.</string>
+    <string name="message_translate_fixedarea_warn">Avís de bateria</string>
+    <string name="message_translate_fixedarea_warn_detail">La bateria es pot descarregar ràpidament.</string>
+    <string name="ad_gate_loading">S\'està preparant un anunci…</string>
+    <string name="ad_gate_reward_notice">Mira l\'anunci fins al final i no apareixeran més anuncis fins que tanquis l\'aplicació.</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">Configuració</string>
+    <string name="settings_menu_cat_pointer">Cursor</string>
+    <string name="settings_menu_pointer_docking_delay">Retard d\'acoblament</string>
+    <string name="settings_menu_haptic_feedback_to_detection">Resposta hàptica en detectar</string>
+    <string name="settings_menu_cat_menubar">Barra de menú</string>
+    <string name="settings_menu_menubar_visible">Mostra la barra de menús</string>
+    <string name="settings_menu_menubar_transparency">Transparència del menú</string>
+    <string name="settings_menu_menubar_composition">Composició de la barra de menús</string>
+    <string name="settings_menu_cat_translation">Traducció</string>
+    <string name="settings_menu_translation_transparency">Transparència traducció</string>
+    <string name="settings_menu_translation_close_delay">Retard de tancament</string>
+    <string name="settings_menu_automated_read_aloud">Lectura automàtica de la traducció</string>
+    <string name="settings_menu_reply_transparency">Transparència resposta</string>
+    <string name="settings_menu_cat_tts">Text a veu</string>
+    <string name="settings_menu_tts_read_target">Text a llegir</string>
+    <string name="settings_tts_read_target_source">Original</string>
+    <string name="settings_tts_read_target_target">Traducció</string>
+    <string name="settings_menu_tts_voices">Veus TTS</string>
+    <string name="settings_menu_tts_rate">Velocitat TTS</string>
+    <string name="settings_menu_cat_about">Quant a</string>
+    <string name="settings_menu_app_version">Versió de l\'app</string>
+    <string name="settings_menu_app_version_latest">(Última)</string>
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">Sense límit de quantitat ni de temps</string>
+    <string name="help_text_deepl_own_key">Utilitza la teva clau API personal de DeepL</string>
+    <string name="deepl_key_guide">Introdueix la teva clau API de DeepL per utilitzar la traducció de DeepL.</string>
+    <string name="deepl_key_signup_guide">Registra\'t a DeepL i podràs subscriure\'t al pla gratuït.</string>
+    <string name="deepl_key_link_subscription">Subscriu-te al pla gratuït</string>
+    <string name="deepl_key_link_keys">Comprova la teva clau API</string>
+    <string name="deepl_key_active">Activat</string>
+    <string name="label_save">Desa</string>
+    <string name="deepl_key_invalid">La clau API no és vàlida.</string>
+    <string name="deepl_key_validating">S\'està verificant…</string>
+    <string name="deepl_key_network_error">No s\'ha pogut verificar la clau a causa d\'un error de xarxa. La clau s\'ha desat.</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">Les frases se seleccionen automàticament.</string>
+    <string name="detect_mode_description_paragraph">Els paràgrafs es reconeixen automàticament.</string>
+    <string name="detect_mode_description_select">També pots seleccionar l’àrea que vulguis.</string>
+    <string name="detect_mode_description_word">Assenyala una paraula per traduir-la a l\'instant.</string>
+    <string name="detect_mode_description_fixed_area">Pots traduir contínuament àrees fixes, com els subtítols de pel·lícules.</string>
+  <string name="say_here">Soc aquí!</string>
+  <string name="hint_settings_reopen">Toca dues vegades el mànec per tornar a obrir la configuració</string>
+  <string name="openai_key_guide">Introduïu la vostra clau API d’OpenAI per traduir amb els models d’OpenAI.</string>
+  <string name="openai_key_signup_guide">Creeu una clau al tauler d’OpenAI. L’ús es factura al vostre compte d’OpenAI.</string>
+  <string name="openai_key_link_keys">Obteniu la vostra clau API</string>
+  <string name="openai_key_link_billing">Facturació i ús</string>
+  <string name="openai_model_label">Model</string>
+  <string name="help_text_openai_own_key">Utilitza la teva clau API personal de OpenAI</string>
+  <string name="gemini_key_guide">Introduïu la vostra clau API d’Gemini per traduir amb els models d’Gemini.</string>
+  <string name="help_text_gemini_own_key">Utilitza la teva clau API personal de Gemini</string>
+  <string name="gemini_key_signup_guide">Crea una clau API a Google AI Studio. Hi ha disponible un nivell gratuït.</string>
+  <string name="claude_key_guide">Introduïu la vostra clau API d’Claude per traduir amb els models d’Claude.</string>
+  <string name="help_text_claude_own_key">Utilitza la teva clau API personal de Claude</string>
+  <string name="claude_key_signup_guide">Crea una clau API a l’Anthropic Console. L’ús es factura al teu compte d’Anthropic.</string>
+    <string name="settings_menu_how_to_use">Com s\'utilitza</string>
+    <string name="settings_menu_privacy_policy">Política de privadesa</string>
+    <string name="source_language_no_screen_reader">No s\'admet el reconeixement de text de la pantalla</string>
+    <string name="ocr_model_preparing">S\'està preparant el motor de traducció. Espereu un moment.</string>
+    <string name="error_translate_invalid_key">La clau API no és vàlida. Comprova-la a la configuració.</string>
+    <string name="error_translate_no_credit">No queden crèdits al compte. Recarrega a la consola del proveïdor.</string>
+    <string name="error_translate_rate_limited">S\'ha arribat al límit d\'ús. Torna-ho a provar més tard.</string>
+    <string name="error_translate_model_unavailable">Aquest model de traducció no està disponible. Actualitza l\'aplicació.</string>
+    <string name="error_translate_network">Error de xarxa. Comprova la connexió.</string>
+    <string name="error_translate_generic">La traducció ha fallat. Torna-ho a provar.</string>
+    <string name="key_saved_credit_hint">Clau verificada. La traducció també requereix crèdits o quota gratuïta al compte.</string>
+    <string name="translation_context_label">Context</string>
+    <string name="translation_context_off">Desactivat</string>
+    <string name="translation_context_nearby">Frases properes</string>
+    <string name="translation_context_screen">Tota la pantalla</string>
+    <string name="translation_context_guide">Envia el text del voltant per resoldre pronoms i paraules ambigües. Consumeix més tokens.</string>
+    <string name="translation_strength_label">Estil de traducció</string>
+    <string name="translation_strength_literal">Literal</string>
+    <string name="translation_strength_natural">Natural</string>
+    <string name="translation_strength_free">Lliure</string>
+    <string name="translation_domain_label">Àmbit</string>
+    <string name="translation_domain_general">General</string>
+    <string name="translation_domain_game">Jocs</string>
+    <string name="translation_domain_comic">Còmic</string>
+    <string name="translation_domain_tech">Tècnic</string>
+    <string name="translation_domain_business">Negocis</string>
+</resources>

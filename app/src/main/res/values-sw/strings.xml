@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">Tafsiri ya skrini</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">Ruhusa Inahitajika:\nArifa</string>
+    <string name="message_permission_notification_detail">Ili kuanzisha Mtafsiri wa Skrini, lazima uruhusu arifa.</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">Ruhusa Inahitajika:\nOnyesha Juu ya Programu Nyingine</string>
+    <string name="message_permission_overlay_detail">Ili kuanzisha Mtafsiri wa Skrini, lazima uruhusu kuonyesha juu ya programu nyingine.</string>
+
+    <!-- MediaProjection token -->
+    <string name="message_media_projection">Ruhusa Inahitajika:\nKurekodi Skrini</string>
+    <string name="message_media_projection_detail">Ili kuanzisha Mtafsiri wa Skrini, lazima uruhusu kurekodi skrini.\n\nTaarifa kutoka kwenye skrini zitatumika tu kwa madhumuni ya tafsiri na hazitahifadhiwa au kushirikiwa.</string>
+
+    <!-- Foreground Service -->
+    <string name="notification_foreground_service">Kazi ya kunasa skrini inatumika kwa tafsiri.</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">Maliza</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">Tafsiri kutoka</string>
+    <string name="title_language_list_view_target">Tafsiri hadi</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">Chagua sauti ya TTS</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">Sasisho Linahitajika</string>
+    <string name="message_force_update_detail">Toleo hili halitumiki tena.\nNenda kwenye duka.</string>
+    <string name="message_service_unavailable">Huduma Haipatikani</string>
+    <string name="message_service_unavailable_detail">Huduma iko kwenye matengenezo kwa sasa.</string>
+    <string name="message_network_unavailable">Mtandao Haupatikani</string>
+    <string name="message_network_unavailable_detail">Mtandao haupatikani.\nTafadhali angalia muunganisho na ujaribu tena.</string>
+    <string name="message_translate_fixedarea_warn">Onyo la betri</string>
+    <string name="message_translate_fixedarea_warn_detail">Betri inaweza kuisha haraka.</string>
+    <string name="ad_gate_loading">Inaandaa tangazo…</string>
+    <string name="ad_gate_reward_notice">Tazama tangazo hadi mwisho na hakuna tangazo lingine litakaloonekana hadi ufunge programu.</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">Mipangilio</string>
+    <string name="settings_menu_cat_pointer">Kiashiria</string>
+    <string name="settings_menu_pointer_docking_delay">Ucheleweshaji wa kuunganisha</string>
+    <string name="settings_menu_haptic_feedback_to_detection">Mrejesho wa mguso unapotambuliwa</string>
+    <string name="settings_menu_cat_menubar">Bari ya Menyu</string>
+    <string name="settings_menu_menubar_visible">Onyesha upau wa menyu</string>
+    <string name="settings_menu_menubar_transparency">Uwazi wa Menyu</string>
+    <string name="settings_menu_menubar_composition">Muundo wa upau wa menyu</string>
+    <string name="settings_menu_cat_translation">Tafsiri</string>
+    <string name="settings_menu_translation_transparency">Uwazi wa Tafsiri</string>
+    <string name="settings_menu_translation_close_delay">Ucheleweshaji wa Kufunga</string>
+    <string name="settings_menu_automated_read_aloud">Kusoma tafsiri kiotomatiki</string>
+    <string name="settings_menu_reply_transparency">Uwazi wa Majibu</string>
+    <string name="settings_menu_cat_tts">Maandishi kwa Sauti</string>
+    <string name="settings_menu_tts_read_target">Maandishi ya kusoma</string>
+    <string name="settings_tts_read_target_source">Asilia</string>
+    <string name="settings_tts_read_target_target">Tafsiri</string>
+    <string name="settings_menu_tts_voices">Sauti za TTS</string>
+    <string name="settings_menu_tts_rate">Kasi ya TTS</string>
+    <string name="settings_menu_cat_about">Kuhusu</string>
+    <string name="settings_menu_app_version">Toleo la programu</string>
+    <string name="settings_menu_app_version_latest">(Zaidi mpya)</string>
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">Hakuna kikomo cha idadi au muda</string>
+    <string name="help_text_deepl_own_key">Hutumia ufunguo wako wa kibinafsi wa DeepL API</string>
+    <string name="deepl_key_guide">Weka ufunguo wako wa DeepL API ili kutumia tafsiri ya DeepL.</string>
+    <string name="deepl_key_signup_guide">Jisajili na DeepL na unaweza kujiandikisha kwenye mpango wa bila malipo.</string>
+    <string name="deepl_key_link_subscription">Jiandikishe kwenye mpango wa bila malipo</string>
+    <string name="deepl_key_link_keys">Angalia ufunguo wako wa API</string>
+    <string name="deepl_key_active">Imewashwa</string>
+    <string name="label_save">Hifadhi</string>
+    <string name="deepl_key_invalid">Ufunguo wa API si sahihi.</string>
+    <string name="deepl_key_validating">Inathibitisha…</string>
+    <string name="deepl_key_network_error">Ufunguo haukuweza kuthibitishwa kutokana na hitilafu ya mtandao. Ufunguo umehifadhiwa.</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">Sentensi huchaguliwa kiotomatiki.</string>
+    <string name="detect_mode_description_paragraph">Aya hutambuliwa kiotomatiki.</string>
+    <string name="detect_mode_description_select">Unaweza pia kuchagua eneo unalotaka.</string>
+    <string name="detect_mode_description_word">Elekeza kwenye neno ili litafsiriwe papo hapo.</string>
+    <string name="detect_mode_description_fixed_area">Unaweza kutafsiri maeneo yaliyowekwa, kama vile manukuu ya filamu, kwa kuendelea.</string>
+  <string name="say_here">Niko hapa!</string>
+  <string name="hint_settings_reopen">Gusa mara mbili kishikizo ili kufungua mipangilio tena</string>
+  <string name="openai_key_guide">Weka ufunguo wako wa OpenAI API ili kutafsiri kwa miundo ya OpenAI.</string>
+  <string name="openai_key_signup_guide">Tengeneza ufunguo katika dashibodi ya OpenAI. Matumizi hutozwa kwenye akaunti yako ya OpenAI.</string>
+  <string name="openai_key_link_keys">Pata ufunguo wako wa API</string>
+  <string name="openai_key_link_billing">Bili na matumizi</string>
+  <string name="openai_model_label">Muundo</string>
+  <string name="help_text_openai_own_key">Hutumia ufunguo wako wa kibinafsi wa OpenAI API</string>
+  <string name="gemini_key_guide">Weka ufunguo wako wa Gemini API ili kutafsiri kwa miundo ya Gemini.</string>
+  <string name="help_text_gemini_own_key">Hutumia ufunguo wako wa kibinafsi wa Gemini API</string>
+  <string name="gemini_key_signup_guide">Unda ufunguo wa API katika Google AI Studio. Kiwango cha bila malipo kinapatikana.</string>
+  <string name="claude_key_guide">Weka ufunguo wako wa Claude API ili kutafsiri kwa miundo ya Claude.</string>
+  <string name="help_text_claude_own_key">Hutumia ufunguo wako wa kibinafsi wa Claude API</string>
+  <string name="claude_key_signup_guide">Unda ufunguo wa API katika Anthropic Console. Matumizi hutozwa kwenye akaunti yako ya Anthropic.</string>
+    <string name="settings_menu_how_to_use">Jinsi ya kutumia</string>
+    <string name="settings_menu_privacy_policy">Sera ya faragha</string>
+    <string name="source_language_no_screen_reader">Utambuzi wa maandishi ya skrini hautumiki</string>
+    <string name="ocr_model_preparing">Injini ya tafsiri inaandaliwa. Tafadhali subiri kidogo.</string>
+    <string name="error_translate_invalid_key">Ufunguo wa API si sahihi. Ukague katika Mipangilio.</string>
+    <string name="error_translate_no_credit">Hakuna salio kwenye akaunti. Ongeza kwenye konsoli ya mtoa huduma.</string>
+    <string name="error_translate_rate_limited">Kikomo cha matumizi kimefikiwa. Jaribu tena baadaye.</string>
+    <string name="error_translate_model_unavailable">Muundo huu wa kutafsiri haupatikani. Tafadhali sasisha programu.</string>
+    <string name="error_translate_network">Hitilafu ya mtandao. Kagua muunganisho wako.</string>
+    <string name="error_translate_generic">Tafsiri imeshindikana. Jaribu tena.</string>
+    <string name="key_saved_credit_hint">Ufunguo umethibitishwa. Kutafsiri kunahitaji pia salio au mgawo wa bure kwenye akaunti.</string>
+    <string name="translation_context_label">Muktadha</string>
+    <string name="translation_context_off">Imezimwa</string>
+    <string name="translation_context_nearby">Sentensi za jirani</string>
+    <string name="translation_context_screen">Skrini nzima</string>
+    <string name="translation_context_guide">Hutuma maandishi yanayozunguka ili kufafanua viwakilishi na maneno yenye maana nyingi. Hutumia tokeni zaidi.</string>
+    <string name="translation_strength_label">Mtindo wa tafsiri</string>
+    <string name="translation_strength_literal">Neno kwa neno</string>
+    <string name="translation_strength_natural">Asilia</string>
+    <string name="translation_strength_free">Huru</string>
+    <string name="translation_domain_label">Uwanja</string>
+    <string name="translation_domain_general">Kwa jumla</string>
+    <string name="translation_domain_game">Michezo</string>
+    <string name="translation_domain_comic">Katuni</string>
+    <string name="translation_domain_tech">Kiufundi</string>
+    <string name="translation_domain_business">Biashara</string>
+</resources>
+
+

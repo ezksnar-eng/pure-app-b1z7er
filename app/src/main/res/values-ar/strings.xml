@@ -1,0 +1,126 @@
+<resources>
+  <string name="app_name">ترجمة الشاشة</string>
+
+  <!-- Notification Permission -->
+  <string name="message_permission_notification">الإذن المطلوب:\nالإشعارات</string>
+  <string name="message_permission_notification_detail">لتشغيل مترجم الشاشة، يجب السماح بالإشعارات.</string>
+
+  <!-- Overlay Permission -->
+  <string name="message_permission_overlay">الإذن المطلوب:\nالعرض فوق التطبيقات الأخرى</string>
+  <string name="message_permission_overlay_detail">لتشغيل مترجم الشاشة، يجب السماح بالعرض فوق التطبيقات الأخرى.</string>
+
+  <!-- MediaProjection token -->
+  <string name="message_media_projection">الإذن المطلوب:\nتسجيل الشاشة</string>
+  <string name="message_media_projection_detail">لتشغيل مترجم الشاشة، يجب السماح بتسجيل الشاشة.\n\nسيتم استخدام المعلومات الملتقطة من الشاشة فقط للترجمة ولن يتم تخزينها أو مشاركتها.</string>
+
+  <!-- Foreground Service -->
+  <string name="notification_foreground_service">يتم استخدام وظيفة التقاط الشاشة للترجمة.</string>
+
+  <!-- OverlayService -->
+  <string name="service_menu_finish">إنهاء</string>
+
+  <!-- LanguageListView -->
+  <string name="title_language_list_view_source">الترجمة من</string>
+  <string name="title_language_list_view_target">الترجمة إلى</string>
+
+  <!-- VoiceListView -->
+  <string name="title_voice_list_view">اختيار صوت TTS</string>
+
+  <!-- Dialog -->
+  <string name="message_force_update">التحديث مطلوب</string>
+  <string name="message_force_update_detail">هذا الإصدار لم يعد مدعومًا.\nيرجى الانتقال إلى المتجر.</string>
+  <string name="message_service_unavailable">الخدمة غير متاحة مؤقتًا</string>
+  <string name="message_service_unavailable_detail">الخدمة حاليًا تحت الصيانة.</string>
+  <string name="message_network_unavailable">الشبكة غير متاحة</string>
+  <string name="message_network_unavailable_detail">الشبكة غير متاحة.\nيرجى التحقق من الاتصال والمحاولة مرة أخرى.</string>
+  <string name="message_translate_fixedarea_warn">تحذير البطارية</string>
+  <string name="message_translate_fixedarea_warn_detail">قد تنفد البطارية بسرعة.</string>
+  <string name="ad_gate_loading">جارٍ تحضير إعلان…</string>
+  <string name="ad_gate_reward_notice">شاهد الإعلان حتى النهاية ولن تظهر إعلانات أخرى حتى تغلق التطبيق.</string>
+
+  <!-- SettingsActivity -->
+  <string name="settings_title">الإعدادات</string>
+  <string name="settings_menu_cat_pointer">المؤشر</string>
+  <string name="settings_menu_pointer_docking_delay">تأخير الإرساء</string>
+  <string name="settings_menu_haptic_feedback_to_detection">استجابة لمسية عند الكشف</string>
+  <string name="settings_menu_cat_menubar">شريط القوائم</string>
+    <string name="settings_menu_menubar_visible">إظهار شريط القائمة</string>
+  <string name="settings_menu_menubar_transparency">شفافية القائمة</string>
+  <string name="settings_menu_menubar_composition">تكوين شريط القائمة</string>
+  <string name="settings_menu_cat_translation">الترجمة</string>
+  <string name="settings_menu_translation_transparency">شفافية الترجمة</string>
+  <string name="settings_menu_translation_close_delay">تأخير الإغلاق</string>
+  <string name="settings_menu_automated_read_aloud">قراءة تلقائية للترجمة</string>
+  <string name="settings_menu_reply_transparency">شفافية الرد</string>
+  <string name="settings_menu_cat_tts">تحويل النص</string>
+  <string name="settings_menu_tts_read_target">هدف القراءة</string>
+  <string name="settings_tts_read_target_source">الأصل</string>
+  <string name="settings_tts_read_target_target">الترجمة</string>
+  <string name="settings_menu_tts_voices">أصوات TTS</string>
+  <string name="settings_menu_tts_rate">سرعة TTS</string>
+  <string name="settings_menu_cat_about">حول</string>
+  <string name="settings_menu_app_version">إصدار التطبيق</string>
+  <string name="settings_menu_app_version_latest">(الأحدث)</string>
+
+  <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+  <string name="help_text_no_limit_free">بدون قيود على الكمية أو المدة</string>
+  <string name="help_text_deepl_own_key">يستخدم مفتاح DeepL API الخاص بك</string>
+  <string name="deepl_key_guide">أدخل مفتاح DeepL API الخاص بك لاستخدام ترجمة DeepL.</string>
+  <string name="deepl_key_signup_guide">سجّل في DeepL ويمكنك الاشتراك في الخطة المجانية.</string>
+  <string name="deepl_key_link_subscription">اشترك في الخطة المجانية</string>
+  <string name="deepl_key_link_keys">تحقق من مفتاح API الخاص بك</string>
+  <string name="deepl_key_active">مُفعّل</string>
+  <string name="label_save">حفظ</string>
+  <string name="deepl_key_invalid">مفتاح API غير صالح.</string>
+  <string name="deepl_key_validating">جارٍ التحقق…</string>
+  <string name="deepl_key_network_error">تعذّر التحقق من المفتاح بسبب خطأ في الشبكة. تم حفظ المفتاح.</string>
+
+  <!-- Detect-mode descriptions -->
+  <string name="detect_mode_description_sentence">يتم تحديد الجمل تلقائيًا.</string>
+  <string name="detect_mode_description_paragraph">يتم التعرف على الفقرات تلقائيًا.</string>
+  <string name="detect_mode_description_select">يمكنك أيضًا تحديد المنطقة التي تريد ترجمتها.</string>
+  <string name="detect_mode_description_fixed_area">يمكنك ترجمة المناطق الثابتة مثل ترجمات الأفلام باستمرار.</string>
+  <string name="detect_mode_description_word">أشِر إلى كلمة لتتم ترجمتها فورًا.</string>
+  <string name="say_here">أنا هنا!</string>
+  <string name="hint_settings_reopen">انقر نقرًا مزدوجًا على المقبض لفتح الإعدادات مرة أخرى</string>
+  <string name="openai_key_guide">أدخل مفتاح OpenAI API الخاص بك للترجمة باستخدام نماذج OpenAI.</string>
+  <string name="openai_key_signup_guide">أنشئ مفتاحًا في لوحة تحكم OpenAI. تُحتسب تكلفة الاستخدام على حساب OpenAI الخاص بك.</string>
+  <string name="openai_key_link_keys">احصل على مفتاح API</string>
+  <string name="openai_key_link_billing">الفوترة والاستخدام</string>
+  <string name="openai_model_label">النموذج</string>
+  <string name="help_text_openai_own_key">يستخدم مفتاح OpenAI API الخاص بك</string>
+  <string name="gemini_key_guide">أدخل مفتاح Gemini API الخاص بك للترجمة باستخدام نماذج Gemini.</string>
+  <string name="help_text_gemini_own_key">يستخدم مفتاح Gemini API الخاص بك</string>
+  <string name="gemini_key_signup_guide">أنشئ مفتاح API في Google AI Studio. تتوفر فئة مجانية.</string>
+  <string name="claude_key_guide">أدخل مفتاح Claude API الخاص بك للترجمة باستخدام نماذج Claude.</string>
+  <string name="help_text_claude_own_key">يستخدم مفتاح Claude API الخاص بك</string>
+  <string name="claude_key_signup_guide">أنشئ مفتاح API في Anthropic Console. تتم محاسبة الاستخدام على حساب Anthropic الخاص بك.</string>
+  <string name="settings_menu_how_to_use">طريقة الاستخدام</string>
+  <string name="settings_menu_privacy_policy">سياسة الخصوصية</string>
+  <string name="source_language_no_screen_reader">التعرّف على نص الشاشة غير مدعوم</string>
+  <string name="ocr_model_preparing">جارٍ تجهيز محرك الترجمة. يُرجى الانتظار قليلًا.</string>
+  <string name="error_translate_invalid_key">مفتاح API غير صالح. تحقق منه في الإعدادات.</string>
+  <string name="error_translate_no_credit">لا يوجد رصيد في حسابك. أعد الشحن من لوحة تحكم المزوّد.</string>
+  <string name="error_translate_rate_limited">تم بلوغ حد الاستخدام. يُرجى المحاولة لاحقًا.</string>
+  <string name="error_translate_model_unavailable">نموذج الترجمة هذا غير متاح. يُرجى تحديث التطبيق.</string>
+  <string name="error_translate_network">خطأ في الشبكة. تحقق من الاتصال.</string>
+  <string name="error_translate_generic">فشلت الترجمة. يُرجى المحاولة مرة أخرى.</string>
+  <string name="key_saved_credit_hint">تم التحقق من المفتاح. تتطلب الترجمة أيضًا رصيدًا أو حصة مجانية في حسابك.</string>
+    <string name="translation_context_label">السياق</string>
+    <string name="translation_context_off">إيقاف</string>
+    <string name="translation_context_nearby">الجمل المجاورة</string>
+    <string name="translation_context_screen">الشاشة بأكملها</string>
+    <string name="translation_context_guide">يرسل النص المحيط لتوضيح الضمائر والكلمات الغامضة. يستهلك رموزًا أكثر.</string>
+    <string name="translation_strength_label">أسلوب الترجمة</string>
+    <string name="translation_strength_literal">حرفي</string>
+    <string name="translation_strength_natural">طبيعي</string>
+    <string name="translation_strength_free">حر</string>
+    <string name="translation_domain_label">المجال</string>
+    <string name="translation_domain_general">عام</string>
+    <string name="translation_domain_game">ألعاب</string>
+    <string name="translation_domain_comic">قصص مصورة</string>
+    <string name="translation_domain_tech">تقني</string>
+    <string name="translation_domain_business">أعمال</string>
+</resources>
+
+

@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">Pagsasalin ng Screen</string>
+
+    <!-- Notification Permission -->
+    <string name="message_permission_notification">Kinakailangang pahintulot:\nAbiso</string>
+    <string name="message_permission_notification_detail">Upang simulan ang Screen Translator, kailangan mong pahintulutan ang notification.</string>
+
+    <!-- Overlay Permission -->
+    <string name="message_permission_overlay">Kinakailangang pahintulot:\nIpakita sa ibabaw ng ibang apps</string>
+    <string name="message_permission_overlay_detail">Upang simulan ang Screen Translator, kailangan mong pahintulutan ang pagpapakita sa ibabaw ng ibang apps.</string>
+
+    <!-- MediaProjection token 요청 -->
+    <string name="message_media_projection">Kinakailangang pahintulot:\nPagre-record ng screen</string>
+    <string name="message_media_projection_detail">Upang simulan ang Screen Translator, kailangan mong pahintulutan ang pagre-record ng screen.\n\nAng impormasyon sa screen ay gagamitin lamang para sa pagsasalin at hindi ito ise-save o ipapadala sa iba.</string>
+
+    <!-- Foreground Service 시작 알림 -->
+    <string name="notification_foreground_service">Ginagamit ang pagkuha ng screen para sa pagsasalin.</string>
+
+    <!-- OverlayService -->
+    <string name="service_menu_finish">Tapos</string>
+
+    <!-- LanguageListView -->
+    <string name="title_language_list_view_source">Isalin mula sa</string>
+    <string name="title_language_list_view_target">Isalin sa</string>
+
+    <!-- VoiceListView -->
+    <string name="title_voice_list_view">Pumili ng boses ng TTS</string>
+
+    <!-- Dialog -->
+    <string name="message_force_update">Kinakailangan ang update</string>
+    <string name="message_force_update_detail">Hindi na sinusuportahan ang bersyong ito.\nPumunta sa Store.</string>
+    <string name="message_service_unavailable">Hindi available ang serbisyo</string>
+    <string name="message_service_unavailable_detail">Pansamantalang isinara ang serbisyo para sa maintenance.</string>
+    <string name="message_network_unavailable">Walang koneksyon sa network</string>
+    <string name="message_network_unavailable_detail">Walang koneksyon sa network.\nPakisuri at subukang muli.</string>
+    <string name="message_translate_fixedarea_warn">Babala sa baterya</string>
+    <string name="message_translate_fixedarea_warn_detail">Maaaring mabilis maubos ang baterya.</string>
+    <string name="ad_gate_loading">Inihahanda ang ad…</string>
+    <string name="ad_gate_reward_notice">Panoorin ang ad hanggang matapos at wala nang lalabas na ad hanggang isara mo ang app.</string>
+
+    <!-- SettingsActivity -->
+    <string name="settings_title">Mga Setting</string>
+    <string name="settings_menu_cat_pointer">Pointer</string>
+    <string name="settings_menu_pointer_docking_delay">Delay ng Dock</string>
+    <string name="settings_menu_haptic_feedback_to_detection">Haptic feedback kapag natukoy</string>
+    <string name="settings_menu_cat_menubar">Menu Bar</string>
+    <string name="settings_menu_menubar_visible">Ipakita ang menu bar</string>
+    <string name="settings_menu_menubar_transparency">Menu Transparency</string>
+    <string name="settings_menu_menubar_composition">Komposisyon ng menu bar</string>
+    <string name="settings_menu_cat_translation">Pagsasalin</string>
+    <string name="settings_menu_translation_transparency">Labo ng Salin</string>
+    <string name="settings_menu_translation_close_delay">Delay sa Pagsara</string>
+    <string name="settings_menu_automated_read_aloud">Awtomatikong pagbasa ng salin</string>
+    <string name="settings_menu_reply_transparency">Labo ng Sagot</string>
+    <string name="settings_menu_cat_tts">Text-to-Speech</string>
+    <string name="settings_menu_tts_read_target">Babasahing teksto</string>
+    <string name="settings_tts_read_target_source">Orihinal</string>
+    <string name="settings_tts_read_target_target">Salin</string>
+    <string name="settings_menu_tts_voices">Mga Boses</string>
+    <string name="settings_menu_tts_rate">Bilis ng TTS</string>
+    <string name="settings_menu_cat_about">Tungkol sa</string>
+    <string name="settings_menu_app_version">Bersyon ng App</string>
+    <string name="settings_menu_app_version_latest">(Pinakabago)</string>
+
+
+    <!-- HelpTextDetectModeView, HelpTranslationKitView -->
+    <string name="help_text_no_limit_free">Walang limitasyon sa dami, walang limitasyon sa panahon</string>
+    <string name="help_text_deepl_own_key">Ginagamit ang iyong personal na DeepL API key</string>
+    <string name="deepl_key_guide">Ilagay ang iyong DeepL API key para gamitin ang pagsasalin ng DeepL.</string>
+    <string name="deepl_key_signup_guide">Mag-sign up sa DeepL at maaari kang mag-subscribe sa libreng plan.</string>
+    <string name="deepl_key_link_subscription">Mag-subscribe sa libreng plan</string>
+    <string name="deepl_key_link_keys">Tingnan ang iyong API key</string>
+    <string name="deepl_key_active">Aktibo na</string>
+    <string name="label_save">I-save</string>
+    <string name="deepl_key_invalid">Hindi wasto ang API key.</string>
+    <string name="deepl_key_validating">Bine-verify…</string>
+    <string name="deepl_key_network_error">Hindi ma-verify ang key dahil sa error sa network. Na-save ang key.</string>
+
+    <!-- Detect-mode descriptions -->
+    <string name="detect_mode_description_sentence">Awtomatikong pipiliin ang mga pangungusap.</string>
+    <string name="detect_mode_description_paragraph">Awtomatikong nakikilala ang mga talata.</string>
+    <string name="detect_mode_description_select">Maaari mo ring tukuyin ang nais na saklaw.</string>
+    <string name="detect_mode_description_word">Ituro ang isang salita para agad itong maisalin.</string>
+    <string name="detect_mode_description_fixed_area">Maaari kang tuloy-tuloy na magsalin ng mga nakapirming lugar, tulad ng mga subtitle ng pelikula.</string>
+  <string name="say_here">Nandito ako!</string>
+  <string name="hint_settings_reopen">I-double tap ang hawakan para muling buksan ang mga setting</string>
+  <string name="openai_key_guide">Ilagay ang iyong OpenAI API key para magsalin gamit ang mga modelo ng OpenAI.</string>
+  <string name="openai_key_signup_guide">Gumawa ng key sa OpenAI dashboard. Ang paggamit ay sinisingil sa iyong OpenAI account.</string>
+  <string name="openai_key_link_keys">Kunin ang iyong API key</string>
+  <string name="openai_key_link_billing">Pagsingil at paggamit</string>
+  <string name="openai_model_label">Modelo</string>
+  <string name="help_text_openai_own_key">Ginagamit ang iyong personal na OpenAI API key</string>
+  <string name="gemini_key_guide">Ilagay ang iyong Gemini API key para magsalin gamit ang mga modelo ng Gemini.</string>
+  <string name="help_text_gemini_own_key">Ginagamit ang iyong personal na Gemini API key</string>
+  <string name="gemini_key_signup_guide">Gumawa ng API key sa Google AI Studio. May available na libreng tier.</string>
+  <string name="claude_key_guide">Ilagay ang iyong Claude API key para magsalin gamit ang mga modelo ng Claude.</string>
+  <string name="help_text_claude_own_key">Ginagamit ang iyong personal na Claude API key</string>
+  <string name="claude_key_signup_guide">Gumawa ng API key sa Anthropic Console. Ang paggamit ay sinisingil sa iyong Anthropic account.</string>
+    <string name="settings_menu_how_to_use">Paano gamitin</string>
+    <string name="settings_menu_privacy_policy">Patakaran sa Privacy</string>
+    <string name="source_language_no_screen_reader">Hindi sinusuportahan ang pagkilala ng teksto sa screen</string>
+    <string name="ocr_model_preparing">Inihahanda ang translation engine. Mangyaring maghintay sandali.</string>
+    <string name="error_translate_invalid_key">Hindi valid ang API key. Suriin ito sa Settings.</string>
+    <string name="error_translate_no_credit">Wala nang credits sa iyong account. Mag-top up sa console ng provider.</string>
+    <string name="error_translate_rate_limited">Naabot na ang limitasyon sa paggamit. Subukang muli mamaya.</string>
+    <string name="error_translate_model_unavailable">Hindi available ang translation model na ito. Paki-update ang app.</string>
+    <string name="error_translate_network">May error sa network. Suriin ang iyong koneksyon.</string>
+    <string name="error_translate_generic">Nabigo ang pagsasalin. Subukang muli.</string>
+    <string name="key_saved_credit_hint">Na-verify ang key. Kailangan din ng credits o libreng quota sa account para makapagsalin.</string>
+    <string name="translation_context_label">Konteksto</string>
+    <string name="translation_context_off">Naka-off</string>
+    <string name="translation_context_nearby">Mga katabing pangungusap</string>
+    <string name="translation_context_screen">Buong screen</string>
+    <string name="translation_context_guide">Ipinapadala ang nakapaligid na teksto para maunawaan ang mga panghalip at malabong salita. Mas maraming token ang nagagamit.</string>
+    <string name="translation_strength_label">Istilo ng pagsasalin</string>
+    <string name="translation_strength_literal">Literal</string>
+    <string name="translation_strength_natural">Natural</string>
+    <string name="translation_strength_free">Malaya</string>
+    <string name="translation_domain_label">Paksa</string>
+    <string name="translation_domain_general">Pangkalahatan</string>
+    <string name="translation_domain_game">Laro</string>
+    <string name="translation_domain_comic">Komiks</string>
+    <string name="translation_domain_tech">Teknikal</string>
+    <string name="translation_domain_business">Negosyo</string>
+</resources>
