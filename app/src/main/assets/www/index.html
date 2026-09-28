@@ -1,233 +1,1247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="How to use Screen Translate: OCR & Live — permissions, translation modes, AI engines, read-aloud, and troubleshooting.">
-<title>How to Use — Screen Translate: OCR &amp; Live</title>
-<link rel="alternate" hreflang="x-default" href="https://aidanpark.github.io/screen-translator/guide/">
-<link rel="alternate" hreflang="en" href="https://aidanpark.github.io/screen-translator/guide/">
-<link rel="alternate" hreflang="ko" href="https://aidanpark.github.io/screen-translator/guide/ko/">
-<link rel="alternate" hreflang="ja" href="https://aidanpark.github.io/screen-translator/guide/ja/">
-<link rel="alternate" hreflang="zh-CN" href="https://aidanpark.github.io/screen-translator/guide/zh-CN/">
-<link rel="alternate" hreflang="zh-TW" href="https://aidanpark.github.io/screen-translator/guide/zh-TW/">
-<link rel="alternate" hreflang="es" href="https://aidanpark.github.io/screen-translator/guide/es/">
-<link rel="alternate" hreflang="pt-BR" href="https://aidanpark.github.io/screen-translator/guide/pt-BR/">
-<link rel="alternate" hreflang="fr" href="https://aidanpark.github.io/screen-translator/guide/fr/">
-<link rel="alternate" hreflang="de" href="https://aidanpark.github.io/screen-translator/guide/de/">
-<link rel="alternate" hreflang="ru" href="https://aidanpark.github.io/screen-translator/guide/ru/">
-<link rel="alternate" hreflang="id" href="https://aidanpark.github.io/screen-translator/guide/id/">
-<link rel="alternate" hreflang="vi" href="https://aidanpark.github.io/screen-translator/guide/vi/">
-<link rel="alternate" hreflang="th" href="https://aidanpark.github.io/screen-translator/guide/th/">
-<link rel="alternate" hreflang="tr" href="https://aidanpark.github.io/screen-translator/guide/tr/">
-<link rel="alternate" hreflang="ar" href="https://aidanpark.github.io/screen-translator/guide/ar/">
-<link rel="alternate" hreflang="hi" href="https://aidanpark.github.io/screen-translator/guide/hi/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>المعرض السري الخاص</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <style>
-  :root { color-scheme: light dark; }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
-    line-height: 1.65; background: #fafafa; color: #1a1a1a;
+  :root{
+    --neon:#4CAF50;
+    --neon-dim: rgba(76,175,80,0.35);
+    --bg:#000000;
+    --card:#0d0d0d;
+    --card2:#121212;
+    --text:#f2f2f2;
+    --muted:#8a8a8a;
+    --danger:#ff4d4f;
   }
-  @media (prefers-color-scheme: dark) {
-    body { background: #111; color: #eee; }
-    .card, .step, .faq details { background: #1c1c1e !important; }
-    .badge { background: #333 !important; }
-    .langsel { background: #1c1c1e; color: #eee; border-color: #444; }
+  *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html,body{
+    margin:0; padding:0; background:var(--bg); color:var(--text);
+    font-family:'Segoe UI', Tahoma, Arial, sans-serif;
+    height:100%; width:100%; overflow-x:hidden;
+    -webkit-user-select:none; user-select:none;
   }
-  main { max-width: 760px; margin: 0 auto; padding: 2rem 1.2rem 4rem; }
-  a { color: #01875f; }
-  h1 { font-size: 1.7rem; margin: .8rem 0 .3rem; }
-  .sub { opacity: .7; margin-bottom: 2rem; }
-  h2 { font-size: 1.25rem; margin: 2.4rem 0 .8rem; }
-  p { margin-bottom: .7rem; }
-  .topbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
-  .backlink { font-size: .9rem; }
-  .langsel {
-    font-size: .85rem; padding: .25rem .5rem; border-radius: 8px;
-    border: 1px solid #ccc; background: #fff; color: inherit;
+  input, textarea{ -webkit-user-select:text; user-select:text; }
+  #app{
+    min-height:100vh;
+    display:flex; flex-direction:column;
+    padding-bottom:78px;
   }
-  .store {
-    display: inline-block; background: #01875f; color: #fff; text-decoration: none;
-    padding: .55rem 1.2rem; border-radius: 24px; font-weight: 600; font-size: .95rem; margin-top: .6rem;
+
+  /* ===== Header ===== */
+  .topbar{
+    position:sticky; top:0; z-index:50;
+    background:rgba(0,0,0,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom:1px solid #1a1a1a;
+    padding:14px 16px;
+    display:flex; align-items:center; justify-content:space-between;
   }
-  .step {
-    background: #fff; border-radius: 14px; padding: 1rem 1.2rem; margin-bottom: .8rem;
-    box-shadow: 0 1px 8px rgba(0,0,0,.07); display: flex; gap: .9rem; align-items: flex-start;
+  .topbar h1{
+    font-size:18px; margin:0; font-weight:700;
+    letter-spacing:0.5px;
+    color:#fff;
   }
-  .num {
-    flex: 0 0 auto; width: 1.8rem; height: 1.8rem; border-radius: 50%;
-    background: #01875f; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center;
+  .topbar h1 span{ color:var(--neon); }
+  .gear-btn{
+    background:var(--card2); border:1px solid #222;
+    width:38px; height:38px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-size:18px; cursor:pointer; color:var(--text);
+    transition:transform .2s ease, background .2s ease;
   }
-  .card {
-    background: #fff; border-radius: 14px; padding: 1.1rem 1.2rem; margin-bottom: 1rem;
-    box-shadow: 0 1px 8px rgba(0,0,0,.07);
+  .gear-btn:active{ transform:scale(0.9) rotate(20deg); background:#1a1a1a; }
+
+  /* ===== Pages ===== */
+  .page{ display:none; flex:1; padding:16px; animation:fadeIn .25s ease; }
+  .page.active{ display:flex; flex-direction:column; }
+  @keyframes fadeIn{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
+
+  /* ===== Albums Grid ===== */
+  .albums-grid{
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:14px; margin-top:8px;
   }
-  .mode { display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap; }
-  .mode video {
-    flex: 0 0 200px; width: 200px; max-width: 100%; border-radius: 10px; background: #000;
+  .album-card{
+    background:linear-gradient(145deg, var(--card), var(--card2));
+    border:1px solid #1c1c1c;
+    border-radius:16px;
+    overflow:hidden;
+    position:relative;
+    cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease;
   }
-  .mode .txt { flex: 1 1 260px; }
-  .mode h3 { font-size: 1.05rem; margin-bottom: .3rem; }
-  .badge {
-    display: inline-block; font-size: .75rem; background: #e8f3ef; border-radius: 8px;
-    padding: .1rem .5rem; margin-left: .4rem; vertical-align: middle; opacity: .9;
+  .album-card:active{ transform:scale(0.96); }
+  .album-cover{
+    width:100%; aspect-ratio:1/1; object-fit:cover; display:block;
+    background:#0a0a0a;
   }
-  ul, ol { padding-left: 1.3rem; margin-bottom: .7rem; }
-  li { margin-bottom: .3rem; }
-  .faq details {
-    background: #fff; border-radius: 12px; padding: .8rem 1.1rem; margin-bottom: .6rem;
-    box-shadow: 0 1px 8px rgba(0,0,0,.07);
+  .album-cover-placeholder{
+    width:100%; aspect-ratio:1/1; display:flex; align-items:center; justify-content:center;
+    font-size:34px; color:#2a2a2a; background:#0a0a0a;
   }
-  .faq summary { cursor: pointer; font-weight: 600; }
-  .faq details p, .faq details ul { margin-top: .5rem; }
-  footer { margin-top: 3rem; font-size: .85rem; opacity: .6; }
-  footer a { color: inherit; }
+  .album-info{ padding:10px 12px 12px; }
+  .album-name{
+    font-size:14px; font-weight:600; color:#fff;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  .album-count{ font-size:12px; color:var(--muted); margin-top:2px; }
+  .album-card.pressed{
+    box-shadow:0 0 0 2px var(--neon);
+  }
+
+  .empty-state{
+    flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    color:var(--muted); text-align:center; gap:10px; padding:40px 20px;
+  }
+  .empty-state .icon{ font-size:48px; opacity:.5; }
+
+  /* ===== Upload Page ===== */
+  .upload-wrap{ display:flex; flex-direction:column; gap:16px; }
+  .field-label{ font-size:13px; color:var(--muted); margin-bottom:6px; display:block; }
+  .album-name-input{
+    width:100%; background:var(--card2); border:1px solid #222;
+    border-radius:12px; padding:14px 16px; color:#fff; font-size:15px;
+    outline:none;
+  }
+  .album-name-input:focus{ border-color:var(--neon); }
+
+  .dropzone{
+    border:2px dashed var(--neon);
+    border-radius:18px;
+    background:rgba(76,175,80,0.05);
+    padding:36px 16px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:10px; text-align:center; cursor:pointer;
+    transition:background .2s ease, transform .15s ease;
+    min-height:180px;
+  }
+  .dropzone:active{ transform:scale(0.98); background:rgba(76,175,80,0.12); }
+  .dropzone .dz-icon{ font-size:40px; color:var(--neon); }
+  .dropzone .dz-text{ font-size:14px; color:#dcdcdc; font-weight:600; }
+  .dropzone .dz-sub{ font-size:12px; color:var(--muted); }
+  #fileInput{ display:none; }
+
+  .preview-strip{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:8px;
+    margin-top:6px; max-height:260px; overflow-y:auto; padding:4px;
+  }
+  .preview-thumb{
+    position:relative; aspect-ratio:1/1; border-radius:10px; overflow:hidden;
+    border:1px solid #222;
+  }
+  .preview-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .preview-thumb .rm{
+    position:absolute; top:3px; left:3px; background:rgba(0,0,0,0.7);
+    color:#fff; border-radius:50%; width:20px; height:20px; font-size:12px;
+    display:flex; align-items:center; justify-content:center; cursor:pointer;
+  }
+
+  .save-btn{
+    margin-top:auto; background:var(--neon); color:#000; font-weight:700;
+    border:none; border-radius:14px; padding:15px; font-size:15px;
+    cursor:pointer; transition:filter .2s ease, transform .15s ease;
+  }
+  .save-btn:disabled{ background:#1f3a20; color:#5a6b5a; }
+  .save-btn:active:not(:disabled){ transform:scale(0.97); filter:brightness(0.9); }
+
+  .upload-count-badge{
+    font-size:12px; color:var(--neon); margin-top:4px; font-weight:600;
+  }
+
+  /* ===== Bottom Nav ===== */
+  .bottom-nav{
+    position:fixed; bottom:0; left:0; right:0; z-index:60;
+    height:64px; background:rgba(5,5,5,0.96);
+    backdrop-filter: blur(10px);
+    border-top:1px solid #1a1a1a;
+    display:flex; align-items:stretch;
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .nav-btn{
+    flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:3px; background:none; border:none; color:var(--muted);
+    font-size:11px; cursor:pointer; position:relative;
+  }
+  .nav-btn .ic{ font-size:21px; }
+  .nav-btn.active{ color:var(--neon); }
+  .nav-divider{
+    width:1.5px; margin:10px 0; background:var(--neon);
+    box-shadow:0 0 8px var(--neon), 0 0 2px var(--neon);
+  }
+
+  /* ===== Gear Dropdown Panel ===== */
+  .gear-overlay{
+    position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:80;
+    opacity:0; pointer-events:none; transition:opacity .2s ease;
+  }
+  .gear-overlay.show{ opacity:1; pointer-events:auto; }
+  .gear-panel{
+    position:fixed; top:64px; left:12px; right:12px; z-index:81;
+    background:var(--card2); border:1px solid #222; border-radius:16px;
+    padding:14px; transform:translateY(-12px) scale(0.97); opacity:0;
+    pointer-events:none; transition:all .22s ease;
+    max-height:70vh; overflow-y:auto;
+  }
+  .gear-panel.show{ transform:translateY(0) scale(1); opacity:1; pointer-events:auto; }
+  .gear-panel h3{ margin:0 0 10px; font-size:14px; color:var(--neon); }
+  .manage-row{
+    display:flex; align-items:center; gap:8px; padding:10px 8px;
+    border-bottom:1px solid #1d1d1d;
+  }
+  .manage-row:last-child{ border-bottom:none; }
+  .manage-name{ flex:1; font-size:13px; color:#eee; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .icon-btn{
+    background:#1a1a1a; border:1px solid #2a2a2a; border-radius:8px;
+    width:32px; height:32px; display:flex; align-items:center; justify-content:center;
+    font-size:14px; cursor:pointer; color:#ddd; flex-shrink:0;
+  }
+  .icon-btn.danger{ color:var(--danger); }
+  .panel-actions{
+    display:flex; gap:8px; margin-top:12px;
+  }
+  .panel-actions button{
+    flex:1; background:#1a1a1a; border:1px solid #2a2a2a; color:#ddd;
+    border-radius:10px; padding:10px; font-size:13px; cursor:pointer;
+  }
+  .panel-actions button.primary{ background:var(--neon); color:#000; border:none; font-weight:700; }
+  #importFileInput{ display:none; }
+  .no-albums-msg{ font-size:12px; color:var(--muted); padding:8px; text-align:center; }
+
+  /* ===== Album Viewer ===== */
+  .viewer-header{
+    display:flex; align-items:center; gap:10px; margin-bottom:14px;
+  }
+  .back-btn{
+    background:var(--card2); border:1px solid #222; border-radius:50%;
+    width:36px; height:36px; display:flex; align-items:center; justify-content:center;
+    font-size:16px; cursor:pointer; color:#fff;
+  }
+  .viewer-title{ font-size:16px; font-weight:700; color:#fff; flex:1; }
+  .photos-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:6px;
+  }
+  .photo-cell{
+    aspect-ratio:1/1; border-radius:8px; overflow:hidden; cursor:pointer;
+    background:#0a0a0a;
+  }
+  .photo-cell img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+  /* ===== Lightbox ===== */
+  .lightbox{
+    position:fixed; inset:0; background:rgba(0,0,0,0.96); z-index:120;
+    display:none; align-items:center; justify-content:center; flex-direction:column;
+  }
+  .lightbox.show{ display:flex; }
+  .lightbox img{ max-width:94%; max-height:80vh; border-radius:8px; object-fit:contain; }
+  .lightbox-close{
+    position:absolute; top:18px; left:18px; background:var(--card2);
+    border:1px solid #222; width:38px; height:38px; border-radius:50%;
+    color:#fff; font-size:18px; display:flex; align-items:center; justify-content:center;
+    cursor:pointer;
+  }
+
+  /* ===== Bottom Sheet (Long Press) ===== */
+  .sheet-overlay{
+    position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:100;
+    opacity:0; pointer-events:none; transition:opacity .25s ease;
+  }
+  .sheet-overlay.show{ opacity:1; pointer-events:auto; }
+  .bottom-sheet{
+    position:fixed; left:0; right:0; bottom:0; z-index:101;
+    background:#111; border-radius:20px 20px 0 0;
+    border-top:1px solid #262626;
+    padding:10px 16px calc(16px + env(safe-area-inset-bottom));
+    transform:translateY(100%); transition:transform .3s cubic-bezier(.32,.72,0,1);
+  }
+  .bottom-sheet.show{ transform:translateY(0); }
+  .sheet-handle{
+    width:40px; height:4px; background:#333; border-radius:3px;
+    margin:6px auto 14px;
+  }
+  .sheet-title{
+    font-size:14px; color:var(--muted); text-align:center; margin-bottom:14px;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  .sheet-option{
+    display:flex; align-items:center; gap:12px; padding:15px 10px;
+    font-size:15px; color:#fff; cursor:pointer; border-radius:12px;
+  }
+  .sheet-option:active{ background:#1c1c1c; }
+  .sheet-option .so-icon{ font-size:18px; width:24px; text-align:center; }
+  .sheet-option.cancel{ color:var(--muted); justify-content:center; margin-top:6px; border-top:1px solid #222; padding-top:16px; border-radius:0; }
+  .sheet-option.zip{ color:var(--neon); }
+  .sheet-option.delete-opt{ color:var(--danger); }
+
+  /* ===== Toast ===== */
+  .toast{
+    position:fixed; bottom:90px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:#1a1a1a; border:1px solid var(--neon); color:#fff;
+    padding:11px 18px; border-radius:30px; font-size:13px; z-index:200;
+    opacity:0; transition:all .3s ease; pointer-events:none; white-space:nowrap;
+    max-width:90vw; overflow:hidden; text-overflow:ellipsis;
+  }
+  .toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
+
+  /* loading spinner */
+  .spin{
+    width:16px; height:16px; border:2px solid #333; border-top-color:var(--neon);
+    border-radius:50%; display:inline-block; animation:spinAnim .7s linear infinite;
+  }
+  @keyframes spinAnim{ to{ transform:rotate(360deg); } }
+
+  /* rename inline prompt */
+  .rename-box{
+    background:var(--card2); border:1px solid #222; border-radius:12px;
+    padding:10px; margin-top:8px; display:none;
+  }
+  .rename-box.show{ display:block; }
+  .rename-box input{
+    width:100%; background:#0a0a0a; border:1px solid #2a2a2a; color:#fff;
+    border-radius:8px; padding:9px 10px; font-size:13px; outline:none; margin-bottom:8px;
+  }
+  .rename-box .rbtns{ display:flex; gap:8px; }
+  .rename-box button{ flex:1; padding:8px; border-radius:8px; border:none; font-size:12px; cursor:pointer; }
+  .rename-box .rb-save{ background:var(--neon); color:#000; font-weight:700; }
+  .rename-box .rb-cancel{ background:#222; color:#ddd; }
 </style>
 </head>
 <body>
-<main>
+
+<div id="app">
+
   <div class="topbar">
-    <p class="backlink"><a href="https://aidanpark.github.io/">&larr; BoxBee</a></p>
-    <select class="langsel" id="langSel" aria-label="Language"><option value="en" selected>English</option><option value="ko">한국어</option><option value="ja">日本語</option><option value="zh-CN">简体中文</option><option value="zh-TW">繁體中文</option><option value="es">Español</option><option value="pt-BR">Português (Brasil)</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ru">Русский</option><option value="id">Bahasa Indonesia</option><option value="vi">Tiếng Việt</option><option value="th">ไทย</option><option value="tr">Türkçe</option><option value="ar">العربية</option><option value="hi">हिन्दी</option></select>
-  </div>
-  <h1>How to Use Screen Translate</h1>
-  <p class="sub">Translate any text on your screen in real time — games, chats, comics, apps.</p>
-
-  <h2>🚀 Quick Start</h2>
-  <div class="step"><div class="num">1</div><div><strong>Grant two permissions.</strong> On first launch the app asks for <em>Display over other apps</em> (for the floating bubble) and <em>Screen capture</em> (to read text on screen). On Android 14+, choose <em>&ldquo;Entire screen&rdquo;</em> when prompted.</div></div>
-  <div class="step"><div class="num">2</div><div><strong>Watch one short ad.</strong> A single rewarded ad unlocks the app <em>ad-free until you close it</em>. If you skip the ad, the gate simply reopens on your next translation.</div></div>
-  <div class="step"><div class="num">3</div><div><strong>Drag the pointer onto text.</strong> A floating bubble appears on your screen. Drag it — a pointer follows your finger. Hold it on any text: a small ring spins inside the pointer while the text is being read, and the translation pops up right there. Let go, and it stays on screen for a few seconds.</div></div>
-
-  <h2>📌 The Floating Menu Bar</h2>
-  <div class="card">
-    <p>The <strong>menu bar</strong> floats on your screen at all times — the app&rsquo;s control center. It only hides briefly during capture (while you hold the pointer) and while a translation window is on screen. It does more than most people realize:</p>
-    <ul>
-      <li><strong>Detect-mode icon</strong> (left) — switch between Word / Sentence / Paragraph / Select Area / Fixed Area.</li>
-      <li><strong>Source language</strong> — <em>Auto</em> detects it for you; tap to pin a specific language instead. Languages whose screen text can&rsquo;t be read yet are greyed out.</li>
-      <li><strong>⇄ Swap</strong> — flip source and target with one tap.</li>
-      <li><strong>Target language</strong> — tap to pick from 110+ languages.</li>
-      <li><strong>Engine icon</strong> (right) — tap to switch the translation engine: Google, DeepL, GPT, Gemini, Claude.</li>
-    </ul>
-    <p>The bar can be dragged anywhere. If you rarely switch these options and the bar feels in the way, adjust its transparency and layout in Settings — or hide it entirely with <em>Show menu bar</em>.</p>
+    <h1>المعرض <span>السري</span></h1>
+    <button class="gear-btn" id="gearBtn" type="button">⚙️</button>
   </div>
 
-  <h2>🎯 Five Translation Modes</h2>
-  <p>Switch modes with the detect-mode icon on the floating <strong>menu bar</strong>.</p>
-
-  <div class="card mode">
-    <video muted autoplay loop playsinline preload="metadata" poster="media/word.jpg" src="media/word.mp4"></video>
-    <div class="txt"><h3>Word</h3>
-    <p>Point at a single word to translate just that word. Great for language learning — includes tap-to-hear pronunciation (TTS).</p></div>
-  </div>
-  <div class="card mode">
-    <video muted autoplay loop playsinline preload="metadata" poster="media/sentence.jpg" src="media/sentence.mp4"></video>
-    <div class="txt"><h3>Sentence</h3>
-    <p>Point anywhere in a sentence to translate the whole sentence. The most popular mode for chats and social media.</p></div>
-  </div>
-  <div class="card mode">
-    <video muted autoplay loop playsinline preload="metadata" poster="media/paragraph.jpg" src="media/paragraph.mp4"></video>
-    <div class="txt"><h3>Paragraph</h3>
-    <p>Point at a block of text to translate the entire paragraph at once — ideal for articles and documents.</p></div>
-  </div>
-  <div class="card mode">
-    <video muted autoplay loop playsinline preload="metadata" poster="media/select.jpg" src="media/select.mp4"></video>
-    <div class="txt"><h3>Select Area</h3>
-    <p>Drag to draw a box around exactly what you want translated. Perfect when the layout is busy.</p></div>
-  </div>
-  <div class="card mode">
-    <video muted autoplay loop playsinline preload="metadata" poster="media/fixed_area.jpg" src="media/fixed_area.mp4"></video>
-    <div class="txt"><h3>Fixed Area <span class="badge">for games &amp; subtitles</span></h3>
-    <p>Pin a region of the screen — the app re-translates it automatically whenever its content changes. Made for game dialogue and video subtitles.</p></div>
+  <!-- ===== Gear Overlay + Panel ===== -->
+  <div class="gear-overlay" id="gearOverlay"></div>
+  <div class="gear-panel" id="gearPanel">
+    <h3>إدارة الألبومات</h3>
+    <div id="manageList"></div>
+    <div class="panel-actions">
+      <button id="exportAllBtn">📤 تصدير الكل</button>
+      <button id="importBtn">📥 استيراد</button>
+    </div>
+    <input type="file" id="importFileInput" accept="application/json,.json">
   </div>
 
-  <h2>🌐 Languages</h2>
-  <p>110+ languages. The source language is <strong>detected automatically</strong>; pick the target language from the menu bar. Swap them any time.</p>
-  <p>Screen text is read right on your phone. Supported scripts: Latin (English, Spanish, French, Vietnamese&hellip;), Chinese, Japanese, Korean, Devanagari (Hindi, Marathi, Nepali&hellip;) and — new in version 2.8 — Arabic script (Arabic, Persian, Urdu&hellip;), Russian, Ukrainian, Belarusian, Bulgarian and Thai. Languages in other scripts, such as Greek, Hebrew or Tamil, can still be chosen as the target language, but can&rsquo;t be read from the screen yet.</p>
-
-  <h2>🤖 AI Translation (optional)</h2>
-  <div class="card">
-    <p>The built-in Google engine is free and needs no setup. Prefer AI translation? Connect your own API key:</p>
-    <ul>
-      <li><strong>DeepL</strong> — free tier available at deepl.com</li>
-      <li><strong>OpenAI (GPT)</strong> — key from the OpenAI dashboard</li>
-      <li><strong>Gemini</strong> — free tier via Google AI Studio</li>
-      <li><strong>Claude</strong> — key from the Anthropic Console</li>
-    </ul>
-    <p>Menu bar → <em>translation engine</em> → choose an engine → paste your key. Usage is billed to <em>your</em> account with that provider; the app adds no markup.</p>
-    <p>OpenAI, Gemini and Claude have extra options on their key pages (Settings → API Key). Pick the <em>Model</em>. <em>Context</em> sends the surrounding text (nearby sentences or the whole screen) so pronouns and ambiguous words come out right. <em>Translation style</em> sets how closely to follow the original (literal, natural or liberal), and <em>Subject</em> tunes the wording for games, comics, technical or business text.</p>
-    <p>If a translation fails, the app shows the reason right on screen — invalid API key, out-of-credit account, rate limit, or network error. Note: a valid key alone is not enough — the provider account also needs credit or an active free tier.</p>
+  <!-- ===== Page: Gallery (Albums List) ===== -->
+  <div class="page active" id="page-gallery">
+    <div class="albums-grid" id="albumsGrid"></div>
+    <div class="empty-state" id="emptyState" style="display:none;">
+      <div class="icon">🗂️</div>
+      <div>لا توجد ألبومات بعد</div>
+      <div style="font-size:12px;">اضغط على "رفع الصور" لإنشاء أول ألبوم</div>
+    </div>
   </div>
 
-  <h2>🔊 Read-Aloud &amp; TTS Voices</h2>
-  <div class="card">
-    <p>The app can read text aloud: tap the speaker icon on a translation, or turn on <em>Auto read-aloud</em> in Settings. The <em>Read target</em> setting chooses whether the original text or the translation is read.</p>
-    <p>Pick a voice under Settings → <em>TTS voice</em>: voices are grouped by language, and tapping one plays a short preview so you can compare before you choose.</p>
+  <!-- ===== Page: Album Viewer ===== -->
+  <div class="page" id="page-viewer">
+    <div class="viewer-header">
+      <button class="back-btn" id="viewerBackBtn">→</button>
+      <div class="viewer-title" id="viewerTitle"></div>
+    </div>
+    <div class="photos-grid" id="photosGrid"></div>
   </div>
 
-  <h2>💬 Replying in Chats</h2>
-  <div class="card">
-    <p>Translated a chat message? Tap the <strong>reply icon</strong> at the bottom right of the translation window, then type your answer in your own language — it is instantly translated into the other person&rsquo;s language.</p>
-    <p>Tap <strong>copy</strong>, paste it into the chat, and send. You can hold a whole conversation without ever leaving the chat app.</p>
+  <!-- ===== Page: Upload ===== -->
+  <div class="page" id="page-upload">
+    <div class="upload-wrap">
+      <div>
+        <label class="field-label">اسم الألبوم</label>
+        <input type="text" id="albumNameInput" class="album-name-input" placeholder="مثال: ذكريات السفر" maxlength="60">
+      </div>
+
+      <div>
+        <div class="dropzone" id="dropZone">
+          <div class="dz-icon">📷</div>
+          <div class="dz-text">اضغط لاختيار الصور</div>
+          <div class="dz-sub">يمكنك اختيار عدة صور دفعة واحدة</div>
+        </div>
+        <input type="file" id="fileInput" accept="image/*" multiple>
+        <div class="upload-count-badge" id="uploadCountBadge"></div>
+      </div>
+
+      <div class="preview-strip" id="previewStrip"></div>
+
+      <button class="save-btn" id="saveAlbumBtn" disabled>حفظ الألبوم</button>
+    </div>
   </div>
 
-  <h2>❓ FAQ &amp; Troubleshooting</h2>
-  <div class="faq">
-    <details><summary>The floating bubble disappeared</summary>
-      <p>Open the app again to restart the service. If it keeps happening, check that <em>Display over other apps</em> is still allowed, and exclude the app from battery optimization (Settings → Battery → Unrestricted).</p></details>
-    <details><summary>First translation is slow or says &ldquo;preparing&rdquo;</summary>
-      <p>Recognition models are downloaded once. The main OCR model comes through Google Play services on first use, and the models for Arabic-script, Cyrillic and Thai text are downloaded right after you install or update the app — until then, those languages can&rsquo;t be read. After that, recognition works offline.</p></details>
-    <details><summary>Translation takes a while on Auto</summary>
-      <p>With the source language on <em>Auto</em>, the app first checks which text recognizer fits the screen, which takes a little longer — especially for Arabic-script, Cyrillic and Thai text. If you mostly read one language, choose it as the source language on the menu bar for faster results.</p></details>
-    <details><summary>Nothing happens on some screens</summary>
-      <p>Apps that block screenshots (banking apps, DRM video players) can&rsquo;t be captured — Android hides their content from every capture app.</p></details>
-    <details><summary>Why do I see an ad?</summary>
-      <p>One short ad per session keeps every core feature free. After the ad, the app stays completely ad-free until you close it.</p></details>
-    <details><summary>A ⚠ message says the translation failed</summary>
-      <p>The message tells you why. <em>Invalid API key</em>: re-check the key in Settings. <em>Out of credit</em>: top up on the provider&rsquo;s console — a valid key still needs credit. <em>Rate limit</em>: wait a moment and retry. <em>Network error</em>: check your connection.</p></details>
-    <details><summary>Translation quality seems off</summary>
-      <p>Try the Sentence or Paragraph mode (more context = better translation), or connect an AI engine (DeepL/GPT/Gemini/Claude) for the best quality.</p></details>
-    <details><summary>How do I see the on-screen tips again?</summary>
-      <p>Open Settings and tap <em>How to Use</em>. Along with opening this guide, it resets the tips, so they show again as you use the app.</p></details>
+</div>
+
+<!-- ===== Bottom Nav ===== -->
+<div class="bottom-nav">
+  <button class="nav-btn active" id="navGallery" type="button">
+    <div class="ic">🖼️</div>
+    <div>العرض</div>
+  </button>
+  <div class="nav-divider"></div>
+  <button class="nav-btn" id="navUpload" type="button">
+    <div class="ic">⬆️</div>
+    <div>رفع الصور</div>
+  </button>
+</div>
+
+<!-- ===== Lightbox ===== -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-close" id="lightboxClose">✕</div>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- ===== Bottom Sheet ===== -->
+<div class="sheet-overlay" id="sheetOverlay"></div>
+<div class="bottom-sheet" id="bottomSheet">
+  <div class="sheet-handle"></div>
+  <div class="sheet-title" id="sheetTitle"></div>
+  <div class="sheet-option zip" id="sheetZipBtn">
+    <div class="so-icon">📦</div>
+    <div>تنزيل الألبوم كاملاً (ZIP)</div>
   </div>
+  <div class="sheet-option cancel" id="sheetCancelBtn">إلغاء</div>
+</div>
 
-  <h2>💻 Source Code</h2>
-  <div class="card">
-    <p>The full source code of Screen Translate is on <a href="https://github.com/AidanPark/screen-translator">GitHub</a>, under the <a href="https://polyformproject.org/licenses/noncommercial/1.0.0">PolyForm Noncommercial License 1.0.0</a>. You are welcome to study it, modify it and share it for personal and other noncommercial purposes. Commercial use — for example, publishing a modified version with ads or in-app purchases — needs our permission; ask through a GitHub issue.</p>
-  </div>
+<!-- ===== Toast ===== -->
+<div class="toast" id="toast"></div>
 
-  <h2>📮 Still stuck?</h2>
-  <p>Email us at <a href="mailto:handwritingdictionary@gmail.com">handwritingdictionary@gmail.com</a> — we read everything.</p>
-  <a class="store" href="https://play.google.com/store/apps/details?id=com.galaxy.airviewdictionary">Get it on Google Play</a>
-
-  <footer>© 2026 BoxBee Corp. · <a href="https://aidanpark.github.io/privacy.html">Privacy Policy</a></footer>
-</main>
 <script>
-(function () {
-  var sel = document.getElementById('langSel');
-  sel.addEventListener('change', function () {
-    var v = sel.value;
-    try { localStorage.setItem('guideLang', v); } catch (e) {}
-    location.href = v === 'en' ? '/screen-translator/guide/' : '/screen-translator/guide/' + v + '/';
-  });
-  var GUIDE_PATH_JS = '/screen-translator/guide/';
-  // 첫 방문 시 브라우저 언어에 맞는 번역 페이지로 이동 (언어를 직접 고르면 그 선택을 기억)
-  var LANGS = {"ko":1,"ja":1,"zh-CN":1,"zh-TW":1,"es":1,"pt-BR":1,"fr":1,"de":1,"ru":1,"id":1,"vi":1,"th":1,"tr":1,"ar":1,"hi":1};
-  var saved = null;
-  try { saved = localStorage.getItem('guideLang'); } catch (e) {}
-  if (saved === 'en') return;
-  if (saved && LANGS[saved]) { location.replace(GUIDE_PATH_JS + saved + '/'); return; }
-  if (saved) return;
-  var nav = (navigator.languages && navigator.languages[0]) || navigator.language || '';
-  var t = null;
-  if (LANGS[nav]) t = nav;
-  else {
-    var b = nav.split('-')[0];
-    if (b === 'zh') t = (/tw|hk|mo|hant/i.test(nav)) ? 'zh-TW' : 'zh-CN';
-    else if (b === 'pt') t = 'pt-BR';
-    else if (LANGS[b]) t = b;
+(function(){
+  "use strict";
+
+  /* ============================================================
+     IndexedDB Layer
+     ============================================================ */
+  var DB_NAME = "SecretGalleryDB";
+  var STORE_NAME = "albums";
+  var DB_VERSION = 1;
+  var dbInstance = null;
+
+  function openDB(){
+    return new Promise(function(resolve, reject){
+      if (dbInstance){ resolve(dbInstance); return; }
+      if (!window.indexedDB){
+        reject(new Error("هذا المتصفح لا يدعم IndexedDB"));
+        return;
+      }
+      var req = indexedDB.open(DB_NAME, DB_VERSION);
+      req.onupgradeneeded = function(e){
+        var db = e.target.result;
+        if (!db.objectStoreNames.contains(STORE_NAME)){
+          db.createObjectStore(STORE_NAME, { keyPath: "name" });
+        }
+      };
+      req.onsuccess = function(e){
+        dbInstance = e.target.result;
+        resolve(dbInstance);
+      };
+      req.onerror = function(e){
+        reject(e.target.error || new Error("فشل فتح قاعدة البيانات"));
+      };
+    });
   }
-  if (t) location.replace(GUIDE_PATH_JS + t + '/');
+
+  function dbGetAllAlbums(){
+    return openDB().then(function(db){
+      return new Promise(function(resolve, reject){
+        try{
+          var tx = db.transaction(STORE_NAME, "readonly");
+          var store = tx.objectStore(STORE_NAME);
+          var req = store.getAll();
+          req.onsuccess = function(){ resolve(req.result || []); };
+          req.onerror = function(){ reject(req.error); };
+        }catch(err){ reject(err); }
+      });
+    });
+  }
+
+  function dbGetAlbum(name){
+    return openDB().then(function(db){
+      return new Promise(function(resolve, reject){
+        try{
+          var tx = db.transaction(STORE_NAME, "readonly");
+          var store = tx.objectStore(STORE_NAME);
+          var req = store.get(name);
+          req.onsuccess = function(){ resolve(req.result || null); };
+          req.onerror = function(){ reject(req.error); };
+        }catch(err){ reject(err); }
+      });
+    });
+  }
+
+  function dbPutAlbum(albumObj){
+    return openDB().then(function(db){
+      return new Promise(function(resolve, reject){
+        try{
+          var tx = db.transaction(STORE_NAME, "readwrite");
+          var store = tx.objectStore(STORE_NAME);
+          var req = store.put(albumObj);
+          req.onsuccess = function(){ resolve(true); };
+          req.onerror = function(){ reject(req.error); };
+        }catch(err){ reject(err); }
+      });
+    });
+  }
+
+  function dbDeleteAlbum(name){
+    return openDB().then(function(db){
+      return new Promise(function(resolve, reject){
+        try{
+          var tx = db.transaction(STORE_NAME, "readwrite");
+          var store = tx.objectStore(STORE_NAME);
+          var req = store.delete(name);
+          req.onsuccess = function(){ resolve(true); };
+          req.onerror = function(){ reject(req.error); };
+        }catch(err){ reject(err); }
+      });
+    });
+  }
+
+  function dbRenameAlbum(oldName, newName){
+    return dbGetAlbum(oldName).then(function(album){
+      if (!album) throw new Error("الألبوم غير موجود");
+      if (oldName === newName) return true;
+      var newAlbum = { name: newName, images: album.images || [], createdAt: album.createdAt || Date.now() };
+      return dbPutAlbum(newAlbum).then(function(){
+        return dbDeleteAlbum(oldName);
+      });
+    });
+  }
+
+  /* ============================================================
+     State
+     ============================================================ */
+  var state = {
+    currentPage: "gallery",
+    albumsCache: [],
+    pendingFiles: [],     // {dataUrl, name}
+    longPressTimer: null,
+    longPressTarget: null,
+    activeSheetAlbum: null,
+    viewerAlbumName: null
+  };
+
+  /* ============================================================
+     Helpers
+     ============================================================ */
+  function $(id){ return document.getElementById(id); }
+
+  function showToast(msg, isError){
+    var t = $("toast");
+    t.textContent = msg;
+    t.style.borderColor = isError ? "var(--danger)" : "var(--neon)";
+    t.classList.add("show");
+    clearTimeout(t._hideTimer);
+    t._hideTimer = setTimeout(function(){
+      t.classList.remove("show");
+    }, 2200);
+  }
+
+  function escapeHtml(str){
+    if (typeof str !== "string") return "";
+    return str.replace(/[&<>"']/g, function(c){
+      var map = {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"};
+      return map[c] || c;
+    });
+  }
+
+  function fileToDataUrl(file){
+    return new Promise(function(resolve, reject){
+      try{
+        var reader = new FileReader();
+        reader.onload = function(){ resolve(reader.result); };
+        reader.onerror = function(){ reject(new Error("فشل قراءة الملف")); };
+        reader.readAsDataURL(file);
+      }catch(err){ reject(err); }
+    });
+  }
+
+  function dataUrlToBlob(dataUrl){
+    try{
+      var parts = dataUrl.split(",");
+      var meta = parts[0];
+      var b64 = parts[1] || "";
+      var mimeMatch = meta.match(/data:([^;]+);/);
+      var mime = mimeMatch ? mimeMatch[1] : "image/jpeg";
+      var bin = atob(b64);
+      var arr = new Uint8Array(bin.length);
+      for (var i=0; i<bin.length; i++){ arr[i] = bin.charCodeAt(i); }
+      return new Blob([arr], { type: mime });
+    }catch(err){
+      return null;
+    }
+  }
+
+  function extFromMime(mime){
+    if (!mime) return "jpg";
+    if (mime.indexOf("png") > -1) return "png";
+    if (mime.indexOf("gif") > -1) return "gif";
+    if (mime.indexOf("webp") > -1) return "webp";
+    if (mime.indexOf("jpeg") > -1 || mime.indexOf("jpg") > -1) return "jpg";
+    return "jpg";
+  }
+
+  /* ============================================================
+     Navigation
+     ============================================================ */
+  function goToPage(pageName){
+    state.currentPage = pageName;
+    ["gallery","viewer","upload"].forEach(function(p){
+      var el = $("page-" + p);
+      if (el) el.classList.toggle("active", p === pageName);
+    });
+    $("navGallery").classList.toggle("active", pageName === "gallery" || pageName === "viewer");
+    $("navUpload").classList.toggle("active", pageName === "upload");
+
+    if (pageName === "gallery"){
+      renderAlbumsGrid();
+    }
+  }
+
+  $("navGallery").addEventListener("click", function(){
+    goToPage("gallery");
+  });
+  $("navUpload").addEventListener("click", function(){
+    resetUploadForm();
+    goToPage("upload");
+  });
+  $("viewerBackBtn").addEventListener("click", function(){
+    goToPage("gallery");
+  });
+
+  /* ============================================================
+     Render: Albums Grid
+     ============================================================ */
+  function renderAlbumsGrid(){
+    dbGetAllAlbums().then(function(albums){
+      state.albumsCache = albums || [];
+      var grid = $("albumsGrid");
+      var empty = $("emptyState");
+      grid.innerHTML = "";
+
+      if (!state.albumsCache.length){
+        empty.style.display = "flex";
+        grid.style.display = "none";
+        return;
+      }
+      empty.style.display = "none";
+      grid.style.display = "grid";
+
+      // sort by newest first
+      var sorted = state.albumsCache.slice().sort(function(a,b){
+        return (b.createdAt || 0) - (a.createdAt || 0);
+      });
+
+      sorted.forEach(function(album){
+        var imgs = album.images || [];
+        var card = document.createElement("div");
+        card.className = "album-card";
+        card.setAttribute("data-name", album.name);
+
+        var coverHtml = imgs.length
+          ? '<img class="album-cover" src="' + imgs[0] + '" alt="">'
+          : '<div class="album-cover-placeholder">🖼️</div>';
+
+        card.innerHTML =
+          coverHtml +
+          '<div class="album-info">' +
+            '<div class="album-name">' + escapeHtml(album.name) + '</div>' +
+            '<div class="album-count">' + imgs.length + ' صورة</div>' +
+          '</div>';
+
+        attachLongPress(card, album.name);
+
+        card.addEventListener("click", function(){
+          if (card._suppressClick){ card._suppressClick = false; return; }
+          openAlbumViewer(album.name);
+        });
+
+        grid.appendChild(card);
+      });
+    }).catch(function(err){
+      showToast("تعذر تحميل الألبومات", true);
+      console.error(err);
+    });
+  }
+
+  /* ============================================================
+     Long Press Handling -> Bottom Sheet
+     ============================================================ */
+  function attachLongPress(el, albumName){
+    var timer = null;
+    var moved = false;
+    var startX = 0, startY = 0;
+
+    function start(x, y){
+      moved = false;
+      startX = x; startY = y;
+      el.classList.add("pressed");
+      timer = setTimeout(function(){
+        el.classList.remove("pressed");
+        el._suppressClick = true;
+        if (navigator.vibrate){ try{ navigator.vibrate(15); }catch(e){} }
+        openBottomSheet(albumName);
+      }, 600);
+    }
+    function cancel(){
+      clearTimeout(timer);
+      el.classList.remove("pressed");
+    }
+    function move(x, y){
+      if (Math.abs(x-startX) > 10 || Math.abs(y-startY) > 10){
+        moved = true;
+        cancel();
+      }
+    }
+
+    el.addEventListener("touchstart", function(e){
+      var t = e.touches && e.touches[0];
+      if (t) start(t.clientX, t.clientY);
+    }, { passive:true });
+    el.addEventListener("touchmove", function(e){
+      var t = e.touches && e.touches[0];
+      if (t) move(t.clientX, t.clientY);
+    }, { passive:true });
+    el.addEventListener("touchend", cancel);
+    el.addEventListener("touchcancel", cancel);
+
+    el.addEventListener("mousedown", function(e){ start(e.clientX, e.clientY); });
+    el.addEventListener("mousemove", function(e){ if (timer) move(e.clientX, e.clientY); });
+    el.addEventListener("mouseup", cancel);
+    el.addEventListener("mouseleave", cancel);
+  }
+
+  function openBottomSheet(albumName){
+    state.activeSheetAlbum = albumName;
+    $("sheetTitle").textContent = albumName;
+    $("sheetOverlay").classList.add("show");
+    $("bottomSheet").classList.add("show");
+  }
+  function closeBottomSheet(){
+    $("sheetOverlay").classList.remove("show");
+    $("bottomSheet").classList.remove("show");
+    state.activeSheetAlbum = null;
+  }
+  $("sheetOverlay").addEventListener("click", closeBottomSheet);
+  $("sheetCancelBtn").addEventListener("click", closeBottomSheet);
+
+  $("sheetZipBtn").addEventListener("click", function(){
+    var name = state.activeSheetAlbum;
+    closeBottomSheet();
+    if (name) downloadAlbumAsZip(name);
+  });
+
+  /* ============================================================
+     ZIP Download (JSZip)
+     ============================================================ */
+  function downloadAlbumAsZip(albumName){
+    if (typeof JSZip === "undefined"){
+      showToast("مكتبة الضغط غير متوفرة حالياً", true);
+      return;
+    }
+    showToast("جاري تجهيز الملف...");
+    dbGetAlbum(albumName).then(function(album){
+      if (!album || !album.images || !album.images.length){
+        showToast("لا توجد صور لتنزيلها", true);
+        return;
+      }
+      var zip = new JSZip();
+      var folder = zip.folder(sanitizeFileName(albumName) || "album");
+
+      album.images.forEach(function(dataUrl, idx){
+        var blob = dataUrlToBlob(dataUrl);
+        if (!blob) return;
+        var ext = extFromMime(blob.type);
+        folder.file("photo_" + (idx+1) + "." + ext, blob);
+      });
+
+      return zip.generateAsync({ type: "blob" }).then(function(content){
+        var url = URL.createObjectURL(content);
+        var a = document.createElement("a");
+        a.href = url;
+        a.download = sanitizeFileName(albumName) + ".zip";
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function(){
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        }, 400);
+        showToast("تم تنزيل الألبوم بصيغة ZIP");
+      });
+    }).catch(function(err){
+      console.error(err);
+      showToast("حدث خطأ أثناء إنشاء ملف ZIP", true);
+    });
+  }
+
+  function sanitizeFileName(name){
+    if (!name) return "album";
+    return name.replace(/[\\/:*?"<>|]/g, "_").trim() || "album";
+  }
+
+  /* ============================================================
+     Album Viewer Page
+     ============================================================ */
+  function openAlbumViewer(albumName){
+    state.viewerAlbumName = albumName;
+    dbGetAlbum(albumName).then(function(album){
+      if (!album){
+        showToast("الألبوم غير موجود", true);
+        goToPage("gallery");
+        return;
+      }
+      $("viewerTitle").textContent = album.name;
+      var grid = $("photosGrid");
+      grid.innerHTML = "";
+      var imgs = album.images || [];
+      if (!imgs.length){
+        grid.innerHTML = '<div class="no-albums-msg" style="grid-column:1/-1;">لا توجد صور في هذا الألبوم</div>';
+      } else {
+        imgs.forEach(function(dataUrl){
+          var cell = document.createElement("div");
+          cell.className = "photo-cell";
+          cell.innerHTML = '<img src="' + dataUrl + '" alt="">';
+          cell.addEventListener("click", function(){
+            openLightbox(dataUrl);
+          });
+          grid.appendChild(cell);
+        });
+      }
+      goToPage("viewer");
+    }).catch(function(err){
+      console.error(err);
+      showToast("تعذر فتح الألبوم", true);
+      goToPage("gallery");
+    });
+  }
+
+  function openLightbox(dataUrl){
+    $("lightboxImg").src = dataUrl;
+    $("lightbox").classList.add("show");
+  }
+  function closeLightbox(){
+    $("lightbox").classList.remove("show");
+    $("lightboxImg").src = "";
+  }
+  $("lightboxClose").addEventListener("click", closeLightbox);
+  $("lightbox").addEventListener("click", function(e){
+    if (e.target.id === "lightbox") closeLightbox();
+  });
+
+  /* ============================================================
+     Upload Page
+     ============================================================ */
+  function resetUploadForm(){
+    state.pendingFiles = [];
+    $("albumNameInput").value = "";
+    $("previewStrip").innerHTML = "";
+    $("uploadCountBadge").textContent = "";
+    $("fileInput").value = "";
+    updateSaveButtonState();
+  }
+
+  function updateSaveButtonState(){
+    var hasName = $("albumNameInput").value.trim().length > 0;
+    var hasFiles = state.pendingFiles.length > 0;
+    $("saveAlbumBtn").disabled = !(hasName && hasFiles);
+  }
+
+  $("albumNameInput").addEventListener("input", updateSaveButtonState);
+
+  $("dropZone").addEventListener("click", function(){
+    try{
+      $("fileInput").click();
+    }catch(err){
+      showToast("تعذر فتح معرض الصور", true);
+    }
+  });
+
+  $("fileInput").addEventListener("change", function(e){
+    try{
+      var files = e.target.files;
+      if (!files || !files.length){
+        // المستخدم ألغى العملية - لا تفعل شيئاً، لا تعطل الواجهة
+        return;
+      }
+
+      var validFiles = [];
+      for (var i=0; i<files.length; i++){
+        var f = files[i];
+        if (f && f.type && f.type.indexOf("image/") === 0){
+          validFiles.push(f);
+        }
+      }
+
+      if (!validFiles.length){
+        showToast("لم يتم اختيار صور صالحة", true);
+        e.target.value = "";
+        return;
+      }
+
+      showToast("جاري تحميل " + validFiles.length + " صورة...");
+
+      var readPromises = validFiles.map(function(file){
+        return fileToDataUrl(file).then(function(dataUrl){
+          return { dataUrl: dataUrl, name: file.name };
+        }).catch(function(err){
+          console.error("file read error", err);
+          return null; // تجاهل الملف الفاشل بدون كسر العملية كاملة
+        });
+      });
+
+      Promise.all(readPromises).then(function(results){
+        var successCount = 0;
+        results.forEach(function(r){
+          if (r && r.dataUrl){
+            state.pendingFiles.push(r);
+            successCount++;
+          }
+        });
+        renderPreviewStrip();
+        updateSaveButtonState();
+        if (successCount < validFiles.length){
+          showToast("تمت إضافة " + successCount + " صورة (تعذر تحميل بعض الملفات)");
+        } else {
+          showToast("تمت إضافة " + successCount + " صورة");
+        }
+      }).catch(function(err){
+        console.error(err);
+        showToast("حدث خطأ أثناء معالجة الصور", true);
+      }).finally(function(){
+        e.target.value = "";
+      });
+
+    }catch(err){
+      console.error(err);
+      showToast("حدث خطأ غير متوقع", true);
+      try{ e.target.value = ""; }catch(e2){}
+    }
+  });
+
+  function renderPreviewStrip(){
+    var strip = $("previewStrip");
+    strip.innerHTML = "";
+    state.pendingFiles.forEach(function(item, idx){
+      var thumb = document.createElement("div");
+      thumb.className = "preview-thumb";
+      thumb.innerHTML =
+        '<img src="' + item.dataUrl + '" alt="">' +
+        '<div class="rm" data-idx="' + idx + '">✕</div>';
+      strip.appendChild(thumb);
+    });
+    $("uploadCountBadge").textContent = state.pendingFiles.length
+      ? state.pendingFiles.length + " صورة جاهزة للحفظ"
+      : "";
+
+    var removeBtns = strip.querySelectorAll(".rm");
+    removeBtns.forEach(function(btn){
+      btn.addEventListener("click", function(ev){
+        ev.stopPropagation();
+        var idx = parseInt(btn.getAttribute("data-idx"), 10);
+        if (!isNaN(idx)){
+          state.pendingFiles.splice(idx, 1);
+          renderPreviewStrip();
+          updateSaveButtonState();
+        }
+      });
+    });
+  }
+
+  $("saveAlbumBtn").addEventListener("click", function(){
+    var name = $("albumNameInput").value.trim();
+    if (!name){
+      showToast("يرجى كتابة اسم الألبوم", true);
+      return;
+    }
+    if (!state.pendingFiles.length){
+      showToast("يرجى اختيار صور أولاً", true);
+      return;
+    }
+
+    $("saveAlbumBtn").disabled = true;
+    $("saveAlbumBtn").innerHTML = '<span class="spin"></span> جاري الحفظ...';
+
+    dbGetAlbum(name).then(function(existing){
+      var images = state.pendingFiles.map(function(f){ return f.dataUrl; });
+      var finalAlbum;
+      if (existing){
+        finalAlbum = {
+          name: name,
+          images: (existing.images || []).concat(images),
+          createdAt: existing.createdAt || Date.now()
+        };
+      } else {
+        finalAlbum = {
+          name: name,
+          images: images,
+          createdAt: Date.now()
+        };
+      }
+      return dbPutAlbum(finalAlbum);
+    }).then(function(){
+      showToast("تم حفظ الألبوم بنجاح");
+      resetUploadForm();
+      goToPage("gallery");
+    }).catch(function(err){
+      console.error(err);
+      showToast("حدث خطأ أثناء حفظ الألبوم", true);
+    }).finally(function(){
+      $("saveAlbumBtn").disabled = false;
+      $("saveAlbumBtn").textContent = "حفظ الألبوم";
+      updateSaveButtonState();
+    });
+  });
+
+  /* ============================================================
+     Gear Panel: Manage Albums (rename / delete / export / import)
+     ============================================================ */
+  function openGearPanel(){
+    renderManageList();
+    $("gearOverlay").classList.add("show");
+    $("gearPanel").classList.add("show");
+  }
+  function closeGearPanel(){
+    $("gearOverlay").classList.remove("show");
+    $("gearPanel").classList.remove("show");
+  }
+  $("gearBtn").addEventListener("click", openGearPanel);
+  $("gearOverlay").addEventListener("click", closeGearPanel);
+
+  function renderManageList(){
+    dbGetAllAlbums().then(function(albums){
+      var list = $("manageList");
+      list.innerHTML = "";
+      if (!albums || !albums.length){
+        list.innerHTML = '<div class="no-albums-msg">لا توجد ألبومات لإدارتها</div>';
+        return;
+      }
+      albums.sort(function(a,b){ return (b.createdAt||0)-(a.createdAt||0); });
+
+      albums.forEach(function(album){
+        var row = document.createElement("div");
+        row.className = "manage-row";
+        row.innerHTML =
+          '<div class="manage-name">' + escapeHtml(album.name) + '</div>' +
+          '<div class="icon-btn rename-trigger" title="تعديل الاسم">✏️</div>' +
+          '<div class="icon-btn" title="تصدير">📤</div>' +
+          '<div class="icon-btn danger" title="حذف">🗑️</div>';
+
+        var btns = row.querySelectorAll(".icon-btn");
+        var renameBtn = btns[0], exportBtn = btns[1], deleteBtn = btns[2];
+
+        var renameBox = document.createElement("div");
+        renameBox.className = "rename-box";
+        renameBox.innerHTML =
+          '<input type="text" value="' + escapeHtml(album.name) + '" maxlength="60">' +
+          '<div class="rbtns">' +
+            '<button class="rb-save">حفظ</button>' +
+            '<button class="rb-cancel">إلغاء</button>' +
+          '</div>';
+
+        renameBtn.addEventListener("click", function(){
+          renameBox.classList.toggle("show");
+        });
+        renameBox.querySelector(".rb-cancel").addEventListener("click", function(){
+          renameBox.classList.remove("show");
+        });
+        renameBox.querySelector(".rb-save").addEventListener("click", function(){
+          var input = renameBox.querySelector("input");
+          var newName = input.value.trim();
+          if (!newName){
+            showToast("الاسم لا يمكن أن يكون فارغاً", true);
+            return;
+          }
+          if (newName === album.name){
+            renameBox.classList.remove("show");
+            return;
+          }
+          dbGetAlbum(newName).then(function(existing){
+            if (existing){
+              showToast("يوجد ألبوم آخر بهذا الاسم", true);
+              return;
+            }
+            return dbRenameAlbum(album.name, newName).then(function(){
+              showToast("تم تعديل الاسم بنجاح");
+              renderManageList();
+              renderAlbumsGrid();
+            });
+          }).catch(function(err){
+            console.error(err);
+            showToast("تعذر تعديل الاسم", true);
+          });
+        });
+
+        exportBtn.addEventListener("click", function(){
+          exportSingleAlbum(album.name);
+        });
+
+        deleteBtn.addEventListener("click", function(){
+          confirmDeleteAlbum(album.name);
+        });
+
+        list.appendChild(row);
+        list.appendChild(renameBox);
+      });
+    }).catch(function(err){
+      console.error(err);
+      showToast("تعذر تحميل قائمة الألبومات", true);
+    });
+  }
+
+  function confirmDeleteAlbum(name){
+    var ok = window.confirm('هل أنت متأكد من حذف الألبوم "' + name + '"؟ لا يمكن التراجع عن هذا الإجراء.');
+    if (!ok) return;
+    dbDeleteAlbum(name).then(function(){
+      showToast("تم حذف الألبوم");
+      renderManageList();
+      renderAlbumsGrid();
+    }).catch(function(err){
+      console.error(err);
+      showToast("تعذر حذف الألبوم", true);
+    });
+  }
+
+  function exportSingleAlbum(name){
+    dbGetAlbum(name).then(function(album){
+      if (!album) throw new Error("not found");
+      downloadJSON([album], sanitizeFileName(name) + "_backup.json");
+      showToast("تم تصدير الألبوم");
+    }).catch(function(err){
+      console.error(err);
+      showToast("تعذر تصدير الألبوم", true);
+    });
+  }
+
+  $("exportAllBtn").addEventListener("click", function(){
+    dbGetAllAlbums().then(function(albums){
+      if (!albums || !albums.length){
+        showToast("لا توجد ألبومات لتصديرها", true);
+        return;
+      }
+      downloadJSON(albums, "secret_gallery_backup.json");
+      showToast("تم تصدير جميع الألبومات");
+    }).catch(function(err){
+      console.error(err);
+      showToast("تعذر تصدير البيانات", true);
+    });
+  });
+
+  function downloadJSON(data, filename){
+    try{
+      var blob = new Blob([JSON.stringify(data)], { type: "application/json" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function(){
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }, 300);
+    }catch(err){
+      console.error(err);
+      showToast("تعذر إنشاء ملف التصدير", true);
+    }
+  }
+
+  $("importBtn").addEventListener("click", function(){
+    try{
+      $("importFileInput").click();
+    }catch(err){
+      showToast("تعذر فتح أداة الاستيراد", true);
+    }
+  });
+
+  $("importFileInput").addEventListener("change", function(e){
+    var file = e.target.files && e.target.files[0];
+    if (!file){
+      return; // المستخدم ألغى الاختيار
+    }
+    var reader = new FileReader();
+    reader.onload = function(){
+      try{
+        var parsed = JSON.parse(reader.result);
+        var albumsArr = Array.isArray(parsed) ? parsed : [parsed];
+        var validAlbums = albumsArr.filter(function(a){
+          return a && typeof a.name === "string" && Array.isArray(a.images);
+        });
+        if (!validAlbums.length){
+          showToast("ملف الاستيراد غير صالح", true);
+          return;
+        }
+        var chain = Promise.resolve();
+        validAlbums.forEach(function(album){
+          chain = chain.then(function(){
+            return dbGetAlbum(album.name).then(function(existing){
+              if (existing){
+                var merged = {
+                  name: album.name,
+                  images: (existing.images || []).concat(album.images || []),
+                  createdAt: existing.createdAt || Date.now()
+                };
+                return dbPutAlbum(merged);
+              } else {
+                return dbPutAlbum({
+                  name: album.name,
+                  images: album.images || [],
+                  createdAt: album.createdAt || Date.now()
+                });
+              }
+            });
+          });
+        });
+        chain.then(function(){
+          showToast("تم استيراد " + validAlbums.length + " ألبوم بنجاح");
+          renderManageList();
+          renderAlbumsGrid();
+        }).catch(function(err){
+          console.error(err);
+          showToast("حدث خطأ أثناء الاستيراد", true);
+        });
+      }catch(err){
+        console.error(err);
+        showToast("ملف JSON غير صالح", true);
+      }
+    };
+    reader.onerror = function(){
+      showToast("تعذر قراءة ملف الاستيراد", true);
+    };
+    reader.readAsText(file);
+    e.target.value = "";
+  });
+
+  /* ============================================================
+     Global Error Safety Net
+     ============================================================ */
+  window.addEventListener("error", function(e){
+    console.error("Global error caught:", e.error || e.message);
+    // لا نعرض شاشة بيضاء أبداً - فقط نسجل الخطأ
+  });
+  window.addEventListener("unhandledrejection", function(e){
+    console.error("Unhandled promise rejection:", e.reason);
+  });
+
+  /* ============================================================
+     Init
+     ============================================================ */
+  function init(){
+    openDB().then(function(){
+      renderAlbumsGrid();
+    }).catch(function(err){
+      console.error(err);
+      showToast("تعذر تهيئة قاعدة البيانات", true);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", init);
+  if (document.readyState === "complete" || document.readyState === "interactive"){
+    init();
+  }
+
 })();
 </script>
 </body>
