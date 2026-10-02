@@ -1,635 +1,135 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manga App UI</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --bg-dark: #080a0f;
-            --card-bg: #12161f;
-            --drawer-bg: #10141d;
-            --accent-blue: #4a6fa5;
-            --text-main: #ffffff;
-            --text-sub: #7a8b9e;
-            --star-color: #f59e0b;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: system-ui, -apple-system, sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            padding-bottom: 20px;
-        }
-
-        /* Top Header */
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 15px 18px;
-            background-color: var(--bg-dark);
-            position: sticky;
-            top: 0;
-            z-index: 50;
-        }
-
-        .header-title {
-            font-size: 1.4rem;
-            font-weight: 800;
-        }
-
-        .header-icons {
-            display: flex;
-            gap: 18px;
-            font-size: 1.2rem;
-            color: #d1d5db;
-        }
-
-        .header-icons i {
-            cursor: pointer;
-        }
-
-        /* Nav Tabs */
-        .nav-tabs {
-            display: flex;
-            justify-content: space-around;
-            padding: 0 10px 8px 10px;
-            border-bottom: 2px solid #1a202c;
-        }
-
-        .tab-item {
-            color: var(--text-sub);
-            font-size: 0.9rem;
-            font-weight: 600;
-            padding-bottom: 8px;
-            cursor: pointer;
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .tab-item.active {
-            color: var(--text-main);
-        }
-
-        .tab-item.active::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background-color: var(--accent-blue);
-            border-radius: 2px;
-        }
-
-        /* Content Container */
-        .container {
-            padding: 15px 12px;
-        }
-
-        /* Grid Layout */
-        .manga-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-        }
-
-        .manga-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            cursor: pointer;
-        }
-
-        .cover-wrapper {
-            position: relative;
-            width: 100%;
-            padding-top: 145%;
-        }
-
-        .cover-wrapper img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .badge-new {
-            position: absolute;
-            top: 12px;
-            left: -20px;
-            background: #d97706;
-            color: white;
-            font-size: 0.6rem;
-            font-weight: bold;
-            padding: 2px 20px;
-            transform: rotate(-45deg);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-        }
-
-        .card-title {
-            padding: 8px 6px 4px 6px;
-            font-size: 0.78rem;
-            font-weight: 700;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .card-meta {
-            display: flex;
-            justify-content: space-between;
-            padding: 0 6px 8px 6px;
-            font-size: 0.7rem;
-        }
-
-        .meta-tag {
-            background: rgba(255, 255, 255, 0.06);
-            padding: 2px 6px;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            gap: 3px;
-            color: var(--text-sub);
-        }
-
-        .meta-tag.star {
-            color: var(--star-color);
-        }
-
-        /* Drawer Overlay & Menu */
-        .drawer-overlay {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.75);
-            z-index: 100;
-            display: none;
-        }
-
-        .drawer {
-            position: fixed;
-            top: 0;
-            right: -300px;
-            width: 290px;
-            height: 100%;
-            background-color: var(--drawer-bg);
-            z-index: 101;
-            transition: right 0.3s ease;
-            padding: 20px 15px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            overflow-y: auto;
-        }
-
-        .drawer.open { right: 0; }
-
-        .profile-card {
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 16px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .avatar-box {
-            position: relative;
-        }
-
-        .avatar-box img {
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .online-dot {
-            position: absolute;
-            bottom: 2px;
-            right: 2px;
-            width: 14px;
-            height: 14px;
-            background: #22c55e;
-            border: 2px solid var(--drawer-bg);
-            border-radius: 50%;
-        }
-
-        .profile-name {
-            font-size: 1.1rem;
-            font-weight: 800;
-        }
-
-        .profile-btn {
-            background: #1e2634;
-            border: none;
-            color: var(--text-sub);
-            padding: 6px 18px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            cursor: pointer;
-        }
-
-        .drawer-group {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .drawer-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px 16px;
-            border-radius: 12px;
-            color: var(--text-main);
-            text-decoration: none;
-            font-size: 0.9rem;
-            background: rgba(255, 255, 255, 0.02);
-            cursor: pointer;
-        }
-
-        .drawer-item.active {
-            background: #17202e;
-            color: var(--accent-blue);
-        }
-
-        .drawer-item-left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        /* Details Modal Page */
-        .modal-page {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: var(--bg-dark);
-            z-index: 200;
-            display: none;
-            overflow-y: auto;
-        }
-
-        .modal-page.open { display: block; }
-
-        .modal-header {
-            position: relative;
-            padding: 20px;
-            padding-top: 50px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .modal-header::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to bottom, rgba(8,10,15,0.4), var(--bg-dark));
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: rgba(0,0,0,0.6);
-            border: none;
-            color: white;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            z-index: 10;
-            cursor: pointer;
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 5;
-            display: flex;
-            gap: 15px;
-        }
-
-        .modal-poster {
-            width: 120px;
-            height: 170px;
-            border-radius: 10px;
-            object-fit: cover;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-        }
-
-        .modal-meta {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            gap: 6px;
-        }
-
-        .modal-title { font-size: 1.1rem; font-weight: 800; }
-        .modal-sub { font-size: 0.8rem; color: var(--text-sub); }
-
-        .tag-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin: 15px 0;
-        }
-
-        .tag-item {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 6px 14px;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            color: #d1d5db;
-        }
-
-        .modal-toggle-btns {
-            display: flex;
-            gap: 10px;
-            margin: 15px 0;
-        }
-
-        .toggle-btn {
-            flex: 1;
-            padding: 12px;
-            border-radius: 10px;
-            border: none;
-            background: var(--card-bg);
-            color: var(--text-sub);
-            font-weight: bold;
-            font-size: 0.9rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .toggle-btn.active {
-            background: var(--accent-blue);
-            color: white;
-        }
-
-        .stats-box {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            background: var(--card-bg);
-            padding: 12px;
-            border-radius: 12px;
-            margin-top: 15px;
-            text-align: center;
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .stat-item { display: flex; flex-direction: column; gap: 4px; }
-        .stat-val { font-weight: bold; font-size: 0.9rem; }
-        .stat-lbl { font-size: 0.7rem; color: var(--text-sub); }
-
-        /* Scraper Inputs */
-        .scraper-container {
-            background: var(--card-bg);
-            padding: 15px;
-            border-radius: 12px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .scraper-container input, .scraper-container select {
-            width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.1);
-            background: var(--bg-dark);
-            color: #fff;
-            outline: none;
-        }
-
-        .btn-submit {
-            background: var(--accent-blue);
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 8px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Overlay -->
-    <div class="drawer-overlay" id="overlay" onclick="toggleDrawer()"></div>
-
-    <!-- Drawer Menu -->
-    <div class="drawer" id="drawer">
-        <div class="profile-card">
-            <div class="avatar-box">
-                <img src="https://via.placeholder.com/150" id="user-avatar" alt="User Avatar">
-                <span class="online-dot"></span>
-            </div>
-            <div class="profile-name">EZ JERRY</div>
-            <button class="profile-btn">الملف الشخصي</button>
-        </div>
-
-        <div class="drawer-group">
-            <div class="drawer-item active" onclick="switchView('grid')">
-                <div class="drawer-item-left"><i class="fa-solid fa-house"></i> الرئيسية</div>
-            </div>
-            <div class="drawer-item" onclick="switchView('grid')">
-                <div class="drawer-item-left"><i class="fa-solid fa-magnifying-glass"></i> بحث</div>
-            </div>
-            <div class="drawer-item" onclick="switchView('grid')">
-                <div class="drawer-item-left"><i class="fa-solid fa-fire"></i> جديد المانجا</div>
-            </div>
-            <div class="drawer-item" onclick="switchView('grid')">
-                <div class="drawer-item-left"><i class="fa-solid fa-sparkles"></i> التوصيات</div>
-            </div>
-            <div class="drawer-item" onclick="switchView('scraper')">
-                <div class="drawer-item-left"><i class="fa-solid fa-bolt"></i> سحب رابط جديد</div>
-            </div>
-        </div>
-
-        <div style="margin-top: auto;">
-            <div class="drawer-item">
-                <div class="drawer-item-left"><i class="fa-solid fa-moon"></i> الوضع الليلـي</div>
-                <input type="checkbox" checked style="accent-color: var(--accent-blue);">
-            </div>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header>
-        <div class="header-icons">
-            <i class="fa-solid fa-bars" onclick="toggleDrawer()"></i>
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-bell"></i>
-        </div>
-        <div class="header-title">الرئيسية</div>
-    </header>
-
-    <!-- Nav Tabs -->
-    <div class="nav-tabs" id="nav-tabs">
-        <div class="tab-item active"><i class="fa-solid fa-bolt"></i> آخر التحديثات</div>
-        <div class="tab-item"><i class="fa-solid fa-fire"></i> الأكثر مشاهدة</div>
-        <div class="tab-item"><i class="fa-solid fa-download"></i> التحميلات</div>
-    </div>
-
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Main Grid -->
-        <div id="view-grid">
-            <div class="manga-grid" id="manga-list"></div>
-        </div>
-
-        <!-- Scraper View -->
-        <div id="view-scraper" style="display: none;">
-            <div class="scraper-container">
-                <h3>سحب بيانات مانجا / أنمي</h3>
-                <input type="text" id="target-url" placeholder="ضع رابط العمل هنا...">
-                <select id="content-type">
-                    <option value="manga">مانجا / مانهوا</option>
-                    <option value="anime">أنمي (روابط فيديو)</option>
-                </select>
-                <button class="btn-submit" onclick="startScrape()">بدء السحب</button>
-            </div>
-            <p id="scrape-status" style="text-align: center; margin-top: 10px; font-size: 0.85rem; color: var(--text-sub);"></p>
-        </div>
-    </div>
-
-    <!-- Modal Page -->
-    <div class="modal-page" id="modal-page">
-        <div class="modal-header" id="modal-bg">
-            <button class="close-btn" onclick="closeModal()"><i class="fa-solid fa-arrow-right"></i></button>
-        </div>
-        <div style="padding: 0 15px; margin-top: -50px;">
-            <div class="header-content">
-                <img src="" id="modal-poster" class="modal-poster">
-                <div class="modal-meta">
-                    <div class="modal-title" id="modal-title">---</div>
-                    <div class="modal-sub" id="modal-update">آخر تحديث: الفصل 39</div>
-                    <div class="modal-sub">حالة القصة: مستمرة</div>
-                    <div class="modal-sub">مانهوا كورية 15+</div>
-                </div>
-            </div>
-
-            <div class="tag-list" id="modal-tags"></div>
-
-            <p id="modal-desc" style="font-size: 0.85rem; color: var(--text-sub); line-height: 1.6; margin-bottom: 15px;"></p>
-
-            <div class="modal-toggle-btns">
-                <button class="toggle-btn active" id="btn-desc" onclick="switchModalTab('desc')"><i class="fa-solid fa-file-lines"></i> التفاصيل</button>
-                <button class="toggle-btn" id="btn-ch" onclick="switchModalTab('ch')"><i class="fa-solid fa-list"></i> الفصول</button>
-            </div>
-
-            <!-- Stats Box -->
-            <div class="stats-box" id="modal-stats">
-                <div class="stat-item">
-                    <i class="fa-solid fa-eye" style="color: var(--accent-blue);"></i>
-                    <span class="stat-val">48 ألف</span>
-                    <span class="stat-lbl">مشاهدات</span>
-                </div>
-                <div class="stat-item">
-                    <i class="fa-solid fa-book-open" style="color: var(--accent-blue);"></i>
-                    <span class="stat-val" id="modal-count">39</span>
-                    <span class="stat-lbl">عدد الفصول</span>
-                </div>
-                <div class="stat-item">
-                    <i class="fa-solid fa-star" style="color: var(--star-color);"></i>
-                    <span class="stat-val">8.64</span>
-                    <span class="stat-lbl">تقييم القراء</span>
-                </div>
-            </div>
-
-            <div id="modal-chapters" style="display: none; flex-direction: column; gap: 8px; margin-top: 15px;"></div>
-        </div>
-    </div>
-
-    <script>
-        const PROXY = 'http://localhost:8080/?url=';
-
-        function toggleDrawer() {
-            document.getElementById('drawer').classList.toggle('open');
-            const overlay = document.getElementById('overlay');
-            overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
-        }
-
-        function switchView(view) {
-            document.getElementById('view-grid').style.display = view === 'grid' ? 'block' : 'none';
-            document.getElementById('view-scraper').style.display = view === 'scraper' ? 'block' : 'none';
-            document.getElementById('nav-tabs').style.display = view === 'grid' ? 'flex' : 'none';
-            if(document.getElementById('drawer').classList.contains('open')) toggleDrawer();
-        }
-
-        async function startScrape() {
-            const url = document.getElementById('target-url').value.trim();
-            const type = document.getElementById('content-type').value;
-            const status = document.getElementById('scrape-status');
-
-            if(!url) return alert('ضع الرابط أولاً');
-
-            status.innerText = '⏳ جاري السحب وتخطي الحظر عبر البروكسي...';
-
-            try {
-                const res = await fetch(PROXY + encodeURIComponent(url));
-                const html = await res.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-
-                const title = doc.querySelector('h1')?.innerText?.trim() || doc.querySelector('title')?.innerText?.trim() || 'بدون عنوان';
-                let img = doc.querySelector('.summary_image img')?.getAttribute('src') || doc.querySelector('meta[property="og:image"]')?.content || '';
-                if(img.startsWith('//')) img = 'https:' + img;
-
-                const summary = doc.querySelector('.summary__content')?.innerText?.trim() || 'لا توجد قصة متاحة.';
-
-                let chapters = [];
-                doc.querySelectorAll('.wp-manga-chapter a, .chapter-link').forEach(c => {
-                    chapters.push({ name: c.innerText.trim(), link: c.href });
-                });
-
-                const item = {
-                    id: Date.now(),
-                    title,
-                    img: img || 'https://via.placeholder.com/150',
-                    summary,
-                    type,
-                    rating: '8.64',
-                    chapters,
-                    tags: ['أكشن', 'حياة مدرسية', 'رومانسية', 'شونين']
-                };
-
-                const stored = JSON.parse(localStorage.getItem('my_manga_data') || '[]');
-                stored.unshift(item);
-                localStorage.setItem('my_manga_data', JSON.stringify(stored));
-
-                status.innerText = '✅ تم السحب والحفظ بنجاح!';
-                renderGrid();
-                switchView('grid');
-
-            } catch(e) {
-                status.innerText = '❌ فشل السحب: ' + e.message;
-            }
-        }
-
-        function renderGrid() {
-            const grid = document.getElementById('manga-list');
-            const data = JSON.parse(localStorage.getItem('my_manga_data') || '[]');
-           
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0a0a0c"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><title>Pure</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.7/hls.min.js"></script>
+<style>
+:root{--bg:#0a0a0c;--c:#15171b;--t:#f2f2f4;--m:#8b90a0;--a:#7a8fb3}
+body.l{--bg:#f3f4f7;--c:#fff;--t:#16181d;--m:#666b78}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);color:var(--t);font:15px system-ui,sans-serif;padding-bottom:84px;user-select:none}
+#bn{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--c);border-top:1px solid #2a2d35;z-index:10;padding-bottom:env(safe-area-inset-bottom)}
+#bn div{flex:1;text-align:center;padding:9px 0;font-size:11px;color:var(--m)}#bn div span{display:block;font-size:20px}
+.top{display:flex;align-items:center;gap:14px;padding:14px;position:sticky;top:0;background:var(--bg);z-index:5}
+.top h2{flex:1;font-size:22px}.ic{background:none;border:0;color:var(--t);font-size:24px}
+.tabs{display:flex;border-bottom:1px solid #2a2d35;margin:0 12px 12px}
+.tabs div{flex:1;text-align:center;padding:12px 0;color:var(--m)}.tabs .on{color:var(--t);border-bottom:3px solid var(--a)}
+.g{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 12px}
+.cd{position:relative}.cd img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:16px;background:var(--c)}
+.cd p{margin-top:6px;font-weight:600;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bd{position:absolute;top:6px;right:6px;background:var(--a);color:#000;font-size:10px;padding:2px 7px;border-radius:8px}
+.m{color:var(--m);padding:14px}.pad{padding:14px}
+.bt{background:var(--c);color:var(--t);border:1px solid #2a2d35;border-radius:14px;padding:12px 16px;margin:4px;font-size:15px}
+.bt.p{background:var(--a);color:#000;border:0}
+input,select{width:100%;background:var(--c);color:var(--t);border:1px solid #2a2d35;border-radius:12px;padding:12px;margin:6px 0;font-size:15px}
+.chip{display:inline-block;border:1px solid #3a3e48;border-radius:14px;padding:5px 12px;margin:3px;font-size:13px}
+.row{display:flex;gap:12px;align-items:flex-start}.row img{width:40%;border-radius:16px}
+.ch{display:flex;justify-content:space-between;padding:14px;border-bottom:1px solid #22252c}
+#dr{position:fixed;top:0;bottom:0;right:0;width:78%;background:var(--bg);transform:translateX(100%);transition:.25s;z-index:20;padding:20px;overflow:auto;box-shadow:0 0 40px #000}
+#dr.o{transform:none}#dr div.i{padding:15px 10px;border-radius:14px;margin:4px 0;background:var(--c)}
+#dr h3{text-align:center;margin:10px 0 20px}
+#pl{display:none;position:fixed;inset:0;background:#000;z-index:30;overflow:auto;color:#fff}
+#ts{display:none;position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:var(--a);color:#000;padding:10px 18px;border-radius:20px;z-index:40}
+.rd img{width:100%;display:block}
+</style></head><body>
+<div id="dr"></div><div id="bn"><div onclick="go('all')"><span>🏠</span>الرئيسية</div><div onclick="go('manga')"><span>📖</span>مانجا</div><div onclick="go('anime')"><span>🎬</span>أنمي</div><div onclick="stack=[home];nav(imp)"><span>⬇️</span>استيراد</div><div onclick="menu()"><span>☰</span>المزيد</div></div><div id="app"></div>
+<div id="pl"><button class="bt" onclick="$('#pl').style.display='none';$('#pb').innerHTML=''">✕ إغلاق</button><div id="pb"></div></div><div id="ts"></div>
+<script>
+const P={toString:()=>(DB.proxy||'http://127.0.0.1:8080/')+'?url='},E=encodeURIComponent,$=s=>document.querySelector(s);
+const DB=Object.assign({items:[],fav:[],hist:[],views:{},name:'EZ JERRY',light:0},JSON.parse(localStorage.pure||'{}'));
+const sv=()=>localStorage.pure=JSON.stringify(DB),px=u=>u?P+E(u):'';
+const esc=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const toast=m=>{$('#ts').textContent=m;$('#ts').style.display='block';setTimeout(()=>$('#ts').style.display='none',2500)};
+const RX=/https?:\\?\/\\?\/[^"'\s<>]+?\.(?:mp4|m3u8)[^"'\s<>\\]*/g;
+let tab='new',sec='all',stack=[],cbs={};
+window.__cb=(id,h)=>{cbs[id](h);delete cbs[id]};
+document.body.classList.toggle('l',!!DB.light);
+/* ===== جلب الصفحات: بروكسي أولاً، وإذا حماية (Cloudflare/روبوت) يستخدم متصفح مخفي ===== */
+async function get(u){
+ try{const r=await fetch(P+E(u));const t=await r.text();
+  if(r.ok&&!/Just a moment|cf-chl|cf-browser-verification|g-recaptcha|hcaptcha/i.test(t.slice(0,8000)))return t}catch(e){}
+ if(window.Native)return new Promise((ok,no)=>{const id='c'+Date.now();cbs[id]=ok;Native.fetchHtml(id,u);setTimeout(()=>no('timeout'),45000)});
+ throw 'fail'}
+const doc=h=>new DOMParser().parseFromString(h,'text/html');
+const abs=(u,b)=>{try{return new URL(u,b).href}catch(e){return ''}};
+const im=(e,b)=>abs(e.getAttribute('data-src')||e.getAttribute('data-lazy-src')||e.getAttribute('data-original')||(e.getAttribute('srcset')||'').split(' ')[0]||e.getAttribute('src')||'',b);
+const og=(d,k)=>(d.querySelector(`meta[property="og:${k}"]`)||{}).content;
+/* ===== استخراج ===== */
+function cards(d,b){const s={},o=[];
+ d.querySelectorAll('a[href]').forEach(a=>{const i=a.querySelector('img');if(!i)return;
+  const h=abs(a.getAttribute('href'),b);if(!h||s[h]||h==b||h.includes('#'))return;
+  const t=(a.title||i.alt||a.textContent||'').trim().replace(/\s+/g,' ').slice(0,80),c=im(i,b);
+  if(!t||!c||c.startsWith('data:'))return;s[h]=1;o.push({title:t,cover:c,url:h})});return o}
+async function fetchD(it){
+ const d=doc(await get(it.url));
+ it.desc=(og(d,'description')||(d.querySelector('.summary__content,.entry-content,[itemprop=description],.description')||{}).textContent||'').trim().slice(0,400);
+ it.genres=[...new Set([...d.querySelectorAll('a[href*=genre],a[href*=tag],a[href*=category],a[rel=tag]')].map(a=>a.textContent.trim()).filter(t=>t&&t.length<20))].slice(0,8);
+ const s={},ch=[];
+ d.querySelectorAll('a[href]').forEach(a=>{const h=abs(a.getAttribute('href'),it.url),t=a.textContent.trim().replace(/\s+/g,' ');
+  if(!s[h]&&h!=it.url&&t.length<70&&/chapter|episode|ep-|ep\/|فصل|حلقة|الحلقة|الفصل/i.test(h+' '+t)){s[h]=1;ch.push({t:t||h,u:h})}});
+ it.ch=ch;sv()}
+async function servers(u){
+ const h=await get(u),d=doc(h);let S=[];
+ d.querySelectorAll('iframe').forEach(f=>{const s=f.getAttribute('src')||f.getAttribute('data-src');if(s)S.push({n:'iframe',u:abs(s,u)})});
+ d.querySelectorAll('video source[src],video[src]').forEach(v=>S.push({n:'direct',u:abs(v.getAttribute('src'),u)}));
+ d.querySelectorAll('[data-url],[data-embed],[data-video],option[value]').forEach(e=>{
+  let v=e.getAttribute('data-url')||e.getAttribute('data-embed')||e.getAttribute('data-video')||e.value||'';
+  if(!/^(https?:)?\/\//.test(v)){try{v=atob(v)}catch(x){}}
+  const m=v.match(/src=["']([^"']+)/);if(m)v=m[1];
+  if(/^(https?:)?\/\//.test(v))S.push({n:/\.(mp4|m3u8)/.test(v)?'direct':'iframe',u:abs(v,u)})});
+ (h.match(RX)||[]).forEach(x=>S.push({n:'direct',u:x.replace(/\\/g,'')}));
+ await Promise.all(S.filter(s=>s.n=='iframe').slice(0,6).map(async s=>{try{const t=await fetch(P+E(s.u)).then(r=>r.text());(t.match(RX)||[]).forEach(x=>S.push({n:'direct',u:x.replace(/\\/g,'')}))}catch(e){}}));
+ const k={};S=S.filter(s=>s.u&&!k[s.u]&&(k[s.u]=1));return S.sort((a,b)=>(b.n=='direct')-(a.n=='direct'))}
+/* ===== واجهات ===== */
+function nav(f){stack.push(f);f()}
+function back(){if($('#dr').classList.contains('o')){$('#dr').classList.remove('o');return true}
+ if($('#pl').style.display=='block'){$('#pl').style.display='none';$('#pb').innerHTML='';return true}
+ if(stack.length>1){stack.pop();stack[stack.length-1]();return true}return false}
+function head(t){return`<div class=top><button class=ic onclick="menu()">☰</button><h2>${t}</h2><button class=ic onclick="nav(srch)">🔍</button></div>`}
+function menu(){$('#dr').innerHTML=`<h3>${esc(DB.name)}</h3>
+<div class=i onclick="go('all')">🏠 الرئيسية</div><div class=i onclick="go('manga')">📖 مانجا</div><div class=i onclick="go('anime')">🎬 أنمي</div>
+<div class=i onclick="sh(imp)">⬇️ استيراد مانجا / أنمي</div><div class=i onclick="sh(srch)">🔍 بحث</div><div class=i onclick="sh(hist)">🕘 سجل المشاهدة</div>
+<div class=i onclick="DB.light=!DB.light;document.body.classList.toggle('l',!!DB.light);sv()">🌓 الوضع الليلي / النهاري</div>
+<div class=i onclick="DB.proxy=prompt('عنوان البروكسي',DB.proxy||'http://127.0.0.1:8080/')||DB.proxy;sv()">🛡️ عنوان البروكسي</div>
+<div class=i onclick="DB.name=prompt('الاسم',DB.name)||DB.name;sv();menu()">✏️ تغيير الاسم</div>`;$('#dr').classList.add('o')}
+function go(s){sec=s;$('#dr').classList.remove('o');stack=[home];home()}
+function sh(f){$('#dr').classList.remove('o');nav(f)}
+function grid(L){return`<div class=g>${L.map(x=>`<div class=cd onclick="nav(()=>det(${DB.items.indexOf(x)}))"><img loading=lazy src="${px(x.cover)}"><b class=bd>${x.type=='anime'?'أنمي':'مانجا'}</b><p>${esc(x.title)}</p></div>`).join('')||'<p class=m>ما اكو محتوى — روح لـ "استيراد" وحط رابط موقع</p>'}</div>`}
+function home(){let L=DB.items.filter(x=>sec=='all'||x.type==sec);
+ if(tab=='top')L=[...L].sort((a,b)=>(DB.views[b.url]||0)-(DB.views[a.url]||0));else if(tab=='fav')L=L.filter(x=>DB.fav.includes(x.url));else L=[...L].reverse();
+ const T=[['new','⚡ آخر التحديثات'],['top','🔥 الأكثر مشاهدة'],['fav','⭐ المفضلة']];
+ $('#app').innerHTML=head({all:'الرئيسية',manga:'المانجا',anime:'الأنمي'}[sec])+`<div class=tabs>${T.map(t=>`<div class="${tab==t[0]?'on':''}" onclick="tab='${t[0]}';home()">${t[1]}</div>`).join('')}</div>`+grid(L)}
+function srch(){$('#app').innerHTML=head('بحث')+`<div class=pad><input id=q placeholder="ابحث بالاسم..." oninput="$('#sr').innerHTML=grid(DB.items.filter(x=>x.title.toLowerCase().includes(this.value.toLowerCase())))"></div><div id=sr></div>`}
+function hist(){$('#app').innerHTML=head('سجل المشاهدة')+grid(DB.hist.map(u=>DB.items.find(x=>x.url==u)).filter(Boolean))}
+async function det(i){const it=DB.items[i];DB.views[it.url]=(DB.views[it.url]||0)+1;sv();
+ const draw=()=>{$('#app').innerHTML=`<div class=top><button class=ic onclick="back()">→</button><h2></h2></div><div class="pad"><div class=row><img src="${px(it.cover)}"><div><h3>${esc(it.title)}</h3><p class=m>${it.type=='anime'?'أنمي':'مانجا'}${it.ch?' | '+it.ch.length+' '+(it.type=='anime'?'حلقة':'فصل'):''}</p></div></div>
+ <div style="margin:12px 0">${(it.genres||[]).map(g=>`<span class=chip>${esc(g)}</span>`).join('')}</div><p>${esc(it.desc)}</p>
+ <div style="margin:12px 0"><button class="bt p" onclick="fv(${i})">${DB.fav.includes(it.url)?'★ بالمفضلة':'☆ أضف للمفضلة'}</button><button class=bt onclick="fetchD(DB.items[${i}]).then(()=>det(${i}))">🔄 تحديث</button></div>
+ <h3>${it.type=='anime'?'الحلقات':'الفصول'}</h3></div>${it.ch?it.ch.map((c,k)=>`<div class=ch onclick="op(${i},${k})"><span>${esc(c.t)}</span><span>▶</span></div>`).join('')||'<p class=m>ما لقيت فصول</p>':'<p class=m>جاري سحب التفاصيل...</p>'}`};
+ draw();if(!it.ch){try{await fetchD(it);draw()}catch(e){toast('فشل سحب التفاصيل')}}}
+function fv(i){const u=DB.items[i].url,k=DB.fav.indexOf(u);k<0?DB.fav.push(u):DB.fav.splice(k,1);sv();det(i)}
+function op(i,k){const it=DB.items[i];DB.hist=[it.url,...DB.hist.filter(x=>x!=it.url)].slice(0,50);sv();it.type=='anime'?ep(i,k):nav(()=>rdr(i,k))}
+async function rdr(i,k){const it=DB.items[i],c=it.ch[k];$('#app').innerHTML=`<div class=top><button class=ic onclick="back()">→</button><h2>${esc(c.t)}</h2></div><p class=m>جاري تحميل الصفحات...</p>`;
+ try{const d=doc(await get(c.u));const box=d.querySelector('#readerarea,.reading-content,.chapter-content,#chapter-container,.entry-content')||d.body;
+  const L=[...new Set([...box.querySelectorAll('img')].map(x=>im(x,c.u)).filter(x=>x&&!x.startsWith('data:')&&!/logo|avatar|banner|icon|\.gif/i.test(x)))];
+  $('#app').innerHTML=`<div class=top><button class=ic onclick="back()">→</button><h2>${esc(c.t)}</h2></div><div class=rd>${L.map(x=>`<img loading=lazy src="${px(x)}">`).join('')||'<p class=m>ما لقيت صور</p>'}</div><div class=pad>${k>0?`<button class=bt onclick="stack.pop();nav(()=>rdr(${i},${k-1}))">الفصل الأحدث ←</button>`:''}${k<it.ch.length-1?`<button class="bt p" onclick="stack.pop();nav(()=>rdr(${i},${k+1}))">→ الفصل الأقدم</button>`:''}</div>`}
+ catch(e){$('#app').innerHTML+='<p class=m>فشل التحميل</p>'}}
+async function ep(i,k){const c=DB.items[i].ch[k];$('#pl').style.display='block';const b=$('#pb');b.innerHTML='<p class=m>جاري البحث عن السيرفرات...</p>';
+ let S=[];try{S=await servers(c.u)}catch(e){}window.SV=S;
+ b.innerHTML=`<div class=pad><b>${esc(c.t)}</b></div>`+(S.length?S.map((s,j)=>`<button class=bt onclick="play(${j})">${s.n=='direct'?'مباشر':'سيرفر'} ${j+1}</button>`).join(''):'<p class=m>ما لقيت سيرفرات</p>')+'<div id=pv></div>';if(S.length)play(0)}
+function play(j){const s=SV[j],v=$('#pv');
+ if(s.n=='iframe')v.innerHTML=`<iframe src="${esc(s.u)}" allowfullscreen style="width:100%;height:56vw;border:0"></iframe>`;
+ else{v.innerHTML='<video controls autoplay playsinline style="width:100%"></video>';const e=v.firstChild;
+  if(/\.m3u8/.test(s.u)&&window.Hls&&Hls.isSupported()){const h=new Hls();h.loadSource(s.u);h.attachMedia(e)}else e.src=s.u}}
+function imp(){$('#app').innerHTML=head('استيراد')+`<div class=pad><select id=it><option value=manga>مانجا</option><option value=anime>أنمي</option></select>
+<input id=iu placeholder="رابط صفحة قائمة الموقع https://..." dir=ltr><input id=ip type=number value=1 min=1 placeholder="عدد الصفحات"><label><input type=checkbox id=if style="width:auto"> سحب التصنيفات والوصف والفصول لكل عنصر (أبطأ)</label>
+<button class="bt p" style="width:100%;margin:10px 0" onclick="doImport()">استيراد</button><p id=st class=m></p><p class=m>العناصر المحفوظة: ${DB.items.length}</p></div>`}
+async function doImport(){const u=$('#iu').value.trim(),type=$('#it').value,n=+$('#ip').value||1,full=$('#if').checked;
+ if(!/^https?:/.test(u))return toast('حط رابط صحيح');let a=0;
+ for(let p=1;p<=n;p++){const url=p==1?u:u.replace(/\/$/,'')+'/page/'+p+'/';$('#st').textContent='جاري سحب الصفحة '+p+'...';
+  let h;try{h=await get(url)}catch(e){$('#st').textContent='فشل الجلب (تأكد من البروكسي أو حماية الموقع)';return}
+  const d=doc(h);let L=cards(d,url);
+  if(!L.length&&p==1&&og(d,'title'))L=[{title:og(d,'title'),cover:abs(og(d,'image')||'',url),url}];
+  if(!L.length)break;
+  L.forEach(x=>{if(!DB.items.some(y=>y.url==x.url)){x.type=type;DB.items.push(x);a++}});sv()}
+ if(full)for(const x of DB.items.filter(y=>y.type==type&&!y.ch)){$('#st').textContent='تفاصيل: '+x.title;try{await fetchD(x)}catch(e){}}
+ $('#st').textContent='تم استيراد '+a+' عنصر ✅'}
+stack=[home];home();
+</script></body></html>
