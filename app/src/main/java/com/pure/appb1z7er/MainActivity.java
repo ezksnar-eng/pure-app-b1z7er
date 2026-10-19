@@ -1,14 +1,20 @@
 package com.pure.appb1z7er;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.Settings;
 import android.view.View;
 import android.webkit.CookieManager;
 import android.webkit.DownloadListener;
+import android.webkit.PermissionRequest;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
@@ -24,15 +30,15 @@ import java.io.File;
 
 public class MainActivity extends Activity {
 
-    private static final String START_URL = "https://appassets.androidplatform.net/assets/www/index.html";
+    private static final String START_URL = "https://appassets.androidplatform.net/assets/www/%D8%B7%D9%8A%D8%B2%D9%8A%20%D8%A7%D9%84%D8%B5%D8%BA%D9%8A%D8%B1%D9%88%D9%86%D9%87.html";
     private static final boolean BUNDLED = true;
     private static final boolean FULLSCREEN = false;
     private static final boolean ALLOW_ZOOM = false;
     private static final boolean LIGHT_STATUS = false;
     private static final String STATUS_COLOR = "#c81466";
     private static final String LIVE_BASE = "https://raw.githubusercontent.com/ezksnar-eng/pure-app-b1z7er/main/live/";
-    private static final long BUNDLED_VERSION = 1791102844L;
-    private static final String ENTRY = "index.html";
+    private static final long BUNDLED_VERSION = 1792427967L;
+    private static final String ENTRY = "\u0637\u064a\u0632\u064a \u0627\u0644\u0635\u063a\u064a\u0631\u0648\u0646\u0647.html";
     private static final String ASSET_HOST = "appassets.androidplatform.net";
     private static final int FILE_REQ = 4242;
 
@@ -46,6 +52,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestRuntimePerms();
 
         liveDir = new File(getFilesDir(), "live");
         liveDir.mkdirs();
@@ -103,6 +110,23 @@ public class MainActivity extends Activity {
                 }
                 return true;
             }
+
+            @Override
+            public void onPermissionRequest(final PermissionRequest request) {
+                java.util.List<String> grant = new java.util.ArrayList<String>();
+                for (String res : request.getResources()) {
+                    if (PermissionRequest.RESOURCE_VIDEO_CAPTURE.equals(res) && checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+                        grant.add(res);
+                    } else if (PermissionRequest.RESOURCE_AUDIO_CAPTURE.equals(res) && checkSelfPermission(Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
+                        grant.add(res);
+                    }
+                }
+                if (!grant.isEmpty()) {
+                    request.grant(grant.toArray(new String[0]));
+                } else {
+                    request.deny();
+                }
+            }
         });
 
         webView.setDownloadListener(new DownloadListener() {
@@ -154,6 +178,26 @@ public class MainActivity extends Activity {
         });
         t.setDaemon(true);
         t.start();
+    }
+
+    private void requestRuntimePerms() {
+        java.util.List<String> need = new java.util.ArrayList<String>();
+        for (String p : new String[]{}) {
+            if (checkSelfPermission(p) != PackageManager.PERMISSION_GRANTED) {
+                need.add(p);
+            }
+        }
+        if (!need.isEmpty()) {
+            requestPermissions(need.toArray(new String[0]), 7);
+        }
+        if (false && Build.VERSION.SDK_INT >= 30 && !Environment.isExternalStorageManager()) {
+            try {
+                Intent i = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+                i.setData(Uri.parse("package:" + getPackageName()));
+                startActivity(i);
+            } catch (Exception ignored) {
+            }
+        }
     }
 
     private boolean handleUrl(Uri uri) {
